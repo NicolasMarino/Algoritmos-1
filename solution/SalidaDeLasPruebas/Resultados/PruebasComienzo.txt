@@ -1,48 +1,24 @@
 ----------------------------------------------
-Prueba Problema A+B nro 1 -> ERROR salida incorrecta
-	Parametros de entrada: 2, 7
-	Se esperaba: 9
-	Se recibio:  0
+Prueba Problema A+B nro 1 -> OK
 ----------------------------------------------
-Prueba Problema A+B nro 2 -> ERROR salida incorrecta
-	Parametros de entrada: -8, 6
-	Se esperaba: -2
-	Se recibio:  0
+Prueba Problema A+B nro 2 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaSuma                                         HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaSuma                                         PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 1 -> ERROR salida incorrecta
-	Parametros de entrada: 7, 0, 6
-	Se esperaba: 0*7=0;1*7=7;2*7=14;3*7=21;4*7=28;5*7=35;6*7=42
-	Se recibio:  
+Prueba Imprimir Tabla del numero 1 -> OK
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 2 -> ERROR salida incorrecta
-	Parametros de entrada: 11, 1, 5
-	Se esperaba: 1*11=11;2*11=22;3*11=33;4*11=44;5*11=55
-	Se recibio:  
+Prueba Imprimir Tabla del numero 2 -> OK
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 3 -> ERROR salida incorrecta
-	Parametros de entrada: 0, 0, 0
-	Se esperaba: 0*0=0
-	Se recibio:  
+Prueba Imprimir Tabla del numero 3 -> OK
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 4 -> ERROR salida incorrecta
-	Parametros de entrada: 12, 10, 15
-	Se esperaba: 10*12=120;11*12=132;12*12=144;13*12=156;14*12=168;15*12=180
-	Se recibio:  
+Prueba Imprimir Tabla del numero 4 -> OK
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 5 -> ERROR salida incorrecta
-	Parametros de entrada: 5, 9, 9
-	Se esperaba: 9*5=45
-	Se recibio:  
+Prueba Imprimir Tabla del numero 5 -> OK
 ----------------------------------------------
-Prueba Imprimir Tabla del numero 6 -> ERROR salida incorrecta
-	Parametros de entrada: 10, 0, 1
-	Se esperaba: 0*10=0;1*10=10
-	Se recibio:  
+Prueba Imprimir Tabla del numero 6 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaImprimirTabla                                HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaImprimirTabla                                PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Simplificar fraccion 1 -> ERROR salida incorrecta
@@ -106,34 +82,19 @@ Prueba Ocurrencias 123 Repetidos 3 -> OK
 ----------------------------------------------
 Prueba Ocurrencias 123 Repetidos 4 -> OK
 ----------------------------------------------
-Prueba Ocurrencias 123 Repetidos 5 -> ERROR salida incorrecta
-	Parametros de entrada: [1,2,3]
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Ocurrencias 123 Repetidos 5 -> OK
 ----------------------------------------------
-Prueba Ocurrencias 123 Repetidos 6 -> ERROR salida incorrecta
-	Parametros de entrada: [1,2,2,2,3]
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Ocurrencias 123 Repetidos 6 -> OK
 ----------------------------------------------
-Prueba Ocurrencias 123 Repetidos 7 -> ERROR salida incorrecta
-	Parametros de entrada: [1,1,2,3]
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Ocurrencias 123 Repetidos 7 -> OK
 ----------------------------------------------
 Prueba Ocurrencias 123 Repetidos 8 -> OK
 ----------------------------------------------
-Prueba Ocurrencias 123 Repetidos 9 -> ERROR salida incorrecta
-	Parametros de entrada: [1,2,3,1,2,3,1,2,3,2,3]
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Ocurrencias 123 Repetidos 9 -> OK
 ----------------------------------------------
-Prueba Ocurrencias 123 Repetidos 10 -> ERROR salida incorrecta
-	Parametros de entrada: [1,2,1,2,1,2,1,3,2,3,1,2,3,1,2,2,3,2,3,1,2,3,1,1,2]
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Ocurrencias 123 Repetidos 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaOcuerrencias123Repetidos                     HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaOcuerrencias123Repetidos                     PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Maximo Numero 1 -> ERROR salida incorrecta
@@ -577,5 +538,5 @@ PRUEBAS FUNCION PruebaOrdenarVecIntMergeSort                       HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  0 INCORRECTAS: 14
+PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  3 INCORRECTAS: 11
 PRUEBAS FUNCIONES 

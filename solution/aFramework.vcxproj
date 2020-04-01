@@ -118,6 +118,13 @@
     <ClInclude Include="PruebasListas.h" />
     <ClInclude Include="PruebasPropias.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasArboles.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasComienzo.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasDefensa.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasListas.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasPropias.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

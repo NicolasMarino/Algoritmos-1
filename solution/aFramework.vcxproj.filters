@@ -13,6 +13,9 @@
     <Filter Include="Framework\Pruebas Aux">
       <UniqueIdentifier>{1baf329c-7efe-417f-bc32-bd9863b06ee2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Soluciones">
+      <UniqueIdentifier>{b6360938-7ed7-4672-816c-5a237b3058da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Principal.cpp">
@@ -131,5 +134,22 @@
     <ClInclude Include="PruebasComienzo.h">
       <Filter>Pruebas</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasArboles.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasComienzo.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasDefensa.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasListas.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasPropias.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
   </ItemGroup>
 </Project>
