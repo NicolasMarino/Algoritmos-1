@@ -97,42 +97,21 @@ Prueba Ocurrencias 123 Repetidos 10 -> OK
 PRUEBAS FUNCION PruebaOcuerrencias123Repetidos                     PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Maximo Numero 1 -> ERROR salida incorrecta
-	Parametros de entrada: 3, 2 4 8
-	Se esperaba: 8
-	Se recibio:  0
+Prueba Maximo Numero 1 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 2 -> ERROR salida incorrecta
-	Parametros de entrada: 2, 1 1
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Maximo Numero 2 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 3 -> ERROR salida incorrecta
-	Parametros de entrada: 6, 2 2 8 5 6 7
-	Se esperaba: 8
-	Se recibio:  0
+Prueba Maximo Numero 3 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 4 -> ERROR salida incorrecta
-	Parametros de entrada: 1, 2
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Maximo Numero 4 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 5 -> ERROR salida incorrecta
-	Parametros de entrada: 10, 2 11 20 90 465 45 34 767 32 1
-	Se esperaba: 767
-	Se recibio:  0
+Prueba Maximo Numero 5 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 6 -> ERROR salida incorrecta
-	Parametros de entrada: 4, -17 89 12 11
-	Se esperaba: 89
-	Se recibio:  0
+Prueba Maximo Numero 6 -> OK
 ----------------------------------------------
-Prueba Maximo Numero 7 -> ERROR salida incorrecta
-	Parametros de entrada: 3, -28923 -2229 -1122
-	Se esperaba: -1122
-	Se recibio:  0
+Prueba Maximo Numero 7 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaMaximoNumero                                 HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaMaximoNumero                                 PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba ordenar vector de int 1 -> OK
@@ -141,60 +120,30 @@ Prueba ordenar vector de int 2 -> OK
 ----------------------------------------------
 Prueba ordenar vector de int 3 -> OK
 ----------------------------------------------
-Prueba ordenar vector de int 4 -> ERROR salida incorrecta
-	Parametros de entrada: [9,5,1]
-	Se esperaba: [1,5,9]
-	Se recibio:  [9,5,1]
+Prueba ordenar vector de int 4 -> OK
 ----------------------------------------------
-Prueba ordenar vector de int 5 -> ERROR salida incorrecta
-	Parametros de entrada: [1,6,4,9,2,4,9,1]
-	Se esperaba: [1,1,2,4,4,6,9,9]
-	Se recibio:  [1,6,4,9,2,4,9,1]
+Prueba ordenar vector de int 5 -> OK
 ----------------------------------------------
-Prueba ordenar vector de int 6 -> ERROR salida incorrecta
-	Parametros de entrada: [9,9,5,5,5,1,1]
-	Se esperaba: [1,1,5,5,5,9,9]
-	Se recibio:  [9,9,5,5,5,1,1]
+Prueba ordenar vector de int 6 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaOrdenarVecInt                                HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaOrdenarVecInt                                PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Invertir Case de palabra 1 -> ERROR salida incorrecta
-	Parametros de entrada: 
-	Se esperaba: 
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 1 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 2 -> ERROR salida incorrecta
-	Parametros de entrada: hola
-	Se esperaba: HOLA
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 2 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 3 -> ERROR salida incorrecta
-	Parametros de entrada: Write in C
-	Se esperaba: wRITE IN c
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 3 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 4 -> ERROR salida incorrecta
-	Parametros de entrada: es UNA cosa DE locos
-	Se esperaba: ES una COSA de LOCOS
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 4 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 5 -> ERROR salida incorrecta
-	Parametros de entrada: EsCrIbIR asi Es MoLeSTOOO
-	Se esperaba: eScRiBir ASI eS mOlEstooo
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 5 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 6 -> ERROR salida incorrecta
-	Parametros de entrada: 1434
-	Se esperaba: 1434
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 6 -> OK
 ----------------------------------------------
-Prueba Invertir Case de palabra 7 -> ERROR salida incorrecta
-	Parametros de entrada: #&/()|A
-	Se esperaba: #&/()|a
-	Se recibio:  NULL
+Prueba Invertir Case de palabra 7 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaInvertirCase                                 HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaInvertirCase                                 PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Islas 1 -> ERROR salida incorrecta
@@ -538,5 +487,5 @@ PRUEBAS FUNCION PruebaOrdenarVecIntMergeSort                       HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  3 INCORRECTAS: 11
+PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  6 INCORRECTAS:  8
 PRUEBAS FUNCIONES 

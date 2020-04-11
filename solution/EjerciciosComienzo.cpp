@@ -22,7 +22,7 @@ void simplificar(int n, int d) {
 	return;
 }
 
-//Obligatorio
+//Obligatorio - DONE
 int ocurrencias123Repetidos(int* vector, int largo) {
 
 	bool aux = false;
@@ -55,22 +55,92 @@ int ocurrencias123Repetidos(int* vector, int largo) {
 	return contador;
 }
 
-//Obligatorio
+//Obligatorio - DONE
 int maximoNumero(unsigned int n) {
-	// IMPLEMENTAR SOLUCION
-    return 0;
+	
+	int maxNumber = INT_MIN;
+	
+	
+	for (int i = 0; i < n; i++)
+	{
+		int num;
+		cin >> num;
+		if (num > maxNumber) {
+			maxNumber = num;
+		}
+	};
+
+    return maxNumber;
 }
 
-//Obligatorio
+//Obligatorio - DONE
 void ordenarVecInt(int *vec, int largoVec) {
-	// IMPLEMENTAR SOLUCION
+
+	for (int i = 0; i < largoVec; i++)
+	{
+		for (int t = i+1; t < largoVec; t++)
+		{
+			int auxiliar = vec[i];
+			if (vec[i] > vec[t]) {
+				vec[i] = vec[t];
+				vec[t] = auxiliar;
+			}
+		}
+	}
 }
 
-//Obligatorio
+//Obligatorio - DONE
 char* invertirCase(char* palabra)
+{	
+	int largoPalabraInput = largoPalabra(palabra);
+	char* palabraAux = new char[largoPalabraInput];
+	
+	for (int i = 0; palabra[i] != '\0'; i++)
+	{
+		if (esString(palabra[i]))
+		{
+			if (palabra[i] + 32 > 122)
+			{
+				palabraAux[i] = palabra[i] - 32;
+			}
+			else if (palabra[i] - 32 == 0)
+			{
+				palabraAux[i] = palabra[i];
+			}
+			else
+			{
+				palabraAux[i] = palabra[i] + 32;
+			}
+		}
+		else
+		{
+			palabraAux[i] = palabra[i];
+		}
+		
+	}
+	palabraAux[largoPalabraInput] = '\0';
+	return palabraAux;
+}
+
+//Auxiliar
+bool esString(char unChar)
 {
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+	bool esString = false;
+	if (unChar >= 65 && unChar <= 122 ) {
+		esString = true;
+	}
+	return esString;
+}
+
+//Auxiliar
+int largoPalabra(char* palabra) 
+{
+	int largoP = 0;
+	for (int i = 0; palabra[i] != '\0'; i ++)
+	{
+		largoP += 1;
+	}
+	return largoP;
 }
 
 int islas(char** mapa, int col, int fil){
@@ -84,27 +154,27 @@ unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
     return 0;
 }
 
-//Obligatorio
+//Obligatorio - TODO
 char **ordenarVecStrings(char **vecStr, int largoVecStr)
 {
 	// IMPLEMENTAR SOLUCION
     return NULL;
 }
 
-//Obligatorio
+//Obligatorio - TODO
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
 	// IMPLEMENTAR SOLUCION
 	return NULL;
 }
 
-//Obligatorio
+//Obligatorio - TODO
 bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
 {
 	// IMPLEMENTAR SOLUCION
 	return false;
 }
 
-//Obligatorio
+//Obligatorio - TODO
 char** splitStr(char* str, char separador, int &largoRet)
 {
 	// IMPLEMENTAR SOLUCION

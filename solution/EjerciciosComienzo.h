@@ -112,6 +112,34 @@ Retorno: "wRITE in c"
 */
 char* invertirCase(char* palabra);
 
+/**
+PRE: Recibe un char unChar.
+POS: Retorna si este char es String o no.
+
+Ejemplo 1
+Entrada: "h"
+Retorno: true
+
+Ejemplo 2
+Entrada: "#"
+Retorno: false
+*/
+bool esString(char unChar);
+
+/*
+PRE: Recibe un string palabra.
+POS: Retorna el largo de este string
+
+Ejemplo 1
+Entrada: "hola"
+Retorno: 4
+
+Ejemplo 2
+Entrada: "ha"
+Retorno: 2
+*/
+int largoPalabra(char* palabra);
+
 /*
  *	EJERCICIO OPCIONAL
 PRE:  recibe un mapa representado por una matriz, de dimensiones col x fil, en la cual 'A' representa un lugar donde hay agua, y 'T' donde hay tierra
