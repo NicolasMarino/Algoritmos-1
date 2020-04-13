@@ -212,42 +212,21 @@ Prueba Ocurrencias Substring 6 -> ERROR salida incorrecta
 PRUEBAS FUNCION PruebaOcurrenciasSubstring                         HAY PRUEBAS INCORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba ordenar vector de strings 1 -> ERROR salida incorrecta
-	Parametros de entrada: ['paso','pasa','pasado','pasaron']
-	Se esperaba: ['pasa','pasado','pasaron','paso']
-	Se recibio:  []
+Prueba ordenar vector de strings 1 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 2 -> ERROR salida incorrecta
-	Parametros de entrada: ['hola']
-	Se esperaba: ['hola']
-	Se recibio:  []
+Prueba ordenar vector de strings 2 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 3 -> ERROR salida incorrecta
-	Parametros de entrada: ['string','strings','substring','strong','strength']
-	Se esperaba: ['strength', 'string', 'strings', 'strong','substring']
-	Se recibio:  []
+Prueba ordenar vector de strings 3 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 4 -> ERROR salida incorrecta
-	Parametros de entrada: ['1234','15324567','1563248','5132135']
-	Se esperaba: ['1234', '15324567', '1563248', '5132135']
-	Se recibio:  []
+Prueba ordenar vector de strings 4 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 5 -> ERROR salida incorrecta
-	Parametros de entrada: ['153243','1532468','153246','15324679']
-	Se esperaba: ['153243', '153246', '15324679', '1532468']
-	Se recibio:  []
+Prueba ordenar vector de strings 5 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 6 -> ERROR salida incorrecta
-	Parametros de entrada: ['algoritmos','algoritmia','algoritmo','algo']
-	Se esperaba: ['algo', 'algoritmia', 'algoritmo', 'algoritmos']
-	Se recibio:  []
+Prueba ordenar vector de strings 6 -> OK
 ----------------------------------------------
-Prueba ordenar vector de strings 7 -> ERROR salida incorrecta
-	Parametros de entrada: ['123456','123546','123645','123598','123754','12365498','1232','12','123','12911']
-	Se esperaba: ['12','123', '1232', '123456', '123546','123598', '123645', '12365498', '123754', '12911']
-	Se recibio:  []
+Prueba ordenar vector de strings 7 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaOrdenarVecStr                                HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaOrdenarVecStr                                PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Intercalar Vectores 1 -> ERROR salida incorrecta
@@ -297,38 +276,23 @@ PRUEBAS FUNCION PruebaIntercalarVector                             HAY PRUEBAS I
 ----------------------------------------------
 Prueba Subconjunto Vector 1 -> OK
 ----------------------------------------------
-Prueba Subconjunto Vector 2 -> ERROR salida incorrecta
-	Parametros de entrada: [1,2,3], [1,2,3,4,5,6]
-	Se esperaba: true
-	Se recibio:  false
+Prueba Subconjunto Vector 2 -> OK
 ----------------------------------------------
 Prueba Subconjunto Vector 3 -> OK
 ----------------------------------------------
-Prueba Subconjunto Vector 4 -> ERROR salida incorrecta
-	Parametros de entrada: [2,2,2,3,54,6,7], [7,6,54,6,3,2]
-	Se esperaba: true
-	Se recibio:  false
+Prueba Subconjunto Vector 4 -> OK
 ----------------------------------------------
 Prueba Subconjunto Vector 5 -> OK
 ----------------------------------------------
-Prueba Subconjunto Vector 6 -> ERROR salida incorrecta
-	Parametros de entrada: [], []
-	Se esperaba: true
-	Se recibio:  false
+Prueba Subconjunto Vector 6 -> OK
 ----------------------------------------------
-Prueba Subconjunto Vector 7 -> ERROR salida incorrecta
-	Parametros de entrada: [], [2,3,1]
-	Se esperaba: true
-	Se recibio:  false
+Prueba Subconjunto Vector 7 -> OK
 ----------------------------------------------
 Prueba Subconjunto Vector 8 -> OK
 ----------------------------------------------
-Prueba Subconjunto Vector 9 -> ERROR salida incorrecta
-	Parametros de entrada: [1], [1]
-	Se esperaba: true
-	Se recibio:  false
+Prueba Subconjunto Vector 9 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaSubconjuntoVector                            HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaSubconjuntoVector                            PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba split de strings 1 -> ERROR salida incorrecta
@@ -487,5 +451,5 @@ PRUEBAS FUNCION PruebaOrdenarVecIntMergeSort                       HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  6 INCORRECTAS:  8
+PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  8 INCORRECTAS:  6
 PRUEBAS FUNCIONES 

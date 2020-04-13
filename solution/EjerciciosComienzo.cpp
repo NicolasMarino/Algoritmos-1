@@ -118,6 +118,7 @@ char* invertirCase(char* palabra)
 		}
 		
 	}
+	
 	palabraAux[largoPalabraInput] = '\0';
 	return palabraAux;
 }
@@ -154,12 +155,82 @@ unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
     return 0;
 }
 
-//Obligatorio - TODO
+//Obligatorio -	DONE
 char **ordenarVecStrings(char **vecStr, int largoVecStr)
 {
-	// IMPLEMENTAR SOLUCION
-    return NULL;
+	char** nuevoVect = new char* [largoVecStr];
+	for (int i = 0; i < largoVecStr; i++)
+	{
+		nuevoVect[i] = copiarStringCompleto(vecStr[i], largoPalabra(vecStr[i]) + 1);
+	}
+
+	for (int i = 0; i < largoVecStr; i++)
+	{
+		for (int t = i + 1; t < largoVecStr; t++)
+		{
+			char* auxiliar = nuevoVect[i];
+			if (obtenerStringMayor(nuevoVect[i], nuevoVect[t]))
+			{
+				nuevoVect[i] = nuevoVect[t];
+				nuevoVect[t] = auxiliar;
+			}
+		}
+	}
+
+	for (int i = 0; i < largoVecStr; i++)
+	{
+		char* test = nuevoVect[i];
+	}
+
+    return nuevoVect;
 }
+
+char** copiaVectorCompleta(char** vector, int largoVector)
+{
+	char** nuevoVector = new char*[largoVector];
+
+	for (int i = 0; i < largoVector; i++)
+	{
+		/*nuevoVector[i] = new char[largoPalabra(vector[i]) + 1];
+		copiarStringCompleto(vector[i], nuevoVector[i], largoPalabra(vector[i])+1);*/
+
+		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]) + 1);
+	}
+
+	return nuevoVector;
+}
+
+char* copiarStringCompleto(char* origen,int largoString)
+{
+	char* nuevoChar = new char[largoString];
+	for (int i = 0; origen[i] != '\0'; i++)
+	{
+		nuevoChar[i] = origen[i];
+	}
+	char asd = nuevoChar[largoString];
+	nuevoChar[largoString-1] = '\0';
+	
+	return nuevoChar;
+}
+
+
+bool obtenerStringMayor(char* unChar, char* otroChar) 
+{
+	int largoUnChar = largoPalabra(unChar);
+	int largoOtroChar = largoPalabra(otroChar);
+	int masLargo = (largoUnChar > largoOtroChar) ? masLargo = largoUnChar : masLargo = largoOtroChar;
+
+	bool esMasLargo = true;
+	for (int i = 0; i < masLargo; i++)
+	{
+		if (unChar[i] != otroChar[i]) 
+		{
+			return unChar[i] > otroChar[i];
+		}
+	}
+	return esMasLargo;
+}
+
 
 //Obligatorio - TODO
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
@@ -167,11 +238,41 @@ int* intercalarVector(int* v1, int* v2, int l1, int l2){
 	return NULL;
 }
 
-//Obligatorio - TODO
+//Obligatorio - DONE
 bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
 {
-	// IMPLEMENTAR SOLUCION
-	return false;
+	
+	bool esSubConjunto = true;
+	if (l1 != 0 && l2 != 0)
+	{
+		bool seEncuentra = true;
+		for (int i = 0; i < l1; i++)
+		{
+			if (!perteneceAVector(v2, v1[i],l2)) 
+			{
+				seEncuentra = false;
+			}
+		}
+		esSubConjunto = (seEncuentra) ? true : false;
+	}
+	else if (l1 != 0 && l2 == 0)
+	{
+		return false;
+	}
+	return esSubConjunto;
+}
+
+bool perteneceAVector(int* vector, int elemento, int largoVector) 
+{
+	bool aux = false;
+	for (int i = 0; i < largoVector; i++)
+	{
+		if (vector[i] == elemento)
+		{
+			return true;
+		}
+	}
+	return aux;
 }
 
 //Obligatorio - TODO
