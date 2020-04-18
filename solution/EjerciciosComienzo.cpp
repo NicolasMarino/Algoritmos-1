@@ -185,21 +185,20 @@ char **ordenarVecStrings(char **vecStr, int largoVecStr)
     return nuevoVect;
 }
 
+//Auxiliar
 char** copiaVectorCompleta(char** vector, int largoVector)
 {
 	char** nuevoVector = new char*[largoVector];
 
 	for (int i = 0; i < largoVector; i++)
 	{
-		/*nuevoVector[i] = new char[largoPalabra(vector[i]) + 1];
-		copiarStringCompleto(vector[i], nuevoVector[i], largoPalabra(vector[i])+1);*/
-
 		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]) + 1);
 	}
 
 	return nuevoVector;
 }
 
+//Auxiliar
 char* copiarStringCompleto(char* origen,int largoString)
 {
 	char* nuevoChar = new char[largoString];
@@ -207,14 +206,13 @@ char* copiarStringCompleto(char* origen,int largoString)
 	{
 		nuevoChar[i] = origen[i];
 	}
-	char asd = nuevoChar[largoString];
 	nuevoChar[largoString-1] = '\0';
 	
 	return nuevoChar;
 }
 
-
-bool obtenerStringMayor(char* unChar, char* otroChar) 
+//Auxiliar
+bool obtenerStringMayor(char* unChar, char* otroChar)
 {
 	int largoUnChar = largoPalabra(unChar);
 	int largoOtroChar = largoPalabra(otroChar);
@@ -230,7 +228,6 @@ bool obtenerStringMayor(char* unChar, char* otroChar)
 	}
 	return esMasLargo;
 }
-
 
 //Obligatorio - TODO
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
@@ -262,6 +259,7 @@ bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
 	return esSubConjunto;
 }
 
+//Auxiliar
 bool perteneceAVector(int* vector, int elemento, int largoVector) 
 {
 	bool aux = false;
@@ -275,11 +273,52 @@ bool perteneceAVector(int* vector, int elemento, int largoVector)
 	return aux;
 }
 
-//Obligatorio - TODO
-char** splitStr(char* str, char separador, int &largoRet)
+//Obligatorio - DONE
+char** splitStr(char* str, char separador, int& largoRet)
 {
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+	int largoNuevoArray = obtenerLargoSplit(str, separador);
+	largoRet = largoNuevoArray;
+	if (largoNuevoArray == 0) return NULL;
+
+	char* nuevoString = copiarStringCompleto(str, largoPalabra(str)+1);
+
+	char** splittedArray = new char* [largoNuevoArray];
+
+	char* separa = new char{ separador };
+	char* pch = strtok(nuevoString, separa);
+
+	int contadorAux2 = 0;
+	while (pch != NULL)
+	{
+		splittedArray[contadorAux2] = pch;
+		pch = strtok(NULL, separa);
+		contadorAux2++;
+	}
+
+	return splittedArray;
+}
+
+//Auxiliar
+int obtenerLargoSplit(char* palabra, char separador)
+{
+	bool auxSeparador = palabra[0] != separador;
+	int contador = 0;
+	for (int i = 0; palabra[i] != '\0'; i++)
+	{
+		if (palabra[i] == separador)
+		{
+			auxSeparador = true;
+		}
+		else
+		{
+			if (auxSeparador)
+			{
+				contador+=1;
+				auxSeparador = false;
+			}
+		}
+	}
+	return contador;
 }
 
 void ordenarVecIntMergeSort(int* vector, int largo) 

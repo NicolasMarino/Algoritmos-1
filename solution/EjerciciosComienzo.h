@@ -14,7 +14,6 @@ using namespace std;
 */
 int suma(int a, int b);
 
-
 /*
  *	EJERCICIO OPCIONAL
 PRE: recibe tres numero enteros positivos. desde <= hasta
@@ -26,7 +25,6 @@ Entrada: (2, 0, 4)
 Salida: 0*2=0;1*2=2;2*2=4;3*2=6;4*2=8
 */
 void tablaDel(unsigned int tablaDel, unsigned int desde, unsigned int hasta);
-
 
 /*
  *	EJERCICIO OPCIONAL
@@ -92,7 +90,6 @@ Entrada: ([5,4,2], 3)
 Vector resultante: ([2,4,5])
 */
 void ordenarVecInt(int *vec, int largoVec);
-
 
 /*
  *	EJERCICIO OBLIGATORIO
@@ -203,11 +200,37 @@ Retorno: (["122","122","134","567"])
 */
 char **ordenarVecStrings(char **vecStr, int largoVecStr);
 
+/*
+PRE: Recibe un string y el largo del mismo string.
+POS: Retorna el mismo string en un nuevo espacio de memoria.
+	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
 
+Ejemplo 
+Entrada : "hola"
+Retorno : "hola" en nuevo espacio de memoria
+
+*/
 char* copiarStringCompleto(char* origen, int largoString);
-bool obtenerStringMayor(char* unChar, char* otroChar);
-char** copiaVectorCompleta(char** vector, int largoVector);
 
+/*
+PRE: Recibe dos strings.
+POS: Retorna cual de los dos strings esta antes alfabeticamente
+
+Ejemplo
+Entrada : "paso,pasa"
+Retorno : FALSE
+*/
+bool obtenerStringMayor(char* unChar, char* otroChar);
+
+/*
+PRE: Recibe un vector y un largo de vector.
+POS: Devuelve el mismo vector copiado en una memoria
+
+Ejemplo
+Entrada : ["paso,pasa,test"]
+Retorno : ["paso,pasa,test"] en nuevo espacio de memoria
+*/
+char** copiaVectorCompleta(char** vector, int largoVector);
 
 /*
  *	EJERCICIO OBLIGATORIO
@@ -246,6 +269,18 @@ Salida: FALSE
 */
 bool subconjuntoVector(int* v1, int* v2, int l1, int l2);
 
+/*
+ *	EJERCICIO OBLIGATORIO
+PRE: 1 vector, 1 elemento, el largo del vector.
+POS: Retorna si ese elemento se encuentra en el vector dado.
+
+Entrada: (5, 2, 2, 1), (1) 4
+Salida: TRUE
+
+Entrada: (1, 1, 1, 4, 2) (5) 5
+Salida: FALSE
+
+*/
 bool perteneceAVector(int* vector, int elemento, int largoVector);
 
 /*
@@ -273,6 +308,18 @@ Entrada: "::"
 Salida: NULL
 */
 char** splitStr(char* str, char separador, int &largoRet);
+
+/*
+PRE: Un string y un separador.
+POS: Devuelve cantidad de strings que hay sin contar el separador
+
+Entrada: " ", "@"
+Salida: 1
+
+Entrada: "A@B", "@"
+Salda: 2
+*/
+int obtenerLargoSplit(char* palabra, char separador);
 
 /*
  *	EJERCICIO OPCIONAL

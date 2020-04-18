@@ -295,72 +295,33 @@ Prueba Subconjunto Vector 9 -> OK
 PRUEBAS FUNCION PruebaSubconjuntoVector                            PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba split de strings 1 -> ERROR salida incorrecta
-	Parametros de entrada: String: Separador:@
-	Se esperaba: []
-	Se recibio:  []
+Prueba split de strings 1 -> OK
 ----------------------------------------------
-Prueba split de strings 2 -> ERROR salida incorrecta
-	Parametros de entrada: String:  Separador:@
-	Se esperaba: [' ']
-	Se recibio:  []
+Prueba split de strings 2 -> OK
 ----------------------------------------------
-Prueba split de strings 3 -> ERROR salida incorrecta
-	Parametros de entrada: String:@ Separador:@
-	Se esperaba: []
-	Se recibio:  []
+Prueba split de strings 3 -> OK
 ----------------------------------------------
-Prueba split de strings 4 -> ERROR salida incorrecta
-	Parametros de entrada: String:@@ @@ @@ @@ @@ Separador:@
-	Se esperaba: [' ', ' ', ' ', ' ']
-	Se recibio:  []
+Prueba split de strings 4 -> OK
 ----------------------------------------------
-Prueba split de strings 5 -> ERROR salida incorrecta
-	Parametros de entrada: String:A@B Separador:@
-	Se esperaba: ['A','B']
-	Se recibio:  []
+Prueba split de strings 5 -> OK
 ----------------------------------------------
-Prueba split de strings 6 -> ERROR salida incorrecta
-	Parametros de entrada: String:A@B@C Separador:@
-	Se esperaba: ['A','B', 'C']
-	Se recibio:  []
+Prueba split de strings 6 -> OK
 ----------------------------------------------
-Prueba split de strings 7 -> ERROR salida incorrecta
-	Parametros de entrada: String:A@ Separador:@
-	Se esperaba: ['A']
-	Se recibio:  []
+Prueba split de strings 7 -> OK
 ----------------------------------------------
-Prueba split de strings 8 -> ERROR salida incorrecta
-	Parametros de entrada: String:@B Separador:@
-	Se esperaba: ['B']
-	Se recibio:  []
+Prueba split de strings 8 -> OK
 ----------------------------------------------
-Prueba split de strings 9 -> ERROR salida incorrecta
-	Parametros de entrada: String:@@@ Separador:@
-	Se esperaba: []
-	Se recibio:  []
+Prueba split de strings 9 -> OK
 ----------------------------------------------
-Prueba split de strings 10 -> ERROR salida incorrecta
-	Parametros de entrada: String:@@@A Separador:@
-	Se esperaba: ['A']
-	Se recibio:  []
+Prueba split de strings 10 -> OK
 ----------------------------------------------
-Prueba split de strings 11 -> ERROR salida incorrecta
-	Parametros de entrada: String:A@@@B Separador:@
-	Se esperaba: ['A','B']
-	Se recibio:  []
+Prueba split de strings 11 -> OK
 ----------------------------------------------
-Prueba split de strings 12 -> ERROR salida incorrecta
-	Parametros de entrada: String:The-Lannisters-send-their-regards Separador:-
-	Se esperaba: ['The','Lannisters','send','their','regards']
-	Se recibio:  []
+Prueba split de strings 12 -> OK
 ----------------------------------------------
-Prueba split de strings 13 -> ERROR salida incorrecta
-	Parametros de entrada: String:Hola@Mundo Separador:-
-	Se esperaba: ['Hola@Mundo']
-	Se recibio:  []
+Prueba split de strings 13 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaSplitStr                                     HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaSplitStr                                     PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba ordenar vector de int Mergesort 1 -> OK
@@ -451,5 +412,5 @@ PRUEBAS FUNCION PruebaOrdenarVecIntMergeSort                       HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  8 INCORRECTAS:  6
+PRUEBAS FUNCIONES                              RESULTADO VARIOS => CORRECTAS:  9 INCORRECTAS:  5
 PRUEBAS FUNCIONES 
