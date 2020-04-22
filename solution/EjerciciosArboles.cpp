@@ -11,11 +11,13 @@ bool sonIguales(NodoAB* p, NodoAB* q) {
 	return false;
 }
 
+//Obligatorio -	TODO
 bool existeCaminoConSuma(NodoAB* raiz, int sum) {
 	// IMPLEMENTAR SOLUCION
 	return false;
 }
 
+//Obligatorio -	TODO
 bool esArbolBalanceado(NodoAB *raiz) {
 	// IMPLEMENTAR SOLUCION
 	return false;
@@ -31,6 +33,7 @@ int cantNodosEntreNiveles(NodoAB* a, int desde, int hasta) {
 	return 0;
 }
 
+//Obligatorio -	TODO
 NodoLista* camino(NodoAB *arbol, int x) {
 	// IMPLEMENTAR SOLUCION
 	return NULL;
@@ -41,6 +44,7 @@ NodoAB* invertirHastak(NodoAB* a, int k){
 	return NULL;
 }
 
+//Obligatorio -	TODO
 void borrarNodoRaiz(NodoAB * & A) {
 	// IMPLEMENTAR SOLUCION
 }
@@ -51,12 +55,14 @@ bool sumaABB(NodoAB* a, int n)
 	return false;
 }
 
+//Obligatorio -	TODO
 int sucesor(NodoAB* a, int n)
 {
 	// IMPLEMENTAR SOLUCION
 	return 0;
 }
 
+//Obligatorio -	TODO
 int nivelMasNodos(NodoAB* raiz, int nivelHasta) {
 	// IMPLEMENTAR SOLUCION
 	return 0;
@@ -72,22 +78,26 @@ int alturaAG(NodoAG* raiz)
 	return 0;
 }
 
+//Obligatorio -	TODO
 int sumaPorNiveles(NodoAG* raiz){
 	// IMPLEMENTAR SOLUCION
 	return 0;
 }
 
+//Obligatorio -	TODO
 bool esPrefijo(NodoAG *a, NodoLista *l)
 {
 	// IMPLEMENTAR SOLUCION
 	return false;
 }
 
+//Obligatorio -	TODO
 NodoLista* caminoAG(NodoAG *arbolGeneral, int dato) {
 	// IMPLEMENTAR SOLUCION
 	return NULL;
 }
 
+//Obligatorio -	TODO
 int nivelConMasNodosAG(NodoAG * arbolGeneral) {
 	// IMPLEMENTAR SOLUCION
 	return 0;
