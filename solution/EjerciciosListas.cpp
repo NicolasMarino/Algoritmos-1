@@ -2,8 +2,34 @@
 
 NodoLista* invertirParcial(NodoLista* l) 
 {
-	// IMPLEMENTAR SOLUCION
-	return NULL;
+	if (l != nullptr) {
+		NodoLista* nuevaListaParcial = nullptr;
+
+		while (l != nullptr) {
+			
+			if (l->sig == nullptr) return nuevaListaParcial;
+
+			NodoLista* nuevoNodo = new NodoLista(l->dato);
+
+			if (nuevaListaParcial == nullptr)
+			{
+				nuevoNodo->sig = nullptr;
+			}
+			else 
+			{
+				nuevoNodo->sig = nuevaListaParcial;
+			}
+
+			nuevaListaParcial = nuevoNodo;
+			l = l->sig;
+		}
+
+		return nuevaListaParcial;
+
+	}
+	else {
+		return nullptr;
+	}
 }
 
 //Obligatorio - TODO
