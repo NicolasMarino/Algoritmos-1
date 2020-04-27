@@ -108,134 +108,61 @@ void listaOrdenadaSelectionSort(NodoLista*& l)
 }
 
 //Obligatorio - TODO
-/*
- *	EJERCICIO OBLIGATORIO
-PRE: Recibe dos listas simplemente encadenadas, ambas ordenadas en orden creciente
-POS: Retorna una nueva lista con todos los elementos de l1 y l2,
-	 incluyendo repetidos, ordenados en orden creciente.
-	 La lista retornada no puede compartir memoria con las listas
-	 recibidas, y estas no pueden ser modificadas.
-	 La funcion no debe recorrer l1 o l2 mas de una vez,
-	 y la lista resultado no debera recorrerse
-	 El ejercicio se deberá resolver de forma iterativa.
 
-Ejemplo
-Entrada: (((1,3,5,7,9,9), (2,2,4,6,8))
-Salida: (1,2,2,3,4,5,6,7,8,9,9)
-*/
+void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista,NodoLista*& ultimo)
+{
+	NodoLista* aux = nullptr;
+	if (listaRetorno == nullptr) {
+		listaRetorno = new NodoLista();
+		listaRetorno->dato = lista->dato;
+		listaRetorno->sig = nullptr;
+		ultimo = listaRetorno;
+	}
+	else
+	{
+		aux = new NodoLista();
+		aux->dato = lista->dato;
+		aux->sig = nullptr;
+		ultimo->sig = aux;
+		ultimo = aux;
+	}
+	lista = lista->sig;
+}
+
+
 NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 {
 	if (l1 == nullptr && l2 == nullptr) return nullptr;
 	NodoLista* listaRetorno = nullptr;
 	NodoLista* ultimo = nullptr;
-	NodoLista* aux = nullptr ;
-	bool estaVacio = true;
 
 	while (l1 != nullptr && l2 != nullptr)
 	{
 		if (l1->dato <= l2->dato)
 		{
-			if (estaVacio) {
-				listaRetorno = new NodoLista();
-				listaRetorno->dato = l1->dato;
-				listaRetorno->sig = nullptr;
-				ultimo = listaRetorno;
-				estaVacio = false;
-			}
-			else
-			{
-				aux = new NodoLista();
-				aux->dato = l1->dato;
-				aux->sig = nullptr;
-				ultimo->sig = aux;
-				ultimo = aux;
-			}
-			l1 = l1->sig;
+			intercalarIterAux(listaRetorno, l1, ultimo);
 		}
 		else
 		{
-			if (estaVacio) {
-				listaRetorno = new NodoLista();
-				listaRetorno->dato = l2->dato;
-				listaRetorno->sig = nullptr;
-				ultimo = listaRetorno;
-				estaVacio = false;
-			}
-			else
-			{
-
-				aux = new NodoLista();
-				aux->dato = l2->dato;
-				aux->sig = nullptr;
-				ultimo->sig = aux;
-				ultimo = aux;
-			}
-
-			l2 = l2->sig;
+			intercalarIterAux(listaRetorno, l2, ultimo);
 		}
 	}
 
 	if (l1 == nullptr) 
 	{
-		if (listaRetorno != nullptr)
-		{
-			aux = new NodoLista();
-			aux->dato = l2->dato;
-			aux->sig = nullptr;
-			ultimo->sig = aux;
-			ultimo = aux;
-		}
-		else
-		{
-			listaRetorno = new NodoLista();
-			listaRetorno->dato = l2->dato;
-			listaRetorno->sig = nullptr;
-			ultimo = listaRetorno;
-		}
-			
-		l2 = l2->sig;
+		intercalarIterAux(listaRetorno, l2, ultimo);
 		while (l2 != nullptr)
 		{
-			if (listaRetorno != nullptr) {
-				aux = new NodoLista();
-				aux->dato = l2->dato;
-				aux->sig = nullptr;
-				ultimo->sig = aux;
-				ultimo = aux;
-			}
-			l2 = l2->sig;
+			intercalarIterAux(listaRetorno, l2, ultimo);
 		}
 
 		return listaRetorno;
 	}
 	if (l2 == nullptr) {
-		if (listaRetorno != nullptr) {
-			aux = new NodoLista();
-			aux->dato = l1->dato;
-			aux->sig = nullptr;
-			ultimo->sig = aux;
-			ultimo = aux;
-		}
-		else
-		{
-			listaRetorno = new NodoLista();
-			listaRetorno->dato = l1->dato;
-			listaRetorno->sig = nullptr;
-			ultimo = listaRetorno;
-		}
-		
-		l1 = l1->sig;
+		intercalarIterAux(listaRetorno, l1, ultimo);
 		while (l1 != nullptr)
 		{
-			if (listaRetorno != nullptr)
-			{
-				aux = new NodoLista();
-				aux->dato = l1->dato;
-				aux->sig = nullptr;
-				ultimo->sig = aux;
-				ultimo = aux;
-			}
-			l1 = l1->sig;
+			intercalarIterAux(listaRetorno, l1, ultimo);
 		}
 
 		return listaRetorno;
@@ -245,7 +172,7 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 //Obligatorio - TODO
 NodoLista* intercalarRec(NodoLista* l1, NodoLista* l2)
 {
-	// IMPLEMENTAR SOLUCION
+	//if (l1 == nullptr) return intercalarRec()
 	return NULL;
 }
 

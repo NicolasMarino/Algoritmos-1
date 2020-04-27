@@ -76,7 +76,7 @@ Entrada: (((1,3,5,7,9,9), (2,2,4,6,8))
 Salida: (1,2,2,3,4,5,6,7,8,9,9)
 */
 NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2);
-
+NodoLista* crearNodoLista(int dato, NodoLista* siguiente);
 /*
  *	EJERCICIO OBLIGATORIO
 PRE: Recibe dos listas simplemente encadenadas, ambas ordenadas en orden creciente
