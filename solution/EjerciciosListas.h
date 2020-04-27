@@ -49,6 +49,7 @@ Entrada: (6,1,1,9)
 Salida: (1,1,6,9)
 */
 NodoLista* listaOrdenadaInsertionSort(NodoLista* l);
+NodoLista* insertionSort(int dato, NodoLista* siguienteNodo);
 
 /*
  *	EJERCICIO OBLIGATORIO
