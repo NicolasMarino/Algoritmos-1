@@ -7,7 +7,7 @@ NodoLista* copiarLista(NodoLista* unaLista)
 	return crearNodoLista(unaLista->dato, copiarLista(unaLista->sig));
 }
 
-// DONE
+//Done
 NodoLista* invertirParcial(NodoLista* l)
 {
 	if (l != nullptr) {
@@ -56,7 +56,6 @@ void eliminarNesimoDesdeElFinal(NodoLista*& lista, int& n)
 	}
 }
 
-//NodoLista* nuevaLista = copiarLista(l);
 NodoLista* crearNodoLista(int dato, NodoLista* siguiente)
 {
 	NodoLista* nuevoNL = new NodoLista();
@@ -107,9 +106,8 @@ void listaOrdenadaSelectionSort(NodoLista*& l)
 	}
 }
 
-//Obligatorio - TODO
-
-void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista,NodoLista*& ultimo)
+//Obligatorio - DONE
+void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& ultimo)
 {
 	NodoLista* aux = nullptr;
 	if (listaRetorno == nullptr) {
@@ -129,7 +127,6 @@ void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista,NodoLista*& u
 	lista = lista->sig;
 }
 
-
 NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 {
 	if (l1 == nullptr && l2 == nullptr) return nullptr;
@@ -148,7 +145,7 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 		}
 	}
 
-	if (l1 == nullptr) 
+	if (l1 == nullptr)
 	{
 		intercalarIterAux(listaRetorno, l2, ultimo);
 		while (l2 != nullptr)
@@ -169,11 +166,28 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 	}
 }
 
-//Obligatorio - TODO
+//Obligatorio - DONE
 NodoLista* intercalarRec(NodoLista* l1, NodoLista* l2)
 {
-	//if (l1 == nullptr) return intercalarRec()
-	return NULL;
+	if (l1 == nullptr && l2 == nullptr) return nullptr;
+	NodoLista* aux = new NodoLista();
+	if (l1 != nullptr)
+	{
+		if (l2 == nullptr || l1->dato <= l2->dato)
+		{
+			aux->dato = l1->dato;
+			aux->sig = intercalarRec(l1->sig, l2);
+		}
+	}
+	if (l2 != nullptr)
+	{
+		if (l1 == nullptr || l1->dato >= l2->dato)
+		{
+			aux->dato = l2->dato;
+			aux->sig = intercalarRec(l1, l2->sig);
+		}
+	}
+	return aux;
 }
 
 NodoLista* insComFin(NodoLista* l, int x)
@@ -189,10 +203,33 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2)
 	return NULL;
 }
 
-//Obligatorio - TODO
+//Auxiliar
+void eliminarCabeza(NodoLista*& nodo) {
+	if (nodo != nullptr) {
+		NodoLista* aux = nodo;
+		nodo = nodo->sig;
+		delete aux;
+	}
+}
+
+//Obligatorio - DONE
 void eliminarDuplicadosListaOrdenadaDos(NodoLista*& l)
 {
-	// IMPLEMENTAR SOLUCION
+	if (l != nullptr) {
+		if (l->sig != nullptr) {
+			if (l->dato == l->sig->dato) {
+				int datoAux = l->dato;
+				while (l != nullptr && l->dato == datoAux)
+				{
+					eliminarCabeza(l);
+				}
+				eliminarDuplicadosListaOrdenadaDos(l);
+			}
+			else {
+				eliminarDuplicadosListaOrdenadaDos(l->sig);
+			}
+		}
+	}
 }
 
 bool palindromo(NodoLista* l)
