@@ -232,66 +232,33 @@ PRUEBAS FUNCION PruebaInsComFin                                    HAY PRUEBAS I
 ----------------------------------------------
 Prueba EXOR 1 -> OK
 ----------------------------------------------
-Prueba EXOR 2 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,3,4), (2,3,5,7)
-	Se esperaba: (1,4,5,7)
-	Se recibio:  ()
+Prueba EXOR 2 -> OK
 ----------------------------------------------
 Prueba EXOR 3 -> OK
 ----------------------------------------------
-Prueba EXOR 4 -> ERROR salida incorrecta
-	Parametros de entrada: (), (-1,0,1,5)
-	Se esperaba: (-1,0,1,5)
-	Se recibio:  ()
+Prueba EXOR 4 -> OK
 ----------------------------------------------
-Prueba EXOR 5 -> ERROR salida incorrecta
-	Parametros de entrada: (19,24,233,2344), (-1222,-129,-12,0,0,0,0,0,0,1,2,3,4,12)
-	Se esperaba: (-1222,-129,-12,0,1,2,3,4,12,19,24,233,2344)
-	Se recibio:  ()
+Prueba EXOR 5 -> OK
 ----------------------------------------------
-Prueba EXOR 6 -> ERROR salida incorrecta
-	Parametros de entrada: (-9,-5,-1), (1,6,8,9)
-	Se esperaba: (-9,-5,-1,1,6,8,9)
-	Se recibio:  ()
+Prueba EXOR 6 -> OK
 ----------------------------------------------
-Prueba EXOR 7 -> ERROR salida incorrecta
-	Parametros de entrada: (0,2,3), (0,1,2,5,7,9,11)
-	Se esperaba: (1,3,5,7,9,11)
-	Se recibio:  ()
+Prueba EXOR 7 -> OK
 ----------------------------------------------
-Prueba EXOR 8 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,2,2,3,4), (1,3,5,7)
-	Se esperaba: (2,4,5,7)
-	Se recibio:  ()
+Prueba EXOR 8 -> OK
 ----------------------------------------------
 Prueba EXOR 9 -> OK
 ----------------------------------------------
-Prueba EXOR 10 -> ERROR salida incorrecta
-	Parametros de entrada: (1,1,2,5), (2,3,3,5)
-	Se esperaba: (1,3)
-	Se recibio:  ()
+Prueba EXOR 10 -> OK
 ----------------------------------------------
-Prueba EXOR 11 -> ERROR salida incorrecta
-	Parametros de entrada: (-1,1,2,5,5), (2,3,3,5,5,5,7,7)
-	Se esperaba: (-1,1,3,7)
-	Se recibio:  ()
+Prueba EXOR 11 -> OK
 ----------------------------------------------
-Prueba EXOR 12 -> ERROR salida incorrecta
-	Parametros de entrada: (-1,1,2,5,5), (2,3,3,5,5,5)
-	Se esperaba: (-1,1,3)
-	Se recibio:  ()
+Prueba EXOR 12 -> OK
 ----------------------------------------------
-Prueba EXOR 13 -> ERROR salida incorrecta
-	Parametros de entrada: (-1,1,2,5,5), (2,3,3,5)
-	Se esperaba: (-1,1,3)
-	Se recibio:  ()
+Prueba EXOR 13 -> OK
 ----------------------------------------------
-Prueba EXOR 14 -> ERROR salida incorrecta
-	Parametros de entrada: (-1,1,2,5), (2,3,3,5,5,5)
-	Se esperaba: (-1,1,3)
-	Se recibio:  ()
+Prueba EXOR 14 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaEXOR                                         HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaEXOR                                         PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Eliminar Duplicados Lista Ordenados 2 1 -> OK
@@ -365,10 +332,7 @@ PRUEBAS FUNCION PruebaPalindromo                                   HAY PRUEBAS I
 ----------------------------------------------
 Prueba eliminar secuencia de listas 1 -> OK
 ----------------------------------------------
-Prueba eliminar secuencia de listas 2 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,3,4,5,6,7,8,9,0), (2,3,4)
-	Se esperaba: {1,5,6,7,8,9,0}
-	Se recibio:  {1,2,3,4,5,6,7,8,9,0}
+Prueba eliminar secuencia de listas 2 -> OK
 ----------------------------------------------
 Prueba eliminar secuencia de listas 3 -> OK
 ----------------------------------------------
@@ -376,29 +340,17 @@ Prueba eliminar secuencia de listas 4 -> OK
 ----------------------------------------------
 Prueba eliminar secuencia de listas 5 -> OK
 ----------------------------------------------
-Prueba eliminar secuencia de listas 6 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,3,4,5,6,7,8,9,0), (1,2)
-	Se esperaba: {3,4,5,6,7,8,9,0}
-	Se recibio:  {1,2,3,4,5,6,7,8,9,0}
+Prueba eliminar secuencia de listas 6 -> OK
 ----------------------------------------------
-Prueba eliminar secuencia de listas 7 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,3,4,5,6,7,8,9,0), (9,0)
-	Se esperaba: {1,2,3,4,5,6,7,8}
-	Se recibio:  {1,2,3,4,5,6,7,8,9,0}
+Prueba eliminar secuencia de listas 7 -> OK
 ----------------------------------------------
-Prueba eliminar secuencia de listas 8 -> ERROR salida incorrecta
-	Parametros de entrada: (1,2,1,2,4,5,6,7,8,9,0), (1,2)
-	Se esperaba: {1,2,4,5,6,7,8,9,0}
-	Se recibio:  {1,2,1,2,4,5,6,7,8,9,0}
+Prueba eliminar secuencia de listas 8 -> OK
 ----------------------------------------------
-Prueba eliminar secuencia de listas 9 -> ERROR salida incorrecta
-	Parametros de entrada: (4,2,1,2,5,6,4,2,2,1), (4,2,2)
-	Se esperaba: {4,2,1,2,5,6,1}
-	Se recibio:  {4,2,1,2,5,6,4,2,2,1}
+Prueba eliminar secuencia de listas 9 -> OK
 ----------------------------------------------
 Prueba eliminar secuencia de listas 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaEliminarSecuencia                            HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaEliminarSecuencia                            PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba mover nodo de listas 1 -> ERROR salida incorrecta
@@ -448,5 +400,5 @@ PRUEBAS FUNCION PruebaMoverNodo                                    HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                              RESULTADO LISTAS => CORRECTAS:  7 INCORRECTAS:  5
+PRUEBAS FUNCIONES                              RESULTADO LISTAS => CORRECTAS:  9 INCORRECTAS:  3
 PRUEBAS FUNCIONES 

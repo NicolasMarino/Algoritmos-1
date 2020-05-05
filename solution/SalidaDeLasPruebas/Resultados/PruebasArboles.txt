@@ -1,72 +1,36 @@
 ----------------------------------------------
-Prueba Altura de un arbol binario 1 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,5,2}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Altura de un arbol binario 1 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 2 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,#,2,#,5}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Altura de un arbol binario 2 -> OK
 ----------------------------------------------
 Prueba Altura de un arbol binario 3 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 4 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,2,3}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Altura de un arbol binario 4 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 5 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,3,#}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Altura de un arbol binario 5 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 6 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,#,#}
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Altura de un arbol binario 6 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 7 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,2,3,1,#,#,#,#,3,1,2,1,1,#,#,#,#,#,4,1,#,2,2}
-	Se esperaba: 9
-	Se recibio:  0
+Prueba Altura de un arbol binario 7 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 8 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
-	Se esperaba: 4
-	Se recibio:  0
+Prueba Altura de un arbol binario 8 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 9 -> ERROR salida incorrecta 
-	Parametros de entrada: {3,3,3,#,1,#,1,#,1,#,1,2,2,#,#,#,#,#,3,1,#,#,4}
-	Se esperaba: 8
-	Se recibio:  0
+Prueba Altura de un arbol binario 9 -> OK
 ----------------------------------------------
-Prueba Altura de un arbol binario 10 -> ERROR salida incorrecta 
-	Parametros de entrada: {1,3,#,1,#}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Altura de un arbol binario 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaAltura                                       HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaAltura                                       PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Son iguales 1 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,#,4,#,#,5}, {1,2,3,#,#,4,#,#,5}
-	Se esperaba: true
-	Se recibio:  false
+Prueba Son iguales 1 -> OK
 ----------------------------------------------
 Prueba Son iguales 2 -> OK
 ----------------------------------------------
-Prueba Son iguales 3 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3}, {1,2,3}
-	Se esperaba: true
-	Se recibio:  false
+Prueba Son iguales 3 -> OK
 ----------------------------------------------
 Prueba Son iguales 4 -> OK
 ----------------------------------------------
-Prueba Son iguales 5 -> ERROR salida incorrecta
-	Parametros de entrada: {}, {}
-	Se esperaba: true
-	Se recibio:  false
+Prueba Son iguales 5 -> OK
 ----------------------------------------------
 Prueba Son iguales 6 -> OK
 ----------------------------------------------
@@ -74,65 +38,38 @@ Prueba Son iguales 7 -> OK
 ----------------------------------------------
 Prueba Son iguales 8 -> OK
 ----------------------------------------------
-Prueba Son iguales 9 -> ERROR salida incorrecta
-	Parametros de entrada: {1,#,2,1,1,1,1}, {1,#,2,1,1,1,1}
-	Se esperaba: true
-	Se recibio:  false
+Prueba Son iguales 9 -> OK
 ----------------------------------------------
 Prueba Son iguales 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaSonIguales                                   HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaSonIguales                                   PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba existe camino con suma 1 -> ERROR salida incorrecta
-	Parametros de entrada: {}, 0
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 1 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 2 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3}, 4
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 2 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 3 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,#,4,#,#,5}, 3
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 3 -> OK
 ----------------------------------------------
 Prueba existe camino con suma 4 -> OK
 ----------------------------------------------
 Prueba existe camino con suma 5 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 6 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,#,4,#,#,5}, 13
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 6 -> OK
 ----------------------------------------------
 Prueba existe camino con suma 7 -> OK
 ----------------------------------------------
 Prueba existe camino con suma 8 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 9 -> ERROR salida incorrecta
-	Parametros de entrada: {1,1,#,5,7,1,5,6,2}, 11
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 9 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 10 -> ERROR salida incorrecta
-	Parametros de entrada: {1,1,#,5,7,1,5,6,2}, 12
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 10 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 11 -> ERROR salida incorrecta
-	Parametros de entrada: {-1,1,#,5,7,1,5,6,2}, 10
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 11 -> OK
 ----------------------------------------------
-Prueba existe camino con suma 12 -> ERROR salida incorrecta
-	Parametros de entrada: {-7,1,#,5,7,1,5,6,2}, 0
-	Se esperaba: true
-	Se recibio:  false
+Prueba existe camino con suma 12 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaExisteCaminoConSuma                          HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaExisteCaminoConSuma                          PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba es arbol balanceado 1 -> ERROR salida incorrecta
@@ -299,57 +236,27 @@ Prueba cantidad de nodos entre niveles 11 -> ERROR salida incorrecta
 PRUEBAS FUNCION PruebaCantNodosEntreNiveles                        HAY PRUEBAS INCORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba camino 1 -> ERROR salida incorrecta
-	Parametros de entrada: {8,3,10,1,5,9,13}, 9
-	Se esperaba: (8,10,9)
-	Se recibio:  ()
+Prueba camino 1 -> OK
 ----------------------------------------------
-Prueba camino 2 -> ERROR salida incorrecta
-	Parametros de entrada: {4}, 4
-	Se esperaba: (4)
-	Se recibio:  ()
+Prueba camino 2 -> OK
 ----------------------------------------------
-Prueba camino 3 -> ERROR salida incorrecta
-	Parametros de entrada: {1,#,2,#,3,#,4,#,5}, 1
-	Se esperaba: (1)
-	Se recibio:  ()
+Prueba camino 3 -> OK
 ----------------------------------------------
-Prueba camino 4 -> ERROR salida incorrecta
-	Parametros de entrada: {10,5,13,#,6,#,15,#,9,#,30,7,#}, 13
-	Se esperaba: (10,13)
-	Se recibio:  ()
+Prueba camino 4 -> OK
 ----------------------------------------------
-Prueba camino 5 -> ERROR salida incorrecta
-	Parametros de entrada: {-80,-130,-1,#,-90,-5,10}, -90
-	Se esperaba: (-80,-130,-90)
-	Se recibio:  ()
+Prueba camino 5 -> OK
 ----------------------------------------------
-Prueba camino 6 -> ERROR salida incorrecta
-	Parametros de entrada: {120,53,180,33,88,150,300,15,#,66,100,#,#,#,#,#,18,#,#,#,#,#,31}, 180
-	Se esperaba: (120, 180)
-	Se recibio:  ()
+Prueba camino 6 -> OK
 ----------------------------------------------
-Prueba camino 7 -> ERROR salida incorrecta
-	Parametros de entrada: {0,-5,8,-10,-4,5,1000000}, 0
-	Se esperaba: (0)
-	Se recibio:  ()
+Prueba camino 7 -> OK
 ----------------------------------------------
-Prueba camino 8 -> ERROR salida incorrecta
-	Parametros de entrada: {120,53,180,33,88,150,300,15,#,66,100,#,#,#,#,#,18,#,#,#,#,#,31}, 18
-	Se esperaba: (120, 53, 33, 15, 18)
-	Se recibio:  ()
+Prueba camino 8 -> OK
 ----------------------------------------------
-Prueba camino 9 -> ERROR salida incorrecta
-	Parametros de entrada: {10,5,13,#,6,#,15,#,9,#,30,7,#}, 7
-	Se esperaba: (10, 5, 6, 9, 7)
-	Se recibio:  ()
+Prueba camino 9 -> OK
 ----------------------------------------------
-Prueba camino 10 -> ERROR salida incorrecta
-	Parametros de entrada: {0,-5,8,-10,-4,5,1000000}, 5
-	Se esperaba: (0, 8, 5)
-	Se recibio:  ()
+Prueba camino 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaCamino                                       HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaCamino                                       PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba Invertir hasta k 1 -> OK
@@ -955,5 +862,5 @@ PRUEBAS FUNCION PruebaNivelConMasNodosAG                           HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS:  0 INCORRECTAS: 18
+PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS:  4 INCORRECTAS: 14
 PRUEBAS FUNCIONES 
