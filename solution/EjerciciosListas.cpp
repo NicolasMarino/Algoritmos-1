@@ -1,12 +1,5 @@
 #include "EjerciciosListas.h"
 
-//Auxiliar
-NodoLista* copiarLista(NodoLista* unaLista)
-{
-	if (unaLista == nullptr) return nullptr;
-	return crearNodoLista(unaLista->dato, copiarLista(unaLista->sig));
-}
-
 //Done
 NodoLista* invertirParcial(NodoLista* l)
 {
@@ -56,19 +49,14 @@ void eliminarNesimoDesdeElFinal(NodoLista*& lista, int& n)
 	}
 }
 
+
+//Auxiliar
 NodoLista* crearNodoLista(int dato, NodoLista* siguiente)
 {
 	NodoLista* nuevoNL = new NodoLista();
 	nuevoNL->dato = dato;
 	nuevoNL->sig = siguiente;
 	return nuevoNL;
-}
-
-//Oligatorio - DONE
-NodoLista* listaOrdenadaInsertionSort(NodoLista* l)
-{
-	if (l == nullptr) return nullptr;
-	return insertionSort(l->dato, listaOrdenadaInsertionSort(l->sig));
 }
 
 //Auxiliar
@@ -82,6 +70,13 @@ NodoLista* insertionSort(int dato, NodoLista* siguienteNodo)
 		siguienteNodo->sig = insertionSort(dato, siguienteNodo->sig);
 		return siguienteNodo;
 	}
+}
+
+//Oligatorio - DONE
+NodoLista* listaOrdenadaInsertionSort(NodoLista* l)
+{
+	if (l == nullptr) return nullptr;
+	return insertionSort(l->dato, listaOrdenadaInsertionSort(l->sig));
 }
 
 //Obligatorio - DONE
@@ -292,6 +287,7 @@ bool palindromo(NodoLista* l)
 	return false;
 }
 
+//Auxiliar
 bool secuenciaEmbebida(NodoLista* l, NodoLista* secuencia) {
 	if (l == nullptr && secuencia == nullptr) return true;
 	if (l == nullptr) return false;
@@ -302,6 +298,7 @@ bool secuenciaEmbebida(NodoLista* l, NodoLista* secuencia) {
 		else
 			return false;
 }
+
 //Obligatorio - DONE
 void eliminarSecuencia(NodoLista*& l, NodoLista* secuencia)
 {
