@@ -89,6 +89,52 @@ void ordenarVecInt(int *vec, int largoVec) {
 	}
 }
 
+
+
+/*
+PRE: Recibe un string palabra.
+POS: Retorna el largo de este string
+
+Ejemplo 1
+Entrada: "hola"
+Retorno: 4
+
+Ejemplo 2
+Entrada: "ha"
+Retorno: 2
+*/
+int largoPalabra(char* palabra)
+{
+	int largoP = 0;
+	for (int i = 0; palabra[i] != '\0'; i++)
+	{
+		largoP += 1;
+	}
+	return largoP;
+}
+
+
+/**
+PRE: Recibe un char unChar.
+POS: Retorna si este char es String o no.
+
+Ejemplo 1
+Entrada: "h"
+Retorno: true
+
+Ejemplo 2
+Entrada: "#"
+Retorno: false
+*/
+bool esString(char unChar)
+{
+	bool esString = false;
+	if (unChar >= 65 && unChar <= 122) {
+		esString = true;
+	}
+	return esString;
+}
+
 //Obligatorio - DONE
 char* invertirCase(char* palabra)
 {	
@@ -123,27 +169,6 @@ char* invertirCase(char* palabra)
 	return palabraAux;
 }
 
-//Auxiliar
-bool esString(char unChar)
-{
-	bool esString = false;
-	if (unChar >= 65 && unChar <= 122 ) {
-		esString = true;
-	}
-	return esString;
-}
-
-//Auxiliar
-int largoPalabra(char* palabra) 
-{
-	int largoP = 0;
-	for (int i = 0; palabra[i] != '\0'; i ++)
-	{
-		largoP += 1;
-	}
-	return largoP;
-}
-
 int islas(char** mapa, int col, int fil){
 	// IMPLEMENTAR SOLUCION
     return 0;
@@ -153,6 +178,73 @@ unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
 {
 	// IMPLEMENTAR SOLUCION
     return 0;
+}
+
+/*
+PRE: Recibe un string y el largo del mismo string.
+POS: Retorna el mismo string en un nuevo espacio de memoria.
+	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
+
+Ejemplo
+Entrada : "hola"
+Retorno : "hola" en nuevo espacio de memoria
+
+*/
+char* copiarStringCompleto(char* origen, int largoString)
+{
+	char* nuevoChar = new char[largoString];
+	for (int i = 0; origen[i] != '\0'; i++)
+	{
+		nuevoChar[i] = origen[i];
+	}
+	nuevoChar[largoString - 1] = '\0';
+
+	return nuevoChar;
+}
+
+/*
+PRE: Recibe un vector y un largo de vector.
+POS: Devuelve el mismo vector copiado en una memoria
+
+Ejemplo
+Entrada : ["paso,pasa,test"]
+Retorno : ["paso,pasa,test"] en nuevo espacio de memoria
+*/
+char** copiaVectorCompleta(char** vector, int largoVector)
+{
+	char** nuevoVector = new char* [largoVector];
+
+	for (int i = 0; i < largoVector; i++)
+	{
+		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]) + 1);
+	}
+
+	return nuevoVector;
+}
+
+/*
+PRE: Recibe dos strings.
+POS: Retorna cual de los dos strings esta antes alfabeticamente
+
+Ejemplo
+Entrada : "paso,pasa"
+Retorno : FALSE
+*/
+bool obtenerStringMayor(char* unChar, char* otroChar)
+{
+	int largoUnChar = largoPalabra(unChar);
+	int largoOtroChar = largoPalabra(otroChar);
+	int masLargo = (largoUnChar > largoOtroChar) ? masLargo = largoUnChar : masLargo = largoOtroChar;
+
+	bool esMasLargo = true;
+	for (int i = 0; i < masLargo; i++)
+	{
+		if (unChar[i] != otroChar[i])
+		{
+			return unChar[i] > otroChar[i];
+		}
+	}
+	return esMasLargo;
 }
 
 //Obligatorio -	DONE
@@ -183,50 +275,6 @@ char **ordenarVecStrings(char **vecStr, int largoVecStr)
 	}
 
     return nuevoVect;
-}
-
-//Auxiliar
-char** copiaVectorCompleta(char** vector, int largoVector)
-{
-	char** nuevoVector = new char*[largoVector];
-
-	for (int i = 0; i < largoVector; i++)
-	{
-		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]) + 1);
-	}
-
-	return nuevoVector;
-}
-
-//Auxiliar
-char* copiarStringCompleto(char* origen,int largoString)
-{
-	char* nuevoChar = new char[largoString];
-	for (int i = 0; origen[i] != '\0'; i++)
-	{
-		nuevoChar[i] = origen[i];
-	}
-	nuevoChar[largoString-1] = '\0';
-	
-	return nuevoChar;
-}
-
-//Auxiliar
-bool obtenerStringMayor(char* unChar, char* otroChar)
-{
-	int largoUnChar = largoPalabra(unChar);
-	int largoOtroChar = largoPalabra(otroChar);
-	int masLargo = (largoUnChar > largoOtroChar) ? masLargo = largoUnChar : masLargo = largoOtroChar;
-
-	bool esMasLargo = true;
-	for (int i = 0; i < masLargo; i++)
-	{
-		if (unChar[i] != otroChar[i]) 
-		{
-			return unChar[i] > otroChar[i];
-		}
-	}
-	return esMasLargo;
 }
 
 //Obligatorio - TODO
@@ -273,6 +321,38 @@ bool perteneceAVector(int* vector, int elemento, int largoVector)
 	return aux;
 }
 
+/*
+PRE: Un string y un separador.
+POS: Devuelve cantidad de strings que hay sin contar el separador
+
+Entrada: " ", "@"
+Salida: 1
+
+Entrada: "A@B", "@"
+Salda: 2
+*/
+int obtenerLargoSplit(char* palabra, char separador)
+{
+	bool auxSeparador = palabra[0] != separador;
+	int contador = 0;
+	for (int i = 0; palabra[i] != '\0'; i++)
+	{
+		if (palabra[i] == separador)
+		{
+			auxSeparador = true;
+		}
+		else
+		{
+			if (auxSeparador)
+			{
+				contador += 1;
+				auxSeparador = false;
+			}
+		}
+	}
+	return contador;
+}
+
 //Obligatorio - DONE
 char** splitStr(char* str, char separador, int& largoRet)
 {
@@ -298,28 +378,7 @@ char** splitStr(char* str, char separador, int& largoRet)
 	return splittedArray;
 }
 
-//Auxiliar
-int obtenerLargoSplit(char* palabra, char separador)
-{
-	bool auxSeparador = palabra[0] != separador;
-	int contador = 0;
-	for (int i = 0; palabra[i] != '\0'; i++)
-	{
-		if (palabra[i] == separador)
-		{
-			auxSeparador = true;
-		}
-		else
-		{
-			if (auxSeparador)
-			{
-				contador+=1;
-				auxSeparador = false;
-			}
-		}
-	}
-	return contador;
-}
+
 
 void ordenarVecIntMergeSort(int* vector, int largo) 
 {

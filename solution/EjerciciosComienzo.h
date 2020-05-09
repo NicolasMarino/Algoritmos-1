@@ -109,34 +109,6 @@ Retorno: "wRITE in c"
 */
 char* invertirCase(char* palabra);
 
-/**
-PRE: Recibe un char unChar.
-POS: Retorna si este char es String o no.
-
-Ejemplo 1
-Entrada: "h"
-Retorno: true
-
-Ejemplo 2
-Entrada: "#"
-Retorno: false
-*/
-bool esString(char unChar);
-
-/*
-PRE: Recibe un string palabra.
-POS: Retorna el largo de este string
-
-Ejemplo 1
-Entrada: "hola"
-Retorno: 4
-
-Ejemplo 2
-Entrada: "ha"
-Retorno: 2
-*/
-int largoPalabra(char* palabra);
-
 /*
  *	EJERCICIO OPCIONAL
 PRE:  recibe un mapa representado por una matriz, de dimensiones col x fil, en la cual 'A' representa un lugar donde hay agua, y 'T' donde hay tierra
@@ -199,38 +171,6 @@ Entrada: (["134","122","122","567"], 4)
 Retorno: (["122","122","134","567"])
 */
 char **ordenarVecStrings(char **vecStr, int largoVecStr);
-
-/*
-PRE: Recibe un string y el largo del mismo string.
-POS: Retorna el mismo string en un nuevo espacio de memoria.
-	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
-
-Ejemplo 
-Entrada : "hola"
-Retorno : "hola" en nuevo espacio de memoria
-
-*/
-char* copiarStringCompleto(char* origen, int largoString);
-
-/*
-PRE: Recibe dos strings.
-POS: Retorna cual de los dos strings esta antes alfabeticamente
-
-Ejemplo
-Entrada : "paso,pasa"
-Retorno : FALSE
-*/
-bool obtenerStringMayor(char* unChar, char* otroChar);
-
-/*
-PRE: Recibe un vector y un largo de vector.
-POS: Devuelve el mismo vector copiado en una memoria
-
-Ejemplo
-Entrada : ["paso,pasa,test"]
-Retorno : ["paso,pasa,test"] en nuevo espacio de memoria
-*/
-char** copiaVectorCompleta(char** vector, int largoVector);
 
 /*
  *	EJERCICIO OBLIGATORIO
@@ -308,18 +248,6 @@ Entrada: "::"
 Salida: NULL
 */
 char** splitStr(char* str, char separador, int &largoRet);
-
-/*
-PRE: Un string y un separador.
-POS: Devuelve cantidad de strings que hay sin contar el separador
-
-Entrada: " ", "@"
-Salida: 1
-
-Entrada: "A@B", "@"
-Salda: 2
-*/
-int obtenerLargoSplit(char* palabra, char separador);
 
 /*
  *	EJERCICIO OPCIONAL

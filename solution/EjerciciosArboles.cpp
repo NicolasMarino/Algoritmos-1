@@ -64,18 +64,36 @@ NodoAB* invertirHastak(NodoAB* a, int k){
 	return NULL;
 }
 
-//Obligatorio -	TODO
-NodoAB* obtenerMinimo(NodoAB* A) {
-	if (A->izq == nullptr) {
+
+NodoAB*& obtenerMayorIzq(NodoAB*& A) {
+	if (A->der == nullptr) {
 		return A;
 	}
 	else {
-		return obtenerMinimo(A->izq);
+		return obtenerMayorIzq(A->der);
 	}
 }
 
+void borrarHojaO1Hijo(NodoAB*& raiz, int dato) {
+	if (raiz->dato == dato)
+	{
+		NodoAB* borrar = raiz;
+		raiz = raiz->der == nullptr ? raiz->izq : nullptr;
+		delete borrar;
+	}
+	else {
+		if (dato < raiz->dato) {
+			borrarHojaO1Hijo(raiz->izq, dato);
+		}
+		else {
+			borrarHojaO1Hijo(raiz->der, dato);
+		}
+	}
+}
+
+//Obligatorio -	DONE
 void borrarNodoRaiz(NodoAB * & A) {
-	/*if (A->der == nullptr) {
+	if (A->der == nullptr) {
 		NodoAB* aux = A;
 		A = A->izq;
 		delete aux;
@@ -88,11 +106,10 @@ void borrarNodoRaiz(NodoAB * & A) {
 	}
 	else
 	{
-		NodoAB* aux = obtenerMinimo(A->der);
+		NodoAB*& aux = obtenerMayorIzq(A->izq);
 		A->dato = aux->dato;
 		borrarHojaO1Hijo(aux, aux->dato);
-
-	}*/
+	}
 }
 
 bool sumaABB(NodoAB* a, int n)
@@ -101,10 +118,13 @@ bool sumaABB(NodoAB* a, int n)
 	return false;
 }
 
+bool esMayor(int primero, int segundo) {
+	return primero > segundo;
+}
+
 //Obligatorio -	TODO
 int sucesor(NodoAB* a, int n)
 {
-	// IMPLEMENTAR SOLUCION
 	return 0;
 }
 

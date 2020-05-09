@@ -311,57 +311,27 @@ Prueba Invertir hasta k 11 -> ERROR salida incorrecta
 PRUEBAS FUNCION PruebaInvertirHastak                               HAY PRUEBAS INCORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba borrar nodo raiz 1 -> ERROR salida incorrecta
-	Parametros de entrada: {1}
-	Se esperaba: {}
-	Se recibio:  {1}
+Prueba borrar nodo raiz 1 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 2 -> ERROR salida incorrecta
-	Parametros de entrada: {1,#,2}
-	Se esperaba: {2}
-	Se recibio:  {1,#,2}
+Prueba borrar nodo raiz 2 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 3 -> ERROR salida incorrecta
-	Parametros de entrada: {3,2,6}
-	Se esperaba: {2,#,6}
-	Se recibio:  {3,2,6}
+Prueba borrar nodo raiz 3 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 4 -> ERROR salida incorrecta
-	Parametros de entrada: {8,3,10,1,5,9,13}
-	Se esperaba: {1,3,5,9,10,13}
-	Se recibio:  {8,3,10,1,5,9,13}
+Prueba borrar nodo raiz 4 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 5 -> ERROR salida incorrecta
-	Parametros de entrada: {5,3,7,2,4,6}
-	Se esperaba: {2,3,6,7,4}
-	Se recibio:  {5,3,7,2,4,6,#}
+Prueba borrar nodo raiz 5 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 6 -> ERROR salida incorrecta
-	Parametros de entrada: {5,3,6,1,4}
-	Se esperaba: {3,6,1,4}
-	Se recibio:  {5,3,6,1,4}
+Prueba borrar nodo raiz 6 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 7 -> ERROR salida incorrecta
-	Parametros de entrada: {1,#,2,#,3,#,4,#,5}
-	Se esperaba: {2,3,4,5}
-	Se recibio:  {1,#,2,#,3,#,4,#,5}
+Prueba borrar nodo raiz 7 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 8 -> ERROR salida incorrecta
-	Parametros de entrada: {10,5,13,#,6,#,15,#,9,#,30,7,#}
-	Se esperaba: {5,6,7,9,13,15,30}
-	Se recibio:  {10,5,13,#,6,#,15,#,9,#,30,7,#}
+Prueba borrar nodo raiz 8 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 9 -> ERROR salida incorrecta
-	Parametros de entrada: {0,-5,8,-10,-4,5,1000000}
-	Se esperaba: {-10,-5,-4,5,8,1000000}
-	Se recibio:  {0,-5,8,-10,-4,5,1000000}
+Prueba borrar nodo raiz 9 -> OK
 ----------------------------------------------
-Prueba borrar nodo raiz 10 -> ERROR salida incorrecta
-	Parametros de entrada: {120,53,180,33,88,130,300,15,#,66,100,#,#,#,#,#,18,#,#,#,#,#,31}
-	Se esperaba: {100,53,180,33,88,130,300,15,#,66,#,#,#,#,#,#,18,#,#,#,31}
-	Se recibio:  {120,53,180,33,88,130,300,15,#,66,100,#,#,#,#,#,18,#,#,#,#,#,31}
+Prueba borrar nodo raiz 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaBorrarNodoRaiz                               HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaBorrarNodoRaiz                               PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba suma equivalente a n en ABB 1 -> ERROR salida incorrecta
@@ -862,5 +832,5 @@ PRUEBAS FUNCION PruebaNivelConMasNodosAG                           HAY PRUEBAS I
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS:  4 INCORRECTAS: 14
+PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS:  5 INCORRECTAS: 13
 PRUEBAS FUNCIONES 
