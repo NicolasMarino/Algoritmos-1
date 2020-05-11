@@ -130,7 +130,6 @@ Lista resultado: (1,4)
 */
 void eliminarDuplicadosListaOrdenadaDos(NodoLista*& l); 
 
-
 /*
  *	EJERCICIO OPCIONAL
 PRE: Recibe una lista simplemente encadenada
@@ -142,7 +141,6 @@ Ejemplos:
 {1,2,3,4,5,4,3,2} -> false
 */
 bool palindromo(NodoLista* l);
-
 
 /*
  *	EJERCICIO OBLIGATORIO
@@ -164,7 +162,6 @@ Resultado: (1,2,3,4,5,6,7,8,9)
 
 */
 void eliminarSecuencia(NodoLista* &l, NodoLista* secuencia);
-
 
 /*
  *	EJERCICIO OPCIONAL
