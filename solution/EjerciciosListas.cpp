@@ -49,7 +49,6 @@ void eliminarNesimoDesdeElFinal(NodoLista*& lista, int& n)
 	}
 }
 
-
 //Auxiliar
 NodoLista* crearNodoLista(int dato, NodoLista* siguiente)
 {
@@ -104,7 +103,6 @@ void listaOrdenadaSelectionSort(NodoLista*& l)
 //Auxiliar
 void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& ultimo)
 {
-	NodoLista* aux = nullptr;
 	if (listaRetorno == nullptr) {
 		listaRetorno = new NodoLista();
 		listaRetorno->dato = lista->dato;
@@ -113,7 +111,7 @@ void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& 
 	}
 	else
 	{
-		aux = new NodoLista();
+		NodoLista* aux = new NodoLista();
 		aux->dato = lista->dato;
 		aux->sig = nullptr;
 		ultimo->sig = aux;

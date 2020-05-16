@@ -35,23 +35,6 @@ bool existeCaminoConSuma(NodoAB* raiz, int sum) {
 }
 
 //Obligatorio -	TODO
-/*
- *	EJERCICIO OBLIGATORIO
-PRE: Recibe un árbol binario
-POS: Retorna true si y solo si el arbol está balanceado.
-	 Un arbol está balanceado, si y solo si, para cualquier nodo, la diferencia de altura entre la rama
-	 izquierda y la derecha es a lo sumo 1.
-	 Notar que si el árbol es vacío entonces está balanceado.
-
-Ejemplo
-Entrada: {1,#,2,#,3}
-  1
-   \
-	2
-	 \
-	  3
-Salida: false
-*/
 bool esArbolBalanceado(NodoAB* raiz) {
 	if (raiz == nullptr) return true;
 	int cantidadIzq = altura(raiz->izq);
@@ -97,7 +80,6 @@ NodoLista* camino(NodoAB *arbol, int x) {
 	return listaRetorno;
 }
 
-//Auxiliar
 NodoAB* invertirHastak(NodoAB* a, int k){
 	// IMPLEMENTAR SOLUCION
 	return NULL;
@@ -112,7 +94,7 @@ NodoAB*& obtenerMayorIzq(NodoAB*& A) {
 		return obtenerMayorIzq(A->der);
 	}
 }
-
+//Auxiliar
 void borrarHojaO1Hijo(NodoAB*& raiz, int dato) {
 	if (raiz->dato == dato)
 	{
@@ -165,9 +147,7 @@ int sucesor(NodoAB* a, int n)
 
 //Obligatorio -	TODO
 int nivelMasNodos(NodoAB* raiz, int nivelHasta) {
-	/*if (raiz == nullptr) return 0;
-	return 1 +
-	return 0;*/
+	
 	return 0;
 }
 
@@ -185,7 +165,7 @@ void borrarPares(NodoAB* & a){
 	}
 }
 
-//Auxiliar
+//Opcional
 int alturaAG(NodoAG* raiz)
 {
 	if(raiz == nullptr )return 0;
@@ -241,28 +221,36 @@ NodoLista* caminoAG(NodoAG *arbolGeneral, int dato) {
 	}
 }
 
-//Obligatorio -	TODO
-/*
- *	EJERCICIO OBLIGATORIO
-PRE: Recibe un arbol general implementado como un arbol binario (primer hijo – siguiente hermano).
-POS: Retorna el nivel con mas nodos del AG. 
-	 En caso de haber mas de un nivel con 
-	 la misma cantidad de nodos retorna el 
-	 menor. La  raíz se encuentra en el nivel 1.
-	
-	 NOTA: Esta operación se puede realizar en O(n).
+//Auxiliar
+int obtenerNodosPorNivel(NodoAG* raiz, int nivel) {
+	if (raiz == nullptr) return 0;
+	if (nivel <= 1){
+		return 1 + obtenerNodosPorNivel(raiz->sh, nivel);
+	}
+	return obtenerNodosPorNivel(raiz->ph, nivel-1) + obtenerNodosPorNivel(raiz->sh, nivel);
+}
 
-		Ejemplo:    ENTRADA
-				ARBOL
-				  1					Nivel 1
-				  |
-				  2 -> 3			Nivel 2
-				  |    |
-				  4	   5			Nivel 3
-
-				SALIDA  Nivel 2;
-*/
+//Obligatorio -	DONE
 int nivelConMasNodosAG(NodoAG * arbolGeneral) {
-	// IMPLEMENTAR SOLUCION
-	return 0;
+	if (arbolGeneral == nullptr) return 0;
+	int alturaArbol = alturaAG(arbolGeneral);
+	int* arr = new int[alturaArbol+1];
+	int cantidadNodos;
+	for (int i = 1; i < alturaArbol+1; i++)
+	{
+		arr[i] = obtenerNodosPorNivel(arbolGeneral, i);
+	}
+	int max = arr[0];
+	for (int x = 1; x <= alturaArbol; x++)
+	{
+		if (arr[x] > max) {
+			max = arr[x];
+		}
+	}
+	for (int ia = 1; ia <= alturaArbol; ia++)
+	{
+		if (arr[ia] == max) {
+			return ia;
+		}
+	}
 }

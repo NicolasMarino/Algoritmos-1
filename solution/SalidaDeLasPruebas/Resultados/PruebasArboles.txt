@@ -589,10 +589,7 @@ Prueba Prefijo AG numero: 17 -> OK
 PRUEBAS FUNCION PruebaEsPrefijo                                    PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Camino AG 1 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,#,#}}, 1
-	Se esperaba: (1)
-	Se recibio:  ()
+Prueba Camino AG 1 -> OK
 ----------------------------------------------
 Prueba Camino AG 2 -> OK
 ----------------------------------------------
@@ -619,65 +616,32 @@ Prueba Camino AG 12 -> OK
 PRUEBAS FUNCION PruebaCaminoAG                                     PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba Nivel con mas Nodos 1 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,#,#}}
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Nivel con mas Nodos 1 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 2 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,#,3}}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Nivel con mas Nodos 2 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 3 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,4,#,#,3,5,#,#}}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Nivel con mas Nodos 3 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 4 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,3,#,4,#,5,#,6,#,#,#}}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Nivel con mas Nodos 4 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 5 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,4,#,#,3,5,#,#,6,#,7,8,#,9,#,10,#,11,#,#}}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Nivel con mas Nodos 5 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 6 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,3,#,4,5,#,#,#,6,#,7,8,#,9,#,#}}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Nivel con mas Nodos 6 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 7 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,3,#,4,5,#,#,#,6,#,7,8,#,9,#,#,10,#,11,#,#}}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Nivel con mas Nodos 7 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 8 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,3,#,4,#,5,#,6,#,#,7,#,9,#,10,#,#}}
-	Se esperaba: 2
-	Se recibio:  0
+Prueba Nivel con mas Nodos 8 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 9 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,3,#,4,#,5,#,6,#,#,7,8,#,9,#,10,#,#}}
-	Se esperaba: 3
-	Se recibio:  0
+Prueba Nivel con mas Nodos 9 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 10 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,4,#,#,3,5,11,#,12,#,13,#,14,#,15,#,#,#,6,#,7,8,#,9,#,#}}
-	Se esperaba: 4
-	Se recibio:  0
+Prueba Nivel con mas Nodos 10 -> OK
 ----------------------------------------------
-Prueba Nivel con mas Nodos 11 -> ERROR salida incorrecta 
-	Parametros de entrada: {{1,2,4,#,#,3,5,#,#,#,6,7,#,#,8,#,9,#,#}}
-	Se esperaba: 1
-	Se recibio:  0
+Prueba Nivel con mas Nodos 11 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaNivelConMasNodosAG                           HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaNivelConMasNodosAG                           PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 10 INCORRECTAS:  8
+PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 11 INCORRECTAS:  7
 PRUEBAS FUNCIONES 

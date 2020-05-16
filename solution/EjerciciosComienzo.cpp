@@ -139,7 +139,7 @@ bool esString(char unChar)
 char* invertirCase(char* palabra)
 {	
 	int largoPalabraInput = largoPalabra(palabra);
-	char* palabraAux = new char[largoPalabraInput];
+	char* palabraAux = new char[largoPalabraInput + 1];
 	
 	for (int i = 0; palabra[i] != '\0'; i++)
 	{
@@ -362,7 +362,7 @@ char** splitStr(char* str, char separador, int& largoRet)
 
 	char* nuevoString = copiarStringCompleto(str, largoPalabra(str)+1);
 
-	char** splittedArray = new char* [largoNuevoArray];
+	char** splittedArray = new char* [largoNuevoArray+1];
 
 	char* separa = new char{ separador };
 	char* pch = strtok(nuevoString, separa);
