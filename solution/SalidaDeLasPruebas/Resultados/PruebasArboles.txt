@@ -74,10 +74,7 @@ PRUEBAS FUNCION PruebaExisteCaminoConSuma                          PRUEBAS CORRE
 ----------------------------------------------
 Prueba es arbol balanceado 1 -> OK
 ----------------------------------------------
-Prueba es arbol balanceado 2 -> ERROR salida incorrecta
-	Parametros de entrada: {1,#,2,#,3}
-	Se esperaba: false
-	Se recibio:  true
+Prueba es arbol balanceado 2 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 3 -> OK
 ----------------------------------------------
@@ -89,10 +86,7 @@ Prueba es arbol balanceado 6 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 7 -> OK
 ----------------------------------------------
-Prueba es arbol balanceado 8 -> ERROR salida incorrecta
-	Parametros de entrada: {0,-3,1,5,#,#,9,#,#,#,1,#,0,#,1,4,#,#,5,#,#}
-	Se esperaba: false
-	Se recibio:  true
+Prueba es arbol balanceado 8 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 9 -> OK
 ----------------------------------------------
@@ -100,21 +94,15 @@ Prueba es arbol balanceado 10 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 11 -> OK
 ----------------------------------------------
-Prueba es arbol balanceado 12 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,#,#,5,6,#,#,7}
-	Se esperaba: false
-	Se recibio:  true
+Prueba es arbol balanceado 12 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 13 -> OK
 ----------------------------------------------
-Prueba es arbol balanceado 14 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,#,#,#,#,#,#,#,#,#,#,#,16,#,#,#,#,#,17}
-	Se esperaba: false
-	Se recibio:  true
+Prueba es arbol balanceado 14 -> OK
 ----------------------------------------------
 Prueba es arbol balanceado 15 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaEsArbolBalanceado                            HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaEsArbolBalanceado                            PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba en nivel 1 -> OK
@@ -435,52 +423,25 @@ PRUEBAS FUNCION PruebaSucesorABB                                   HAY PRUEBAS I
 ----------------------------------------------
 Prueba nivel con mas nodos 1 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 2 -> ERROR salida incorrecta
-	Parametros de entrada: {1}, 1
-	Se esperaba: 1
-	Se recibio:  0
+Prueba nivel con mas nodos 2 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 3 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,5,6,7}, 1
-	Se esperaba: 1
-	Se recibio:  0
+Prueba nivel con mas nodos 3 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 4 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,5,6,7}, 2
-	Se esperaba: 2
-	Se recibio:  0
+Prueba nivel con mas nodos 4 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 5 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,5,6,7}, 3
-	Se esperaba: 3
-	Se recibio:  0
+Prueba nivel con mas nodos 5 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 6 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,4,5,6,7}, 5
-	Se esperaba: 3
-	Se recibio:  0
+Prueba nivel con mas nodos 6 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 7 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,4,5,6,#,#,#,#,7,8,#,#,#,9}, 5
-	Se esperaba: 3
-	Se recibio:  0
+Prueba nivel con mas nodos 7 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 8 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,4,5,6,#,#,#,#,7,8,#,#,#,9}, 2
-	Se esperaba: 2
-	Se recibio:  0
+Prueba nivel con mas nodos 8 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 9 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,4,5,6,7,8,9,10,11,12,#,#,#,13}, 5
-	Se esperaba: 4
-	Se recibio:  0
+Prueba nivel con mas nodos 9 -> OK
 ----------------------------------------------
-Prueba nivel con mas nodos 10 -> ERROR salida incorrecta
-	Parametros de entrada: {1,2,3,#,4,5,6,7,8,9,10,11,12,#,#,#,13}, 3
-	Se esperaba: 3
-	Se recibio:  0
+Prueba nivel con mas nodos 10 -> OK
 ----------------------------------------------
-PRUEBAS FUNCION PruebaNivelMasNodos                                HAY PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PruebaNivelMasNodos                                PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba BorrarPares nro 1 -> OK
@@ -643,5 +604,5 @@ PRUEBAS FUNCION PruebaNivelConMasNodosAG                           PRUEBAS CORRE
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 11 INCORRECTAS:  7
+PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 13 INCORRECTAS:  5
 PRUEBAS FUNCIONES 

@@ -28,32 +28,18 @@ bool sonIguales(NodoAB* p, NodoAB* q) {
 bool existeCaminoConSuma(NodoAB* raiz, int sum) {
 	if (raiz == nullptr && sum == 0) return true;
 	if (raiz == nullptr && sum != 0) return false;
-	if (raiz->der == nullptr && raiz->izq == nullptr) return raiz->dato == sum;
 	if (raiz->der == nullptr) return existeCaminoConSuma(raiz->izq, sum - raiz->dato);
 	if (raiz->izq == nullptr) return existeCaminoConSuma(raiz->der, sum - raiz->dato);
+	if (raiz->der == nullptr && raiz->izq == nullptr) return raiz->dato == sum;
 	if (raiz->izq != nullptr && raiz->der != nullptr) return existeCaminoConSuma(raiz->der, sum - raiz->dato) || existeCaminoConSuma(raiz->izq, sum - raiz->dato);
 }
 
-//Obligatorio -	TODO
+//Obligatorio -	DONE
 bool esArbolBalanceado(NodoAB* raiz) {
 	if (raiz == nullptr) return true;
 	int cantidadIzq = altura(raiz->izq);
 	int cantidadDer = altura(raiz->der);
-	int diferenciaIzq = cantidadIzq - cantidadDer;
-	int diferenciaDer = cantidadDer - cantidadIzq;
-	return esArbolBalanceado(raiz->izq) && esArbolBalanceado(raiz->der);
-	if (diferenciaIzq == 0) {
-		return true;
-	}
-	else if (diferenciaIzq > 1 || diferenciaDer > 1)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
-	
+	return (cantidadIzq == cantidadDer || (cantidadIzq - 1) == cantidadDer || cantidadIzq == (cantidadDer - 1)) && esArbolBalanceado(raiz->izq) && esArbolBalanceado(raiz->der);
 }
 
 NodoLista* enNivel(NodoAB *a, int k) {
@@ -66,8 +52,8 @@ int cantNodosEntreNiveles(NodoAB* a, int desde, int hasta) {
 	return 0;
 }
 
-//Obligatorio -	Done
-NodoLista* camino(NodoAB *arbol, int x) {
+//Obligatorio -	DONE
+NodoLista* camino(NodoAB *arbol, int x) { //1,2,3 3
 	NodoLista* listaRetorno = new NodoLista();
 	listaRetorno->dato = arbol->dato;
 	listaRetorno->sig = nullptr;
@@ -94,6 +80,7 @@ NodoAB*& obtenerMayorIzq(NodoAB*& A) {
 		return obtenerMayorIzq(A->der);
 	}
 }
+
 //Auxiliar
 void borrarHojaO1Hijo(NodoAB*& raiz, int dato) {
 	if (raiz->dato == dato)
@@ -145,10 +132,48 @@ int sucesor(NodoAB* a, int n)
 	return 0;
 }
 
-//Obligatorio -	TODO
+//Auxiliar
+int obtenerNodosPorNivelArbolBinario(NodoAB* raiz, int nivel) {
+	if (raiz == nullptr) return 0;
+	if (nivel <= 1)
+		return 1;
+	return obtenerNodosPorNivelArbolBinario(raiz->izq, nivel - 1) + obtenerNodosPorNivelArbolBinario(raiz->der, nivel - 1);
+}
+
+//Auxiliar
+int obtenerMayorArray(int* unArray, int largoArray) {
+	int max = unArray[0];
+	for (int x = 1; x <= largoArray; x++)
+	{
+		if (unArray[x] >= max) {
+			max = unArray[x];
+		}
+	}
+	return max;
+}
+
+//Auxiliar
+int obtenerPrimeraOcurrenciaEnArray(int*& unArray, int largoArray, int dato) {
+	for (int ia = 1; ia <= largoArray; ia++)
+	{
+		if (unArray[ia] == dato) {
+			delete[] unArray;
+			return ia;
+		}
+	}
+}
+
+//Obligatorio -	DONE
 int nivelMasNodos(NodoAB* raiz, int nivelHasta) {
-	
-	return 0;
+	if (raiz == nullptr) return 0;
+	int* nodosPorNivel = new int[nivelHasta + 1]();
+	int alturaArbol = altura(raiz);
+	for (int i = 1; i < nivelHasta+1; i++)
+	{
+		nodosPorNivel[i] = obtenerNodosPorNivelArbolBinario(raiz, i);
+	}
+	int maximoArray = obtenerMayorArray(nodosPorNivel, nivelHasta + 1);
+	return obtenerPrimeraOcurrenciaEnArray(nodosPorNivel, nivelHasta+1, maximoArray);
 }
 
 //DONE
@@ -173,13 +198,19 @@ int alturaAG(NodoAG* raiz)
 }
 
 //Auxiliar
-int sumaPorNivelesAux(NodoAG* raiz, int nivel) {
-	return (raiz == nullptr) ? 0 : ((nivel % 2 == 0) ? + raiz->dato : -raiz->dato) + sumaPorNivelesAux(raiz->ph, nivel+1) + sumaPorNivelesAux(raiz->sh, nivel);
+int sumaNivelParMenosImpar(NodoAG* raiz, int nivel) {
+	if (raiz == nullptr) return 0;
+	if (nivel % 2 == 0) {
+		return + raiz->dato + sumaNivelParMenosImpar(raiz->ph, nivel + 1) + sumaNivelParMenosImpar(raiz->sh, nivel);
+	}
+	else {
+		return - raiz->dato + sumaNivelParMenosImpar(raiz->ph, nivel + 1) + sumaNivelParMenosImpar(raiz->sh, nivel);
+	}
 }
 
 //Obligatorio -	DONE
 int sumaPorNiveles(NodoAG* raiz){
-	return sumaPorNivelesAux(raiz, 1);
+	return sumaNivelParMenosImpar(raiz, 1);
 }
 
 //Obligatorio -	DONE
@@ -187,7 +218,6 @@ bool esPrefijo(NodoAG *a, NodoLista *l)
 {
 	if (l == nullptr) return true;
 	if (a == nullptr && l == nullptr) return true;
-	if (a == nullptr && l != nullptr) return false;
 	if (a != nullptr && l != nullptr) {
 		if (a->dato == l->dato) {
 			return esPrefijo(a->ph, l->sig);
@@ -222,35 +252,23 @@ NodoLista* caminoAG(NodoAG *arbolGeneral, int dato) {
 }
 
 //Auxiliar
-int obtenerNodosPorNivel(NodoAG* raiz, int nivel) {
+int obtenerNodosPorNivelAG(NodoAG* raiz, int nivel) {
 	if (raiz == nullptr) return 0;
 	if (nivel <= 1){
-		return 1 + obtenerNodosPorNivel(raiz->sh, nivel);
+		return 1 + obtenerNodosPorNivelAG(raiz->sh, nivel);
 	}
-	return obtenerNodosPorNivel(raiz->ph, nivel-1) + obtenerNodosPorNivel(raiz->sh, nivel);
+	return obtenerNodosPorNivelAG(raiz->ph, nivel-1) + obtenerNodosPorNivelAG(raiz->sh, nivel);
 }
 
 //Obligatorio -	DONE
 int nivelConMasNodosAG(NodoAG * arbolGeneral) {
 	if (arbolGeneral == nullptr) return 0;
 	int alturaArbol = alturaAG(arbolGeneral);
-	int* arr = new int[alturaArbol+1];
-	int cantidadNodos;
+	int* cantidadNodosEnNivel = new int[alturaArbol+1];
 	for (int i = 1; i < alturaArbol+1; i++)
 	{
-		arr[i] = obtenerNodosPorNivel(arbolGeneral, i);
+		cantidadNodosEnNivel[i] = obtenerNodosPorNivelAG(arbolGeneral, i);
 	}
-	int max = arr[0];
-	for (int x = 1; x <= alturaArbol; x++)
-	{
-		if (arr[x] > max) {
-			max = arr[x];
-		}
-	}
-	for (int ia = 1; ia <= alturaArbol; ia++)
-	{
-		if (arr[ia] == max) {
-			return ia;
-		}
-	}
+	int maximoArray = obtenerMayorArray(cantidadNodosEnNivel, alturaArbol);
+	return obtenerPrimeraOcurrenciaEnArray(cantidadNodosEnNivel, alturaArbol, maximoArray);
 }

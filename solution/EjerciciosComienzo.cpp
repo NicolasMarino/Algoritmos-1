@@ -58,19 +58,22 @@ int ocurrencias123Repetidos(int* vector, int largo) {
 //Obligatorio - DONE
 int maximoNumero(unsigned int n) {
 	
-	int maxNumber = INT_MIN;
+	int* numerosPorConsola = new int[n];
 	
+	for (int i = 0; i < n; i++) {
+		cin >> numerosPorConsola[i];
+	};
+	
+	int maximoNum = numerosPorConsola[0];
 	
 	for (int i = 0; i < n; i++)
 	{
-		int num;
-		cin >> num;
-		if (num > maxNumber) {
-			maxNumber = num;
+		if (numerosPorConsola[i] > maximoNum) {
+			maximoNum = numerosPorConsola[i];
 		}
 	};
 
-    return maxNumber;
+    return maximoNum;
 }
 
 //Obligatorio - DONE
@@ -88,8 +91,6 @@ void ordenarVecInt(int *vec, int largoVec) {
 		}
 	}
 }
-
-
 
 /*
 PRE: Recibe un string palabra.
@@ -110,9 +111,8 @@ int largoPalabra(char* palabra)
 	{
 		largoP += 1;
 	}
-	return largoP;
+	return largoP + 1;
 }
-
 
 /**
 PRE: Recibe un char unChar.
@@ -139,7 +139,7 @@ bool esString(char unChar)
 char* invertirCase(char* palabra)
 {	
 	int largoPalabraInput = largoPalabra(palabra);
-	char* palabraAux = new char[largoPalabraInput + 1];
+	char* palabraAux = new char[largoPalabraInput];
 	
 	for (int i = 0; palabra[i] != '\0'; i++)
 	{
@@ -165,7 +165,7 @@ char* invertirCase(char* palabra)
 		
 	}
 	
-	palabraAux[largoPalabraInput] = '\0';
+	palabraAux[largoPalabraInput - 1] = '\0';
 	return palabraAux;
 }
 
@@ -193,11 +193,10 @@ Retorno : "hola" en nuevo espacio de memoria
 char* copiarStringCompleto(char* origen, int largoString)
 {
 	char* nuevoChar = new char[largoString];
-	for (int i = 0; origen[i] != '\0'; i++)
+	for (int i = 0; i < largoString; i++)
 	{
 		nuevoChar[i] = origen[i];
 	}
-	nuevoChar[largoString - 1] = '\0';
 
 	return nuevoChar;
 }
@@ -216,7 +215,7 @@ char** copiaVectorCompleta(char** vector, int largoVector)
 
 	for (int i = 0; i < largoVector; i++)
 	{
-		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]) + 1);
+		nuevoVector[i] = copiarStringCompleto(vector[i], largoPalabra(vector[i]));
 	}
 
 	return nuevoVector;
@@ -253,7 +252,7 @@ char **ordenarVecStrings(char **vecStr, int largoVecStr)
 	char** nuevoVect = new char* [largoVecStr];
 	for (int i = 0; i < largoVecStr; i++)
 	{
-		nuevoVect[i] = copiarStringCompleto(vecStr[i], largoPalabra(vecStr[i]) + 1);
+		nuevoVect[i] = copiarStringCompleto(vecStr[i], largoPalabra(vecStr[i]));
 	}
 
 	for (int i = 0; i < largoVecStr; i++)
@@ -278,15 +277,74 @@ char **ordenarVecStrings(char **vecStr, int largoVecStr)
 }
 
 //Obligatorio - TODO
+/*
+ *	EJERCICIO OBLIGATORIO
+PRE: Recibe dos vectores ordenados ascendentemente v1 y v2 y sus respectios largos l1 y l2
+POS: Retorna un nuevo vector ordenado con los elementos de v1 y v2.
+	 Los vectores pueden contener elementos repetidos, y deberán aparecer todos ellos.
+	 El vector retornado no debe compartir memoria.
+	 Resolver en O(l1+l2)
+
+Ejemplo
+Entrada: (1,3,5,6), (2,3,4)
+Lista resultado: (1, 2,3,3,4,5,6)
+1,2,3) 1,2,3)
+1m2233
+*/
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
-	// IMPLEMENTAR SOLUCION
+	//int* nuevoVect = new int[l1 + l2 ];
+	//int ultimo = 0;
+	//for (int lg1 = 0, int ultimo = 0; lg1 < l1 && lg1 < l2 || ultimo < l1 && ultimo < l2; lg1++, ultimo++)
+	//{
+	//	if (v1[l1] == v2[l2]) {
+	//		/*
+	//		if (lg1 > lg2) {
+	//			nuevoVect[lg1] = v1[lg1];
+	//			nuevoVect[lg1 + 1] = v2[lg1];
+	//			lg1 = lg1 + 1;
+	//		}
+	//		else {
+	//			nuevoVect[lg1] = v1[lg1];
+	//			nuevoVect[lg1 + 1] = v2[lg1];
+	//			lg1 = lg1 + 1;
+	//		}
+	//		*/	
+	//	}
+	//	else if (v1[lg1] > v2[lg1])
+	//	{
+	//		nuevoVect[lg1] = v2[lg1];
+	//	}
+	//	else if (v1[lg1] < v2[lg1])
+	//	{
+	//		nuevoVect[lg1] = v2[lg1];
+	//	}
+	//}
+
+	//if (v1 == nullptr)
+	//{
+	//	/*intercalarIterAux(listaRetorno, l2, ultimo);
+	//	while (l2 != nullptr)
+	//	{
+	//		intercalarIterAux(listaRetorno, l2, ultimo);
+	//	}
+
+	//	return listaRetorno;*/
+	//}
+	//if (v2 == nullptr) {
+	//	/*intercalarIterAux(listaRetorno, l1, ultimo);
+	//	while (l1 != nullptr)
+	//	{
+	//		intercalarIterAux(listaRetorno, l1, ultimo);
+	//	}
+
+	//	return listaRetorno;*/
+	//}
 	return NULL;
 }
 
 //Obligatorio - DONE
 bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
-{
-	
+{	
 	bool esSubConjunto = true;
 	if (l1 != 0 && l2 != 0)
 	{
@@ -356,29 +414,26 @@ int obtenerLargoSplit(char* palabra, char separador)
 //Obligatorio - DONE
 char** splitStr(char* str, char separador, int& largoRet)
 {
-	int largoNuevoArray = obtenerLargoSplit(str, separador);
+	int largoNuevoArray  = obtenerLargoSplit(str, separador);
 	largoRet = largoNuevoArray;
+
 	if (largoNuevoArray == 0) return NULL;
 
-	char* nuevoString = copiarStringCompleto(str, largoPalabra(str)+1);
+	char* nuevoString = copiarStringCompleto(str, largoPalabra(str));
 
-	char** splittedArray = new char* [largoNuevoArray+1];
+	char** splittedArray = new char* [largoNuevoArray];
 
-	char* separa = new char{ separador };
-	char* pch = strtok(nuevoString, separa);
+	char* stringStokeadoSinMemoria = strtok(nuevoString, &separador);
 
-	int contadorAux2 = 0;
-	while (pch != NULL)
+	for (int i = 0; stringStokeadoSinMemoria != NULL ; i++)
 	{
-		splittedArray[contadorAux2] = pch;
-		pch = strtok(NULL, separa);
-		contadorAux2++;
+		splittedArray[i] = stringStokeadoSinMemoria;
+		stringStokeadoSinMemoria = strtok(NULL, &separador);
 	}
 
-	return splittedArray;
+	return splittedArray;	
+	//return NULL;
 }
-
-
 
 void ordenarVecIntMergeSort(int* vector, int largo) 
 {
