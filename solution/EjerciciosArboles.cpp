@@ -71,7 +71,10 @@ NodoAB* invertirHastak(NodoAB* a, int k){
 	return NULL;
 }
 
-//Auxiliar
+/*
+PRE: Recibe arbol binario
+POS : Devuelve el nodo que contiene el mayor dato de la izquierda.
+*/
 NodoAB*& obtenerMayorIzq(NodoAB*& A) {
 	if (A->der == nullptr) {
 		return A;
@@ -81,7 +84,10 @@ NodoAB*& obtenerMayorIzq(NodoAB*& A) {
 	}
 }
 
-//Auxiliar
+/*
+PRE: Recibe un arbol binario y un dato
+POS: Borra un nodo contemplando si es hoja o si tiene elementos a la derecha.
+*/
 void borrarHojaO1Hijo(NodoAB*& raiz, int dato) {
 	if (raiz->dato == dato)
 	{
@@ -126,13 +132,45 @@ bool sumaABB(NodoAB* a, int n)
 	return false;
 }
 
-//Obligatorio -	TODO
-int sucesor(NodoAB* a, int n)
-{
+int obtenerMinimo(int primerValor, int segundoValor) {
+	if (primerValor <= segundoValor)
+	{
+		return primerValor;
+	}
+	else {
+		return segundoValor;
+	}
+}
+
+int obtenerMinMasCercano(NodoAB* raiz, int dato) {
+	/*if (raiz == nullptr) return 0;
+	int diferencia = raiz->dato - dato;
+	
+	if (dato > raiz->dato) {
+		return obtenerMinimo(raiz->dato, obtenerMinMasCercano(raiz->der, dato));
+	}
+	else if (dato < raiz->dato)
+	{
+		return obtenerMinimo(raiz->dato, obtenerMinMasCercano(raiz->izq, dato));
+	}
+	else if (diferencia == 0) {
+		return obtenerMinimo(obtenerMinimo(raiz->dato, obtenerMinMasCercano(raiz->izq, dato)), obtenerMinimo(raiz->dato, obtenerMinMasCercano(raiz->der, dato)));
+	}*/
 	return 0;
 }
 
-//Auxiliar
+//Obligatorio -	TODO
+int sucesor(NodoAB* a, int n)
+{
+	//if (a == nullptr) return 0;
+	//int min = obtenerMinMasCercano(a, n);
+	return 0;
+}
+
+/*
+PRE: Recibe arbol biario y un nivel
+POS: Devuelve la cantidad de nodos en ese nivel.
+*/
 int obtenerNodosPorNivelArbolBinario(NodoAB* raiz, int nivel) {
 	if (raiz == nullptr) return 0;
 	if (nivel <= 1)
@@ -140,7 +178,10 @@ int obtenerNodosPorNivelArbolBinario(NodoAB* raiz, int nivel) {
 	return obtenerNodosPorNivelArbolBinario(raiz->izq, nivel - 1) + obtenerNodosPorNivelArbolBinario(raiz->der, nivel - 1);
 }
 
-//Auxiliar
+/*
+PRE: Recibe una array y un largo del array
+POS: Devuelve el mayor del array
+*/
 int obtenerMayorArray(int* unArray, int largoArray) {
 	int max = unArray[0];
 	for (int x = 1; x <= largoArray; x++)
@@ -152,7 +193,10 @@ int obtenerMayorArray(int* unArray, int largoArray) {
 	return max;
 }
 
-//Auxiliar
+/*
+PRE: Recibe un array un largoArray y un dato
+POS: Devuelve la primer ocurrencia de ese dato en el array.
+*/
 int obtenerPrimeraOcurrenciaEnArray(int*& unArray, int largoArray, int dato) {
 	for (int ia = 1; ia <= largoArray; ia++)
 	{
@@ -197,7 +241,11 @@ int alturaAG(NodoAG* raiz)
 	return obtenerMaximo(alturaAG(raiz->sh), 1 + alturaAG(raiz->ph));
 }
 
-//Auxiliar
+/*
+Se hace esta auxiliar para poder pasarle un entero e ir subiendo de niveles para saber si estamos en nivel par o impar.
+PRE: Recibe un arbol general y un entero nivel
+POS: Devuelve la suma de los datos de ndos par menos la de los impares
+*/
 int sumaNivelParMenosImpar(NodoAG* raiz, int nivel) {
 	if (raiz == nullptr) return 0;
 	if (nivel % 2 == 0) {
@@ -251,7 +299,10 @@ NodoLista* caminoAG(NodoAG *arbolGeneral, int dato) {
 	}
 }
 
-//Auxiliar
+/*
+PRE: Recibe arbol general y un nivel
+POS: Devuelve la cantidad de nodos en ese nivel.
+*/
 int obtenerNodosPorNivelAG(NodoAG* raiz, int nivel) {
 	if (raiz == nullptr) return 0;
 	if (nivel <= 1){

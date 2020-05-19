@@ -288,8 +288,6 @@ POS: Retorna un nuevo vector ordenado con los elementos de v1 y v2.
 Ejemplo
 Entrada: (1,3,5,6), (2,3,4)
 Lista resultado: (1, 2,3,3,4,5,6)
-1,2,3) 1,2,3)
-1m2233
 */
 int* intercalarVector(int* v1, int* v2, int l1, int l2){
 	//int* nuevoVect = new int[l1 + l2 ];
@@ -365,7 +363,10 @@ bool subconjuntoVector(int* v1, int* v2, int l1, int l2)
 	return esSubConjunto;
 }
 
-//Auxiliar
+/*
+PRE: Recibe un vector, un elemento y el largo del vector	
+POS: Devuelve si el elemento se encuentra en el vector.
+*/
 bool perteneceAVector(int* vector, int elemento, int largoVector) 
 {
 	bool aux = false;

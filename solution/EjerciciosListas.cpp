@@ -49,7 +49,10 @@ void eliminarNesimoDesdeElFinal(NodoLista*& lista, int& n)
 	}
 }
 
-//Auxiliar
+/*
+PRE: Recibe un dato y una lista.
+POS: Crea un nuevo nodo y lo agrega al inicio de la lista.
+*/
 NodoLista* crearNodoLista(int dato, NodoLista* siguiente)
 {
 	NodoLista* nuevoNL = new NodoLista();
@@ -58,12 +61,18 @@ NodoLista* crearNodoLista(int dato, NodoLista* siguiente)
 	return nuevoNL;
 }
 
-//Auxiliar
+/*
+PRE: Recibe un entero que es el dato y el siguiente nodo
+POS: Aplica el algoritmo de ordenación insertion sort.
+*/
 NodoLista* insertionSort(int dato, NodoLista* siguienteNodo)
 {
 	if (siguienteNodo == nullptr || dato <= siguienteNodo->dato)
 	{
-		return crearNodoLista(dato, siguienteNodo);
+		NodoLista * nuevoNL = new NodoLista();
+		nuevoNL->dato = dato;
+		nuevoNL->sig = siguienteNodo;
+		return nuevoNL;	
 	}
 	else {
 		siguienteNodo->sig = insertionSort(dato, siguienteNodo->sig);
@@ -100,7 +109,15 @@ void listaOrdenadaSelectionSort(NodoLista*& l)
 	}
 }
 
-//Auxiliar
+/*
+Con esta funcion
+PRE: Recibe una listaRetorno, una lista sobre la que vamos a iterar y una nodoLista que es el ultimo.
+POS: Sino existe la lista retorno le crea el nodo y ultimo lo iguala a esto, luego  si entra en otra iteracion
+	 crea un nodo lista, dice a ultimo que el siguiente es ese nodo lista e iguala ultimo a este.
+	 Con esto lo que logramos es insertar al final de la lista.
+	 Por ultimo mueve la lista a lista= lista->sig; debido a que ese nodo ya lo agregamos y queremos que 
+	 se evalue el siguiente elemento de la lista para conseguir hacer los intercalados.
+*/
 void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& ultimo)
 {
 	if (listaRetorno == nullptr) {
@@ -250,7 +267,10 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2)
 	return listaRetorno;
 }
 
-//Auxiliar
+/*
+PRE: Recibe una lista
+POS: Elimina el primer ndo de la lista y el siguiente elmento pasa a ser el primero.
+*/
 void eliminarCabeza(NodoLista*& nodo) {
 	if (nodo != nullptr) {
 		NodoLista* aux = nodo;
@@ -285,7 +305,11 @@ bool palindromo(NodoLista* l)
 	return false;
 }
 
-//Auxiliar
+/*
+PRE: Recibe dos listas (l y secuencia)
+POS: Devuelve si la secuencia se encuentra embebida en la lista. 
+	 Es decir si se encuentran todos los valores de la secuencia consecutivamente en la lista
+*/
 bool secuenciaEmbebida(NodoLista* l, NodoLista* secuencia) {
 	if (l == nullptr && secuencia == nullptr) return true;
 	if (l == nullptr) return false;
