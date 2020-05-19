@@ -444,7 +444,10 @@ Prueba nivel con mas nodos 10 -> OK
 PRUEBAS FUNCION PruebaNivelMasNodos                                PRUEBAS CORRECTAS
 ----------------------------------------------
 ----------------------------------------------
-Prueba BorrarPares nro 1 -> OK
+Prueba BorrarPares nro 1 -> ERROR salida incorrecta
+	Parametros de entrada: {5,3,7,2,4,6,8}
+	Se esperaba: {5,3,7}
+	Se recibio:  {5,3,7,2,4,6,8}
 ----------------------------------------------
 Prueba BorrarPares nro 2 -> OK
 ----------------------------------------------
@@ -452,19 +455,37 @@ Prueba BorrarPares nro 3 -> OK
 ----------------------------------------------
 Prueba BorrarPares nro 4 -> OK
 ----------------------------------------------
-Prueba BorrarPares nro 5 -> OK
+Prueba BorrarPares nro 5 -> ERROR salida incorrecta
+	Parametros de entrada: {4,2,6}
+	Se esperaba: {}
+	Se recibio:  {4,2,6}
 ----------------------------------------------
-Prueba BorrarPares nro 6 -> OK
+Prueba BorrarPares nro 6 -> ERROR salida incorrecta
+	Parametros de entrada: {4}
+	Se esperaba: {}
+	Se recibio:  {4}
 ----------------------------------------------
-Prueba BorrarPares nro 7 -> OK
+Prueba BorrarPares nro 7 -> ERROR salida incorrecta
+	Parametros de entrada: {3,2,9}
+	Se esperaba: {3,#,9}
+	Se recibio:  {3,2,9}
 ----------------------------------------------
-Prueba BorrarPares nro 8 -> OK
+Prueba BorrarPares nro 8 -> ERROR salida incorrecta
+	Parametros de entrada: {7,5,8,4,6}
+	Se esperaba: {5,#,7}
+	Se recibio:  {7,5,8,4,6}
 ----------------------------------------------
-Prueba BorrarPares nro 9 -> OK
+Prueba BorrarPares nro 9 -> ERROR salida incorrecta
+	Parametros de entrada: {8,6,10,#,#,9}
+	Se esperaba: {9}
+	Se recibio:  {8,6,10,#,#,9,#}
 ----------------------------------------------
-Prueba BorrarPares nro 10 -> OK
+Prueba BorrarPares nro 10 -> ERROR salida incorrecta
+	Parametros de entrada: {17,10,20,6,14,18,22,4,8,12,16}
+	Se esperaba: {17}
+	Se recibio:  {17,10,20,6,14,18,22,4,8,12,16}
 ----------------------------------------------
-PRUEBAS FUNCION PruebaBorrarPares                                  PRUEBAS CORRECTAS
+PRUEBAS FUNCION PruebaBorrarPares                                  HAY PRUEBAS INCORRECTAS
 ----------------------------------------------
 ----------------------------------------------
 Prueba AlturaAG Nro 1 -> OK
@@ -604,5 +625,5 @@ PRUEBAS FUNCION PruebaNivelConMasNodosAG                           PRUEBAS CORRE
 ----------------------------------------------
 ----------------------------------------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 13 INCORRECTAS:  5
+PRUEBAS FUNCIONES                             RESULTADO ARBOLES => CORRECTAS: 12 INCORRECTAS:  6
 PRUEBAS FUNCIONES 

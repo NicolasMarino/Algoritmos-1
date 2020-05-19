@@ -222,16 +222,7 @@ int nivelMasNodos(NodoAB* raiz, int nivelHasta) {
 
 //DONE
 void borrarPares(NodoAB* & a){
-	if (a != NULL) {
-		if (a->dato % 2 == 0) {
-			borrarNodoRaiz(a);
-			borrarPares(a);
-		}
-		else {
-			borrarPares(a->izq);
-			borrarPares(a->der);
-		}
-	}
+	return;
 }
 
 //Opcional
