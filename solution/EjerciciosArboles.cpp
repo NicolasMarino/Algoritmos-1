@@ -220,7 +220,6 @@ int nivelMasNodos(NodoAB* raiz, int nivelHasta) {
 	return obtenerPrimeraOcurrenciaEnArray(nodosPorNivel, nivelHasta+1, maximoArray);
 }
 
-//DONE
 void borrarPares(NodoAB* & a){
 	return;
 }
