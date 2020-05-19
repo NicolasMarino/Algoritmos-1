@@ -118,7 +118,7 @@ POS: Sino existe la lista retorno le crea el nodo y ultimo lo iguala a esto, lue
 	 Por ultimo mueve la lista a lista= lista->sig; debido a que ese nodo ya lo agregamos y queremos que 
 	 se evalue el siguiente elemento de la lista para conseguir hacer los intercalados.
 */
-void intercalarIterAux(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& ultimo)
+void insertarYQuedarmeUltimoNodo(NodoLista*& listaRetorno, NodoLista*& lista, NodoLista*& ultimo)
 {
 	if (listaRetorno == nullptr) {
 		listaRetorno = new NodoLista();
@@ -148,29 +148,29 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 	{
 		if (l1->dato <= l2->dato)
 		{
-			intercalarIterAux(listaRetorno, l1, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
 		}
 		else
 		{
-			intercalarIterAux(listaRetorno, l2, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
 		}
 	}
 
 	if (l1 == nullptr)
 	{
-		intercalarIterAux(listaRetorno, l2, ultimo);
+		insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
 		while (l2 != nullptr)
 		{
-			intercalarIterAux(listaRetorno, l2, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
 		}
 
 		return listaRetorno;
 	}
 	if (l2 == nullptr) {
-		intercalarIterAux(listaRetorno, l1, ultimo);
+		insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
 		while (l1 != nullptr)
 		{
-			intercalarIterAux(listaRetorno, l1, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
 		}
 
 		return listaRetorno;
@@ -230,10 +230,10 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2)
 			l2 = l2->sig;
 		}
 		else if (l1->dato < l2->dato) {
-			intercalarIterAux(listaRetorno, l1, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
 		}
 		else if (l1->dato > l2->dato) {
-			intercalarIterAux(listaRetorno, l2, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
 		}
 
 	}
@@ -247,7 +247,7 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2)
 			{
 				l1 = l1->sig;
 			}
-			intercalarIterAux(listaRetorno, l1, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
 		}
 	}
 
@@ -260,7 +260,7 @@ NodoLista* exor(NodoLista* l1, NodoLista* l2)
 			{
 				l2 = l2->sig;
 			}
-			intercalarIterAux(listaRetorno, l2, ultimo);
+			insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
 		}
 	}
 
