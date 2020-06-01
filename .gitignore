@@ -53,3 +53,6 @@ dkms.conf
 
 solution/Debug
 solution/.vs
+
+solution-2/Debug
+solution-2/.vs

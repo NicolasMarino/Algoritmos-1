@@ -136,7 +136,22 @@ void insertarYQuedarmeUltimoNodo(NodoLista*& listaRetorno, NodoLista*& lista, No
 	}
 	lista = lista->sig;
 }
+void insertarFinal(NodoLista*& listaRetorno, NodoLista*& ultimo, int dato)
+{
+	NodoLista* unNodo = new NodoLista();
+	unNodo->dato = dato;
+	unNodo->sig = nullptr;
+	
 
+	if (listaRetorno == nullptr) {
+		listaRetorno = unNodo;
+	}
+	else {
+		ultimo->sig = unNodo;
+		ultimo = unNodo;
+	}
+
+}
 //Obligatorio - DONE
 NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 {
@@ -156,25 +171,17 @@ NodoLista* intercalarIter(NodoLista* l1, NodoLista* l2)
 		}
 	}
 
-	if (l1 == nullptr)
+	while (l2 != nullptr)
 	{
 		insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
-		while (l2 != nullptr)
-		{
-			insertarYQuedarmeUltimoNodo(listaRetorno, l2, ultimo);
-		}
-
-		return listaRetorno;
 	}
-	if (l2 == nullptr) {
+
+	while (l1 != nullptr)
+	{
 		insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
-		while (l1 != nullptr)
-		{
-			insertarYQuedarmeUltimoNodo(listaRetorno, l1, ultimo);
-		}
-
-		return listaRetorno;
 	}
+
+	return listaRetorno;
 }
 
 //Obligatorio - DONE

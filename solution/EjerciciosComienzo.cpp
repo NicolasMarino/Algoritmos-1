@@ -180,7 +180,7 @@ unsigned int ocurrenciasSubstring(char **vecStr, int largoVecStr, char *substr)
     return 0;
 }
 
-/*
+	/*
 PRE: Recibe un string y el largo del mismo string.
 POS: Retorna el mismo string en un nuevo espacio de memoria.
 	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
