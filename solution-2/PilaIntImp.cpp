@@ -2,47 +2,37 @@
 
 #ifdef PILA_INT_IMP
 
-struct _nodoPilaInt {
-	int dato;
-	_nodoPilaInt* sig;
+struct _cabezalPilaInt {
+	// NO IMPLEMENTADO
 };
 
-struct _cabezalPilaInt {
-	_nodoPilaInt* tope;
-	unsigned int cantidad;
-};
 
 PilaInt crearPilaInt(){
-	PilaInt retorno = new _cabezalPilaInt();
-	retorno->cantidad = 0;
-	retorno->tope = nullptr;
-	return retorno;
+	// NO IMPLEMENTADO
+	return NULL;
 }
 
 void push(PilaInt& p, int e) {
-	_nodoPilaInt* nuevoNodo = new _nodoPilaInt();
-	nuevoNodo->dato = e;
-	nuevoNodo->sig = p->tope;
-	p->tope = nuevoNodo;
-	p->cantidad++;
+	// NO IMPLEMENTADO
 }
 
 int top(PilaInt p) {
-	return p->tope->dato;
+	// NO IMPLEMENTADO
+	return 0;
 }
 
 void pop(PilaInt& p) {
-	_nodoPilaInt* borrar = p->tope;
-	p->tope = p->tope->sig;
-	delete borrar;
+	// NO IMPLEMENTADO
 }
 
 unsigned int cantidadElementos(PilaInt p) {
-	return p->cantidad;
+	// NO IMPLEMENTADO
+	return 0;
 }
 
 bool esVacia(PilaInt p) {
-	return p->tope == nullptr;
+	// NO IMPLEMENTADO
+	return true;
 }
 
 PilaInt clon(PilaInt p) {

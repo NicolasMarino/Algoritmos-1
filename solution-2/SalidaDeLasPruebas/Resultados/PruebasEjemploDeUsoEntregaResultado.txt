@@ -1,0 +1,1304 @@
+********* INICIO PRUEBAS Enlistar*******
+-----------------------------------
+Prueba 0: Prueba de pasar ABB a ListaOrd 1
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Llamada: Enlistar({2,1,5})
+ 2: 1 2 5
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Llamada: Enlistar({2,1,5})
+ 2! NULL
+ 3: 
+-----------------------------------
+Prueba 1: Prueba de pasar ABB a ListaOrd 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Llamada: Enlistar({1,#,2,#,5})
+ 2: 1 2 5
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Llamada: Enlistar({1,#,2,#,5})
+ 2! NULL
+ 3: 
+-----------------------------------
+Prueba 2: Prueba de pasar ABB a ListaOrd 3
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+ 1: Llamada: Enlistar({1,#,2,#,15,10,20,8,#,16,30,7,9,#,18})
+ 2: 1 2 7 8 9 10 15 16 18 20 30
+ 3: 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+ 1: Llamada: Enlistar({1,#,2,#,15,10,20,8,#,16,30,7,9,#,18})
+ 2! NULL
+ 3: 
+********* FIN PRUEBAS Enlistar*******
+
+PRUEBAS FUNCION PRUEBAS Enlistar                                   HAY 3 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS UnionListaOrd*******
+-----------------------------------
+Prueba 3: Prueba union de dos listas ordenadas 1
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: UnionListaOrd((1,3,5,7,9), (2,4,6,8))
+2 : 1 2 3 4 5 6 7 8 9
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: UnionListaOrd((1,3,5,7,9), (2,4,6,8))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 4: Prueba union de dos listas ordenadas 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: UnionListaOrd((100,200,300,400), (100,200,300,400))
+2 : 100 100 200 200 300 300 400 400
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: UnionListaOrd((100,200,300,400), (100,200,300,400))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 5: Prueba union de dos listas ordenadas 3
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: UnionListaOrd((), (-1,0,1,5))
+2 : -1 0 1 5
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: UnionListaOrd((), (-1,0,1,5))
+2 ! NULL
+3 : 
+********* FIN PRUEBAS UnionListaOrd*******
+
+PRUEBAS FUNCION PRUEBAS UnionListaOrd                              HAY 3 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS EstaContenida*******
+-----------------------------------
+Prueba 6: Prueba de pila contenida 1 -> OK
+-----------------------------------
+Prueba 7: Prueba de pila contenida 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
+2 : Esta contenida
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
+2 ! No esta contenida
+3 : 
+-----------------------------------
+Prueba 8: Prueba de pila contenida 3 -> OK
+-----------------------------------
+Prueba 9: Prueba de pila contenida 4
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
+2 : Esta contenida
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
+2 ! No esta contenida
+3 : 
+********* FIN PRUEBAS EstaContenida*******
+
+PRUEBAS FUNCION PRUEBAS EstaContenida                              HAY 2 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS ObtenerRepetidos*******
+-----------------------------------
+Prueba 10: Prueba ObtenerRepetidos 1
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 1, 2))
+2 : 1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 1, 2))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 11: Prueba ObtenerRepetidos 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos(())
+2 : 
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos(())
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 12: Prueba ObtenerRepetidos 3
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 2, 3, 2, 1))
+2 : 1 2
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 2, 3, 2, 1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 13: Prueba ObtenerRepetidos 4
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((10, 4, 6, 1, 1, 10, 5, 8))
+2 : 1 10
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((10, 4, 6, 1, 1, 10, 5, 8))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 14: Prueba ObtenerRepetidos 5
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((4))
+2 : 
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((4))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 15: Prueba ObtenerRepetidos 6
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+2 : 
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 16: Prueba ObtenerRepetidos 7
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 1, 1, 1, 1, 1))
+2 : 1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 1, 1, 1, 1, 1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 17: Prueba ObtenerRepetidos 8
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 10, 100, 1000))
+2 : 
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 10, 100, 1000))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 18: Prueba ObtenerRepetidos 9
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((4, 6, 4, 6, 4, 6, 4, 6))
+2 : 4 6
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((4, 6, 4, 6, 4, 6, 4, 6))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 19: Prueba ObtenerRepetidos 10
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((1, 2, 1, 4, 2, 1, 4, 2, 7))
+2 : 1 2 4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((1, 2, 1, 4, 2, 1, 4, 2, 7))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 20: Prueba ObtenerRepetidos 11
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((6, 6))
+2 : 6
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((6, 6))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 21: Prueba ObtenerRepetidos 12
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
+2 : 6 7
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
+2 ! NULL
+3 : 
+********* FIN PRUEBAS ObtenerRepetidos*******
+
+PRUEBAS FUNCION PRUEBAS ObtenerRepetidos                           HAY 12 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS Xor de multisets*******
+-----------------------------------
+Prueba 22: Prueba Xor de multisets 1
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((), ())
+2 : ()
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((), ())
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 23: Prueba Xor de multisets 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,2,3), (3,2,1))
+2 : ()
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,2,3), (3,2,1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 24: Prueba Xor de multisets 3
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,2,3), ())
+2 : (1,2,3)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,2,3), ())
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 25: Prueba Xor de multisets 4
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((), (3,2,1))
+2 : (1,2,3)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((), (3,2,1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 26: Prueba Xor de multisets 5
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,3,4,7), (8,1,2,3))
+2 : (2,4,7,8)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,3,4,7), (8,1,2,3))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 27: Prueba Xor de multisets 6
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,1,2), (1,2))
+2 : (1)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,1,2), (1,2))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 28: Prueba Xor de multisets 7
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,1,2,3,3,3), (1,3))
+2 : (1,2,3,3)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,1,2,3,3,3), (1,3))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 29: Prueba Xor de multisets 8
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,1,1), ())
+2 : (1,1,1)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,1,1), ())
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 30: Prueba Xor de multisets 9
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,1,1), (5))
+2 : (1,1,1,5)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,1,1), (5))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 31: Prueba Xor de multisets 10
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: Xor((1,1,1,0), (1,1,1))
+2 : (0)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: Xor((1,1,1,0), (1,1,1))
+2 ! NULL
+3 : 
+********* FIN PRUEBAS Xor de multisets*******
+
+PRUEBAS FUNCION PRUEBAS Xor de multisets                           HAY 10 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS pruebaMenorPrioridad*******
+-----------------------------------
+Prueba 32: Prueba pruebaMenorPrioridad 1
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad(())
+2 : 
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad(())
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 33: Prueba pruebaMenorPrioridad 2
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((4:1,2:3,3:2,1:4))
+2 : 4:1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((4:1,2:3,3:2,1:4))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 34: Prueba pruebaMenorPrioridad 3
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((5:5,9:6,2:2,-3:3,5:8,7:2,9:4,-2:-4,1:2,-1:-1))
+2 : -2:-4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((5:5,9:6,2:2,-3:3,5:8,7:2,9:4,-2:-4,1:2,-1:-1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 35: Prueba pruebaMenorPrioridad 4
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((6:-1,30:0,4:7,-10:-1,9:9))
+2 : 6:-1 -10:-1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((6:-1,30:0,4:7,-10:-1,9:9))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 36: Prueba pruebaMenorPrioridad 5
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((15:5,-4:4,3:4,-3:3,-2:2,12:2,5:2,7:1,6:2,9:4,-3:3,-5:5,1:1))
+2 : 7:1 1:1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((15:5,-4:4,3:4,-3:3,-2:2,12:2,5:2,7:1,6:2,9:4,-3:3,-5:5,1:1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 37: Prueba pruebaMenorPrioridad 6
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((2:4,2:4,4:4,4:4))
+2 : 2:4 2:4 4:4 4:4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((2:4,2:4,4:4,4:4))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 38: Prueba pruebaMenorPrioridad 7
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((2:4,1:4,7:5,6:4,8:4))
+2 : 2:4 1:4 6:4 8:4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((2:4,1:4,7:5,6:4,8:4))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 39: Prueba pruebaMenorPrioridad 8
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((9:-1,8:-2,7:-3,5:-4,3:-5,2:-6,5:-7,4:-8,1:-9,3:-10))
+2 : 3:-10
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((9:-1,8:-2,7:-3,5:-4,3:-5,2:-6,5:-7,4:-8,1:-9,3:-10))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 40: Prueba pruebaMenorPrioridad 9
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((1:-1))
+2 : 1:-1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((1:-1))
+2 ! NULL
+3 : 
+-----------------------------------
+Prueba 41: Prueba pruebaMenorPrioridad 10
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Llamada: MenorPrioridad((1:1,2:-1,3:-2,4:1,5:-1,6:-2,7:-2,8:-1,9:1))
+2 : 3:-2 6:-2 7:-2
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Llamada: MenorPrioridad((1:1,2:-1,3:-2,4:1,5:-1,6:-2,7:-2,8:-1,9:1))
+2 ! NULL
+3 : 
+********* FIN PRUEBAS pruebaMenorPrioridad*******
+
+PRUEBAS FUNCION PRUEBAS pruebaMenorPrioridad                       HAY 10 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS ListaOrdInt*******
+-----------------------------------
+Prueba 42: Imprimo largo luego de agregar 7 elementos -> OK
+-----------------------------------
+Prueba 43: Imprimo el primer elemento de la lista y el utlimo -> OK
+-----------------------------------
+Prueba 44: Imprimo largo luego de borrar el minimo -> OK
+-----------------------------------
+Prueba 45: Imprimo largo luego de borrar el maximo -> OK
+-----------------------------------
+Prueba 46: Imprimo largo luego de borrar un elemento que no existe -> OK
+-----------------------------------
+Prueba 47: Imprimo largo luego de borrar un elemento que existe -> OK
+-----------------------------------
+Prueba 48: Imprimo la lista no es vacia -> OK
+-----------------------------------
+Prueba 49: Imprimo la lista no contiene el elemento 32 -> OK
+-----------------------------------
+Prueba 50: Imprimo la lista si contiene el elemento 7 -> OK
+-----------------------------------
+Prueba 51: Clono e imprimo -> OK
+-----------------------------------
+Prueba 52: Verifico que se modifique el clon y no el original -> OK
+-----------------------------------
+Prueba 53: Imprimo luego de borrar elementos -> OK
+-----------------------------------
+Prueba 54: Borro algunos elementos y vacio la lista -> OK
+-----------------------------------
+Prueba 55: Imprimo largo luego de borrar el minimo en la lista vacia -> OK
+-----------------------------------
+Prueba 56: Imprimo largo luego de borrar el maximo en la lista vacia -> OK
+-----------------------------------
+Prueba 57: Imprimo la lista vacia no contiene el elemento 7 -> OK
+-----------------------------------
+Prueba 58: Libero memoria -> OK
+********* FIN PRUEBAS ListaOrdInt*******
+
+PRUEBAS FUNCION PRUEBAS ListaOrdInt                                PRUEBAS CORRECTAS
+
+********* INICIO PRUEBAS ListaPosInt*******
+-----------------------------------
+Prueba 59: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de lista Pos: 7
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de lista Pos: 0
+2 : 
+-----------------------------------
+Prueba 60: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : 5,7,-1,-2,5,4,15
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! 
+-----------------------------------
+Prueba 61: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 : Cantidad de elementos de la cola luego de vaciar clon: 7
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 62: Borro algunos elementos y vacio la lista
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de lista Pos luego de borrar 4 elementos: 3
+2 : Largo de lista Pos luego de vaciarla: 0
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de lista Pos luego de borrar 4 elementos: 0
+2 : Largo de lista Pos luego de vaciarla: 0
+3 : 
+-----------------------------------
+Prueba 63: Libero memoria -> OK
+********* FIN PRUEBAS ListaPosInt*******
+
+PRUEBAS FUNCION PRUEBAS ListaPosInt                                HAY 4 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS PilaInt*******
+-----------------------------------
+Prueba 64: Imprimo la cantidad de elementos al crear la pila y valido que sea vacia -> OK
+-----------------------------------
+Prueba 65: Imprimo el tope de la pila con 1 elemento para validar el caso base de push
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : tope de la pila cuando agrego el primer elemento: 4
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! tope de la pila cuando agrego el primer elemento: 0
+2 : 
+-----------------------------------
+Prueba 66: Imprimo si esta vacia o llena antes y despues de agregar, verificando que push funcione
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Esta vacia: 0
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Esta vacia: 1
+2 : 
+-----------------------------------
+Prueba 67: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de pila: 5
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de pila: 0
+2 : 
+-----------------------------------
+Prueba 68: Imprimo el primer elemento antes y despues del pop, verificando que disminuya la cantidad de elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : el primer elemento antes del pop es: -1
+2 : el primer elemento luego del pop es: 3
+3 : la cantidad de elementos luego del pop es: 4
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! el primer elemento antes del pop es: 0
+2 ! el primer elemento luego del pop es: 0
+3 ! la cantidad de elementos luego del pop es: 0
+4 : 
+-----------------------------------
+Prueba 69: Clono e imprimo los elementos de la pila clonando y poppeando
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : elementos de la pila: 
+2 : 3,2,5,4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : elementos de la pila: 
+2 ! 
+-----------------------------------
+Prueba 70: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de clon luego de vaciarlo: 0
+2 : Largo de la pila original luego de vaciar clon: 4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de clon luego de vaciarlo: 0
+2 ! Largo de la pila original luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 71: Verifico que pushear y poppear elementos no altere la estructura de la pila
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : El tope de la pila clon luego de agregar 3 elementos es: -16
+2 : El tope de la pila clon luego de poppear 2 elementos es: 38
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! El tope de la pila clon luego de agregar 3 elementos es: 0
+2 ! El tope de la pila clon luego de poppear 2 elementos es: 0
+3 : 
+-----------------------------------
+Prueba 72: Verifico que funcione el caso base de pop dejando la pila vacia -> OK
+-----------------------------------
+Prueba 73: Verifico que destruir el clon no altere la pila original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : cantidad de elementos de la pila original luego de destruir clon: 4tope de la pila original luego de destruir clon3
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! cantidad de elementos de la pila original luego de destruir clon: 0tope de la pila original luego de destruir clon0
+-----------------------------------
+Prueba 74: Verifico que el clon copie todos los elementos de la pila
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : elementos de la pila: 
+2 : 3,2,5,4
+3 : elementos del clon de la pila: 
+4 : 3,2,5,4
+5 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : elementos de la pila: 
+2 ! elementos del clon de la pila: 
+3 ! 
+-----------------------------------
+Prueba 75: Libero memoria -> OK
+********* FIN PRUEBAS PilaInt*******
+
+PRUEBAS FUNCION PRUEBAS PilaInt                                    HAY 9 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS ColaInt*******
+-----------------------------------
+Prueba 76: Imprimo la cantidad de elementos al crear la cola y valido que sea vacia -> OK
+-----------------------------------
+Prueba 77: Imprimo el principio de la cola con 1 elemento para validar el caso base de encolar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Principio de la cola cuando agrego el primer elemento: 4
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Principio de la cola cuando agrego el primer elemento: 0
+2 : 
+-----------------------------------
+Prueba 78: Imprimo si esta vacia o llena antes y despues de agregar, verificando que encolar funcione
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Esta vacia: 0
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Esta vacia: 1
+2 : 
+-----------------------------------
+Prueba 79: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de cola: 5
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de cola: 0
+2 : 
+-----------------------------------
+Prueba 80: Imprimo el primer elemento antes y despues de desencolar, verificando que disminuya la cantidad de elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : el primer elemento antes de desencolar es: 4
+2 : el primer elemento luego de desencolar es: 5
+3 : la cantidad de elementos luego de desencolar es: 4
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! el primer elemento antes de desencolar es: 0
+2 ! el primer elemento luego de desencolar es: 0
+3 ! la cantidad de elementos luego de desencolar es: 0
+4 : 
+-----------------------------------
+Prueba 81: Clono e imprimo los elementos de la cola clonando y desencolando
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : elementos de la cola: 
+2 : 5,2,3,-1
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : elementos de la cola: 
+2 ! 
+-----------------------------------
+Prueba 82: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de clon luego de vaciarlo: 0
+2 : Largo de la cola original luego de vaciar clon: 4
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de clon luego de vaciarlo: 0
+2 ! Largo de la cola original luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 83: Verifico que encolar y desencolar elementos no altere la estructura de la cola
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : El principio de la cola clon luego de agregar 3 elementos es: 38
+2 : El principio de la cola clon luego de desencolar 2 elementos es: -16
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! El principio de la cola clon luego de agregar 3 elementos es: 0
+2 ! El principio de la cola clon luego de desencolar 2 elementos es: 0
+3 : 
+-----------------------------------
+Prueba 84: Verifico que funcione el caso base de desencolar dejando la cola vacia -> OK
+-----------------------------------
+Prueba 85: Verifico que destruir el clon no altere la cola original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : cantidad de elementos de la cola original luego de destruir clon: 4principio de la cola original luego de destruir clon5
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! cantidad de elementos de la cola original luego de destruir clon: 0principio de la cola original luego de destruir clon0
+-----------------------------------
+Prueba 86: Verifico que el clon copie todos los elementos de la cola
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : elementos de la cola: 
+2 : 5,2,3,-1
+3 : elementos del clon de la cola: 
+4 : 5,2,3,-1
+5 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : elementos de la cola: 
+2 ! elementos del clon de la cola: 
+3 ! 
+-----------------------------------
+Prueba 87: Libero memoria -> OK
+********* FIN PRUEBAS ColaInt*******
+
+PRUEBAS FUNCION PRUEBAS ColaInt                                    HAY 9 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS Diccionario*******
+-----------------------------------
+Prueba 88: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de diccionario: 6
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de diccionario: 0
+2 : 
+-----------------------------------
+Prueba 89: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Clon de diccionario: (-5,-1,4,5,7,15)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Clon de diccionario: ()
+2 : 
+-----------------------------------
+Prueba 90: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de clon luego de vaciarlo: 0
+2 : Largo de diccionario luego de vaciar clon: 6
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de clon luego de vaciarlo: 0
+2 ! Largo de diccionario luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 91: Borro algunos elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de diccionario luego de borrar 3 elementos: 3
+2 : Diccionario luego de borrar 3 elementos: (-1,4,7)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de diccionario luego de borrar 3 elementos: 0
+2 ! Diccionario luego de borrar 3 elementos: ()
+3 : 
+-----------------------------------
+Prueba 92: Libero memoria -> OK
+********* FIN PRUEBAS Diccionario*******
+
+PRUEBAS FUNCION PRUEBAS Diccionario                                HAY 4 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS TablaIntString*******
+-----------------------------------
+Prueba 93: Imprimio largo luego de agregar 5 elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de la tabla: 5
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de la tabla: 0
+2 : 
+-----------------------------------
+Prueba 94: Imprimio largo del clon luego de clonar la tabla
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo del clon: 5
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo del clon: 0
+2 : 
+-----------------------------------
+Prueba 95: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Elementos del dominio del Clon de la tabla: (1,2,3,4,5)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Elementos del dominio del Clon de la tabla: ()
+2 : 
+-----------------------------------
+Prueba 96: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de clon luego de vaciarlo: 0
+2 : Largo de Tabla luego de vaciar clon: 5
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de clon luego de vaciarlo: 0
+2 ! Largo de Tabla luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 97: Verifico que se agregue los elementos a la tabla
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de la tabla luego de agregar dos elemento :7
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de la tabla luego de agregar dos elemento :0
+2 : 
+-----------------------------------
+Prueba 98: Verifico que el elemento 7 esta definido
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : El 7  si  esta definido en la tabla
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! El 7  no  esta definido en la tabla
+2 : 
+-----------------------------------
+Prueba 99: Verifico que el elemento 7 tenga datos asociados
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : El elemento  de dominio 7 le corresponde : char
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! El elemento  de dominio 7 le corresponde : 
+2 : 
+-----------------------------------
+Prueba 100: Verifico que el elemento 7 no esta definido -> OK
+-----------------------------------
+Prueba 101: Verifico que la tabla me devuelva un dominio cualquiera
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Consigo un dominio cualquiera de la tabla : 1
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Consigo un dominio cualquiera de la tabla : 0
+2 : 
+-----------------------------------
+Prueba 102: Verifico que la tabla no sea vacia
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : La tabla  no  es vacia
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! La tabla  si  es vacia
+2 : 
+-----------------------------------
+Prueba 103: Libero memoria -> OK
+********* FIN PRUEBAS TablaIntString*******
+
+PRUEBAS FUNCION PRUEBAS TablaIntString                             HAY 9 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS MultisetInt*******
+-----------------------------------
+Prueba 104: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de lista Pos: 8
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo de lista Pos: 0
+2 : 
+-----------------------------------
+Prueba 105: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Clon de multiset: (-2,-1,4,5,5,7,7,15)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Clon de multiset: ()
+2 : 
+-----------------------------------
+Prueba 106: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de clon luego de vaciarlo: 0
+2 : Largo de Set luego de vaciar clon: 8
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de clon luego de vaciarlo: 0
+2 ! Largo de Set luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 107: Hago union e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Union de multiset: (-2,-1,1,2,2,2,4,4,5,5,7,7,13,15)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Union de multiset: ()
+2 : 
+-----------------------------------
+Prueba 108: Verifico que se modifique la union y no los originales
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de la union luego de vaciarlo: 0
+2 : Largo de Multiset1 luego de vaciar la union: 8
+3 : Largo de Multiset2 luego de vaciar la union: 11
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de la union luego de vaciarlo: 0
+2 ! Largo de Multiset1 luego de vaciar la union: 0
+3 ! Largo de Multiset2 luego de vaciar la union: 0
+4 : 
+-----------------------------------
+Prueba 109: Hago interseccion e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Interseccion de multiset: (4,5,5,7,15)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Interseccion de multiset: ()
+2 : 
+-----------------------------------
+Prueba 110: Verifico que se modifique la interseccion y no los originales
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de la interseccion luego de vaciarlo: 0
+2 : Largo de Multiset1 luego de vaciar la interseccion: 8
+3 : Largo de Multiset2 luego de vaciar la interseccion: 11
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de la interseccion luego de vaciarlo: 0
+2 ! Largo de Multiset1 luego de vaciar la interseccion: 0
+3 ! Largo de Multiset2 luego de vaciar la interseccion: 0
+4 : 
+-----------------------------------
+Prueba 111: Hago diferencia e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Diferencia de multiset: (-2,-1,7)
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Diferencia de multiset: ()
+2 : 
+-----------------------------------
+Prueba 112: Verifico que se modifique la diferencia y no los originales
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo de la diferencia luego de vaciarlo: 0
+2 : Largo de Multiset1 luego de vaciar la diferencia: 8
+3 : Largo de Multiset2 luego de vaciar la diferencia: 11
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Largo de la diferencia luego de vaciarlo: 0
+2 ! Largo de Multiset1 luego de vaciar la diferencia: 0
+3 ! Largo de Multiset2 luego de vaciar la diferencia: 0
+4 : 
+-----------------------------------
+Prueba 113: Verifico si pertenecen algunos elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Pertenece elemento: 1
+2 : Pertenece elemento luego de borrarlo: 0
+3 : Pertenece otro elemento: 0
+4 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Pertenece elemento: 0
+2 : Pertenece elemento luego de borrarlo: 0
+3 : Pertenece otro elemento: 0
+4 : 
+-----------------------------------
+Prueba 114: Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Subconjunto: 0
+2 : Subconjunto luego de borrar elementos: 0
+3 : Subconjunto luego de borrar mas elementos: 1
+4 : Es vacio: 1
+5 : Cantidad elementos de vacio: 0
+6 : Subconjunto vacio: 1
+7 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Subconjunto: 0
+2 : Subconjunto luego de borrar elementos: 0
+3 ! Subconjunto luego de borrar mas elementos: 0
+4 : Es vacio: 1
+5 : Cantidad elementos de vacio: 0
+6 ! Subconjunto vacio: 0
+7 : 
+-----------------------------------
+Prueba 115: Borro algunos elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Largo del multiset luego de borrar otro elemento: 5
+2 : Multiset luego de haber borrado 2 elementos: (-2,4,5,7,7)
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Largo del multiset luego de borrar otro elemento: 0
+2 ! Multiset luego de haber borrado 2 elementos: ()
+3 : 
+-----------------------------------
+Prueba 116: Libero memoria -> OK
+********* FIN PRUEBAS MultisetInt*******
+
+PRUEBAS FUNCION PRUEBAS MultisetInt                                HAY 12 PRUEBAS INCORRECTAS
+
+********* INICIO PRUEBAS ColaPrioridadInt*******
+-----------------------------------
+Prueba 117: Imprimo largo luego de agregar
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Cantidad de elementos de la cola: 10
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Cantidad de elementos de la cola: 0
+2 : 
+-----------------------------------
+Prueba 118: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Clon de elementos colaPrioridadInt: 9:9,8:8,6:6,5:5,3:3,2:3,-5:3,20:3,1:1,1:-1
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Clon de elementos colaPrioridadInt: 
+-----------------------------------
+Prueba 119: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 : Cantidad de elementos de la cola luego de vaciar clon: 10
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 120: Clono e imprimo
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Clon de prioridades colaPrioridadInt: 9:-1,8:-1,6:-1,5:-1,3:-1,2:-1,-5:-1,20:-1,1:-1,1:-1
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Clon de prioridades colaPrioridadInt: 
+-----------------------------------
+Prueba 121: Verifico que se modifique el clon y no el original
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 : Cantidad de elementos de la cola luego de vaciar clon: 10
+3 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 : Cantidad de elementos del clon luego de vaciarlo: 0
+2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
+3 : 
+-----------------------------------
+Prueba 122: Cantidad de elementos luego de borrar 3 elementos
+ -> ERROR impresion incorrecta
+Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
+1 : Cantidad de elementos luego de borrar 3 elementos: 7
+2 : 
+
+Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
+(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
+1 ! Cantidad de elementos luego de borrar 3 elementos: 0
+2 : 
+-----------------------------------
+Prueba 123: Libero memoria -> OK
+********* FIN PRUEBAS ColaPrioridadInt*******
+
+PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS INCORRECTAS
+
+
+
+----------------
+PRUEBAS FUNCIONES 
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  1 INCORRECTAS: 13
+PRUEBAS FUNCIONES 
