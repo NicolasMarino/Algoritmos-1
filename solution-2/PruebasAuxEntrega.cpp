@@ -2,6 +2,7 @@
 
 void pruebaEnlistar(const char* inputTree)
 {
+	cout << "Llamada: " << "Enlistar" << "(" << inputTree << ")" << endl;
 	int largo;
 	NodoABInt* arbol = (NodoABInt*)FrameworkA1::parsearColeccion(inputTree, largo);
 
@@ -29,6 +30,7 @@ void pruebaEnlistar(const char* inputTree)
 
 void pruebaUnionListaOrd(const char* inputList1, const char* inputList2)
 {
+	cout << "Llamada: " << "UnionListaOrd" << "(" << inputList1 << ", " << inputList2 << ")" << endl;
 	int largoLista1;
 	int largoLista2;
 	NodoListaInt* lista1 = (NodoListaInt*)FrameworkA1::parsearColeccion(inputList1, largoLista1);
@@ -64,6 +66,7 @@ void pruebaUnionListaOrd(const char* inputList1, const char* inputList2)
 
 void pruebaEstaContenida(const char* inputList1, const char* inputList2)
 {
+	cout << "Llamada: " << "EstaContenida" << "(" << inputList1 << ", " << inputList2 << ")" << endl;
 	int largoLista1;
 	int largoLista2;
 	NodoListaInt* lista1 = (NodoListaInt*)FrameworkA1::parsearColeccion(inputList1, largoLista1);
@@ -92,6 +95,7 @@ void pruebaEstaContenida(const char* inputList1, const char* inputList2)
 
 void pruebaObtenerRepetidos(const char* lista)
 {
+	cout << "Llamada: " << "ObtenerRepetidos" << "(" << lista << ")" << endl;
 	int largo;
 	NodoListaInt* listaParseada = (NodoListaInt*)FrameworkA1::parsearColeccion(lista, largo);
 
@@ -120,6 +124,7 @@ void pruebaObtenerRepetidos(const char* lista)
 
 void pruebaXor(const char* inputMultiSet1, const char* inputMultiSet2)
 {
+	cout << "Llamada: " << "Xor" << "(" << inputMultiSet1 << ", " << inputMultiSet2 << ")" << endl;
 	int largoLista1;
 	int largoLista2;
 	NodoListaInt* lista1 = (NodoListaInt*)FrameworkA1::parsearColeccion(inputMultiSet1, largoLista1);
@@ -139,6 +144,8 @@ void pruebaXor(const char* inputMultiSet1, const char* inputMultiSet2)
 			borrar(res, e);
 		}
 		char* salida = FrameworkA1::serializar(lord);
+		cout << salida << endl;
+		delete[]salida;
 		FrameworkA1::destruir(lord);
 		destruir(res);
 	}
@@ -157,6 +164,18 @@ void pruebaMenorPrioridad(const char* inputCpElem, const char* inputCpPrio)
 	int largoLista;
 	NodoListaInt* cp1elem = (NodoListaInt*)FrameworkA1::parsearColeccion(inputCpElem, largoLista);
 	NodoListaInt* cp1prio = (NodoListaInt*)FrameworkA1::parsearColeccion(inputCpPrio, largoLista);
+
+	cout << "Llamada: " << "MenorPrioridad" << "((";
+	NodoListaInt* ptre = cp1elem;
+	NodoListaInt* ptrp = cp1prio;
+	while (ptre != NULL)
+	{
+		cout << ptre->dato << ":" << ptrp->dato;
+		ptre = ptre->sig;
+		ptrp = ptrp->sig;
+		if (ptre != NULL) cout << ",";
+	}
+	cout << "))" << endl;
 
 	ColaPrioridadInt cp1 = FrameworkA1::ConvertirAColaPrioridad(cp1elem, cp1prio);
 

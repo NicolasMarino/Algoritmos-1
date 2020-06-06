@@ -18,7 +18,7 @@ EJERCICIOS
 4)	Considere la siguiente definición del tipo árbol binario de enteros ordenado (ABB):
 	struct NodoABInt { 
 		int dato;
-		NodoAB *izq, *der; 
+		NodoABInt *izq, *der; 
 	};
 	Implemente una función Enlistar, que recibiendo un puntero a un ABB de tipo NodoABInt, 
 	retorne una ListaOrdInt con los mismos elementos presentes en el árbol. 
@@ -30,7 +30,6 @@ EJERCICIOS
 	retorne una nueva lista ordenada (ListaOrdInt) que contenga todos los elementos presentes en l1 y l2. 
 	La nueva lista no deberá compartir registros de memoria con las listas parámetros y 
 	las listas parámetro no deberán ser modificadas. 
-	Las listas recibidas y la lista retornada no deben recorrerse más de una vez.
 
 	ListaOrdInt UnionListaOrd(ListaOrdInt l1, ListaOrdInt l2);
 

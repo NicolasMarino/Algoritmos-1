@@ -10,7 +10,7 @@ struct _cabezalListaOrdInt {
 /* AUXILIARES */
 
 // PRE:
-// POS: 
+// POS: Agrega el dato ordenado creando un nuevo nodo
 void agregar(NodoListaInt*& l, int dato) {
 	if (l == NULL) {
 		l = new NodoListaInt(dato);
@@ -26,7 +26,7 @@ void agregar(NodoListaInt*& l, int dato) {
 }
 
 // PRE:
-// POS: 
+// POS: Borra el nodo con el dato maximo
 bool borrarMaximo(NodoListaInt*& l) {
 	if (l == NULL) {
 		return false;
@@ -42,7 +42,7 @@ bool borrarMaximo(NodoListaInt*& l) {
 
 
 // PRE:
-// POS: 
+// POS: Borra el nodo con el dato
 bool borrar(NodoListaInt*& l, int dato) {
 	if (l == NULL) return false;
 	if (dato > l->dato) {
@@ -58,7 +58,7 @@ bool borrar(NodoListaInt*& l, int dato) {
 }
 
 // PRE:
-// POS: 
+// POS: Borra todos los nodos
 void vaciar(NodoListaInt*& l) {
 	if (l != NULL) {
 		vaciar(l->sig);
@@ -68,7 +68,7 @@ void vaciar(NodoListaInt*& l) {
 }
 
 // PRE:
-// POS: 
+// POS: Retorna un puntero a la copia de todos los nodos
 NodoListaInt* clon(NodoListaInt* l) {
 	if (l == NULL) return NULL;
 	NodoListaInt* nuevo = new NodoListaInt;
@@ -78,7 +78,7 @@ NodoListaInt* clon(NodoListaInt* l) {
 }
 
 // PRE:
-// POS: 
+// POS: Retorna si existe el dato en un nodo
 bool existe(NodoListaInt* l, int dato) {
 	if (l == NULL) return false;
 	if (dato > l->dato) {

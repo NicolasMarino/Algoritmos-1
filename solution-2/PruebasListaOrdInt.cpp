@@ -63,6 +63,10 @@ void pruebasListaOrdIntNoAcotada(Prueba* pruebaConcreta)
 	cout << "La lista " << existeElemento << " contiene el elemento 32" << endl;
 	pruebaConcreta->ver3("Imprimo la lista no contiene el elemento 32");
 
+	existeElemento = existe(l, 7) ? " si " : " no ";
+	cout << "La lista " << existeElemento << " contiene el elemento 7" << endl;
+	pruebaConcreta->ver3("Imprimo la lista si contiene el elemento 7");
+
 	ListaOrdInt clonL = clon(l);
 
 	cout << "Clon de lista Ord: ";
@@ -108,8 +112,19 @@ void pruebasListaOrdIntNoAcotada(Prueba* pruebaConcreta)
 
 	cout << endl;
 	cout << "Largo de lista Ord luego de vaciarla: " << cantidadElementos(l) << endl;
-	
 	pruebaConcreta->ver3("Borro algunos elementos y vacio la lista");
+
+	borrarMinimo(l);
+	cout << "El largo de la lista ord " << cantidadElementos(l) << endl;
+	pruebaConcreta->ver3("Imprimo largo luego de borrar el minimo en la lista vacia");
+
+	borrarMaximo(l);
+	cout << "El largo de la lista ord " << cantidadElementos(l) << endl;
+	pruebaConcreta->ver3("Imprimo largo luego de borrar el maximo en la lista vacia");
+
+	existeElemento = existe(l, 7) ? " si " : " no ";
+	cout << "La lista vacia" << existeElemento << " contiene el elemento 7" << endl;
+	pruebaConcreta->ver3("Imprimo la lista vacia no contiene el elemento 7");
 
 	destruir(l);
 	destruir(clonL);

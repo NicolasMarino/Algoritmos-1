@@ -18,24 +18,29 @@ void pruebasColaDePrioridadIntNoAcotada(Prueba* pruebaConcreta)
 	encolar(cola, 8, 8);
 	encolar(cola, 1, 1);
 	encolar(cola, 6, 6);
-	encolar(cola, 3, 3);
+	encolar(cola, 2, 3);
 	encolar(cola, 9, 9);
+	encolar(cola, -5, 3);
+	encolar(cola, 20, 3);
+	encolar(cola, 1, -1);
 
 	cout << "Cantidad de elementos de la cola: " << cantidadElementos(cola) << endl;
 	pruebaConcreta->ver3("Imprimo largo luego de agregar");
 
 	ColaPrioridadInt colaClon = clon(cola);
 	int e;
+	int p;
 	cout << "Clon de elementos colaPrioridadInt: ";
 	while (!esVacia(colaClon))
 	{
 		e = principio(colaClon);
+		p = principioPrioridad(colaClon);
 		desencolar(colaClon);
 		if (!esVacia(colaClon)) {
-			cout << e << ",";
+			cout << e << ":" << p << ",";
 		}
 		else {
-			cout << e << endl;
+			cout << e << ":" << p << endl;
 		}
 	}
 
@@ -51,10 +56,10 @@ void pruebasColaDePrioridadIntNoAcotada(Prueba* pruebaConcreta)
 		e = principio(colaClonPriori);
 		desencolar(colaClonPriori);
 		if (!esVacia(colaClonPriori)) {
-			cout << e << ",";
+			cout << e << ":" << p << ",";
 		}
 		else {
-			cout << e << endl;
+			cout << e << ":" << p << endl;
 		}
 
 	}
