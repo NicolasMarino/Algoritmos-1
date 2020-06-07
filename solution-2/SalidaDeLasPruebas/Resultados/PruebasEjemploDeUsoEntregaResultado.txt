@@ -593,57 +593,18 @@ PRUEBAS FUNCION PRUEBAS ListaOrdInt                                PRUEBAS CORRE
 
 ********* INICIO PRUEBAS ListaPosInt*******
 -----------------------------------
-Prueba 59: Imprimo largo luego de agregar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de lista Pos: 7
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de lista Pos: 0
-2 : 
+Prueba 59: Imprimo largo luego de agregar -> OK
 -----------------------------------
-Prueba 60: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : 5,7,-1,-2,5,4,15
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! 
+Prueba 60: Clono e imprimo -> OK
 -----------------------------------
-Prueba 61: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 : Cantidad de elementos de la cola luego de vaciar clon: 7
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
-3 : 
+Prueba 61: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 62: Borro algunos elementos y vacio la lista
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de lista Pos luego de borrar 4 elementos: 3
-2 : Largo de lista Pos luego de vaciarla: 0
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de lista Pos luego de borrar 4 elementos: 0
-2 : Largo de lista Pos luego de vaciarla: 0
-3 : 
+Prueba 62: Borro algunos elementos y vacio la lista -> OK
 -----------------------------------
 Prueba 63: Libero memoria -> OK
 ********* FIN PRUEBAS ListaPosInt*******
 
-PRUEBAS FUNCION PRUEBAS ListaPosInt                                HAY 4 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS ListaPosInt                                PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS PilaInt*******
 -----------------------------------
@@ -1300,5 +1261,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  1 INCORRECTAS: 13
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  2 INCORRECTAS: 12
 PRUEBAS FUNCIONES 

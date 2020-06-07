@@ -3,52 +3,91 @@
 #ifdef LISTA_POS_INT_IMP
 
 struct _cabezalListaPosInt {
-	//IMPLEMENTAR SOLUCION
+	int tamVector;
+	int tope;
+	int* vector;
 };
 
 ListaPosInt crearListaPosInt()
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	ListaPosInt lista = new _cabezalListaPosInt();
+	lista->tope = -1;
+	lista->vector = new int [10];
+	return lista;
+}
+
+void expandirVector(ListaPosInt p) {
+	int* nuevaMemoria = new int [p->tamVector * 2]();
+	for (int i = 0; i < p->tamVector; i++)
+	{
+		nuevaMemoria[i] = p->vector[i];
+	}
+	delete[] p->vector;
+	p->tamVector *= 2;
+	p->vector = nuevaMemoria;
 }
 
 void agregar(ListaPosInt& l, int e, unsigned int pos)
 {
-	//IMPLEMENTAR SOLUCION
+	if (l->tope == l->tamVector) {
+		expandirVector(l);
+	}
+	if (pos > l->tope)
+	{
+		l->tope++;
+		l->vector[l->tope] = e;
+	}
+	else
+	{
+		for (int i = l->tope; i +1 > pos; i--) {
+			l->vector[i + 1] = l->vector[i];
+		}
+		l->vector[pos] = e;
+		l->tope++;
+	}
 }
 
 void borrar(ListaPosInt& l, unsigned int pos)
 {
-	//IMPLEMENTAR SOLUCION
+	if (pos >= l->tope+1) return;
+	for (int i = pos; i < l->tope; i++) {
+		l->vector[i] = l->vector[i + 1];
+	}
+	l->tope--;
 }
 
 int elemento(ListaPosInt l, unsigned int pos)
 {
-	//IMPLEMENTAR SOLUCION
-	return 0;
+	return l->vector[pos];
 }
 
 bool esVacia(ListaPosInt l)
 {
-	//IMPLEMENTAR SOLUCION
-	return true;
+	return l->tope == -1;
 }
 
 unsigned int cantidadElementos(ListaPosInt l)
 {
-	//IMPLEMENTAR SOLUCION
-	return 0;
+	return l->tope+1;
 }
 
 ListaPosInt clon(ListaPosInt l)
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	ListaPosInt nuevaListaPosInt = new _cabezalListaPosInt();
+	nuevaListaPosInt->vector = new int[l->tamVector]();
+	for (int i = 0; i <= l->tope; i++)
+	{
+		nuevaListaPosInt->vector[i] = l->vector[i];
+	}
+	nuevaListaPosInt->tamVector = l->tamVector;
+	nuevaListaPosInt->tope = l->tope;
+	return nuevaListaPosInt;
 }
 
 void destruir(ListaPosInt& l)
 {
-	//IMPLEMENTAR SOLUCION
+	delete[] l->vector;
+	delete l;
 }
 
 

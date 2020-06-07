@@ -256,6 +256,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
     </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasCorreccionResultado.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasDefensaResultado.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasEjemploDeUsoEntregaResultado.txt" />
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasPropiasResultado.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="version.txt" />

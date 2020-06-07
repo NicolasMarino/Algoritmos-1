@@ -76,6 +76,9 @@
     <Filter Include="Colecciones\Tablas\TablaIntInt">
       <UniqueIdentifier>{f67645c5-72c1-40f9-86cf-846b7b6c2f2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Soluciones">
+      <UniqueIdentifier>{09ea9021-2459-4d56-965b-a5c074b4ce62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PruebasPropias.h">
@@ -372,6 +375,18 @@
     </Text>
     <Text Include="Defensa.txt">
       <Filter>Ejercicios</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasCorreccionResultado.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasDefensaResultado.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasEjemploDeUsoEntregaResultado.txt">
+      <Filter>Soluciones</Filter>
+    </Text>
+    <Text Include="SalidaDeLasPruebas\Resultados\PruebasPropiasResultado.txt">
+      <Filter>Soluciones</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
