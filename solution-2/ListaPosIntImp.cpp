@@ -11,6 +11,7 @@ struct _cabezalListaPosInt {
 ListaPosInt crearListaPosInt()
 {
 	ListaPosInt lista = new _cabezalListaPosInt();
+	lista->tamVector = 10;
 	lista->tope = -1;
 	lista->vector = new int [10];
 	return lista;
@@ -18,7 +19,7 @@ ListaPosInt crearListaPosInt()
 
 void expandirVector(ListaPosInt p) {
 	int* nuevaMemoria = new int [p->tamVector * 2]();
-	for (int i = 0; i < p->tamVector; i++)
+	for (int i = 0; i < p->tope + 1 ; i++)
 	{
 		nuevaMemoria[i] = p->vector[i];
 	}
@@ -75,7 +76,7 @@ ListaPosInt clon(ListaPosInt l)
 {
 	ListaPosInt nuevaListaPosInt = new _cabezalListaPosInt();
 	nuevaListaPosInt->vector = new int[l->tamVector]();
-	for (int i = 0; i <= l->tope; i++)
+	for (int i = 0; i < l->tope + 1 ; i++)
 	{
 		nuevaListaPosInt->vector[i] = l->vector[i];
 	}

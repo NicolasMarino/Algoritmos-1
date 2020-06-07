@@ -261,39 +261,42 @@ cantidad de elementos al crear la pila: 0
 Esta vacia: 1
 
 -!-64::0-?-?-Imprimo la cantidad de elementos al crear la pila y valido que sea vacia
-tope de la pila cuando agrego el primer elemento: 0
+tope de la pila cuando agrego el primer elemento: 4
 
 -!-65::0-?-?-Imprimo el tope de la pila con 1 elemento para validar el caso base de push
-Esta vacia: 1
+Esta vacia: 0
 
 -!-66::0-?-?-Imprimo si esta vacia o llena antes y despues de agregar, verificando que push funcione
-Largo de pila: 0
+Largo de pila: 5
 
 -!-67::0-?-?-Imprimo largo luego de agregar
-el primer elemento antes del pop es: 0
-el primer elemento luego del pop es: 0
-la cantidad de elementos luego del pop es: 0
+el primer elemento antes del pop es: -1
+el primer elemento luego del pop es: 3
+la cantidad de elementos luego del pop es: 4
 
 -!-68::0-?-?-Imprimo el primer elemento antes y despues del pop, verificando que disminuya la cantidad de elementos
 elementos de la pila: 
+3,2,5,4
 
 -!-69::0-?-?-Clono e imprimo los elementos de la pila clonando y poppeando
 Largo de clon luego de vaciarlo: 0
-Largo de la pila original luego de vaciar clon: 0
+Largo de la pila original luego de vaciar clon: 4
 
 -!-70::0-?-?-Verifico que se modifique el clon y no el original
-El tope de la pila clon luego de agregar 3 elementos es: 0
-El tope de la pila clon luego de poppear 2 elementos es: 0
+El tope de la pila clon luego de agregar 3 elementos es: -16
+El tope de la pila clon luego de poppear 2 elementos es: 38
 
 -!-71::0-?-?-Verifico que pushear y poppear elementos no altere la estructura de la pila
 vacio el clon totalmente. Cantidad de elementos: 0
 Es vacia: 1
 
 -!-72::0-?-?-Verifico que funcione el caso base de pop dejando la pila vacia
-cantidad de elementos de la pila original luego de destruir clon: 0tope de la pila original luego de destruir clon0
+cantidad de elementos de la pila original luego de destruir clon: 4tope de la pila original luego de destruir clon3
 -!-73::0-?-?-Verifico que destruir el clon no altere la pila original
 elementos de la pila: 
+3,2,5,4
 elementos del clon de la pila: 
+3,2,5,4
 
 -!-74::0-?-?-Verifico que el clon copie todos los elementos de la pila
 
