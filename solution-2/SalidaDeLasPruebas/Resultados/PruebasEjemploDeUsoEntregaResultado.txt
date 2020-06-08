@@ -639,122 +639,30 @@ PRUEBAS FUNCION PRUEBAS PilaInt                                    PRUEBAS CORRE
 -----------------------------------
 Prueba 76: Imprimo la cantidad de elementos al crear la cola y valido que sea vacia -> OK
 -----------------------------------
-Prueba 77: Imprimo el principio de la cola con 1 elemento para validar el caso base de encolar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Principio de la cola cuando agrego el primer elemento: 4
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Principio de la cola cuando agrego el primer elemento: 0
-2 : 
+Prueba 77: Imprimo el principio de la cola con 1 elemento para validar el caso base de encolar -> OK
 -----------------------------------
-Prueba 78: Imprimo si esta vacia o llena antes y despues de agregar, verificando que encolar funcione
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Esta vacia: 0
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Esta vacia: 1
-2 : 
+Prueba 78: Imprimo si esta vacia o llena antes y despues de agregar, verificando que encolar funcione -> OK
 -----------------------------------
-Prueba 79: Imprimo largo luego de agregar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de cola: 5
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de cola: 0
-2 : 
+Prueba 79: Imprimo largo luego de agregar -> OK
 -----------------------------------
-Prueba 80: Imprimo el primer elemento antes y despues de desencolar, verificando que disminuya la cantidad de elementos
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : el primer elemento antes de desencolar es: 4
-2 : el primer elemento luego de desencolar es: 5
-3 : la cantidad de elementos luego de desencolar es: 4
-4 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! el primer elemento antes de desencolar es: 0
-2 ! el primer elemento luego de desencolar es: 0
-3 ! la cantidad de elementos luego de desencolar es: 0
-4 : 
+Prueba 80: Imprimo el primer elemento antes y despues de desencolar, verificando que disminuya la cantidad de elementos -> OK
 -----------------------------------
-Prueba 81: Clono e imprimo los elementos de la cola clonando y desencolando
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : elementos de la cola: 
-2 : 5,2,3,-1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : elementos de la cola: 
-2 ! 
+Prueba 81: Clono e imprimo los elementos de la cola clonando y desencolando -> OK
 -----------------------------------
-Prueba 82: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de clon luego de vaciarlo: 0
-2 : Largo de la cola original luego de vaciar clon: 4
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de clon luego de vaciarlo: 0
-2 ! Largo de la cola original luego de vaciar clon: 0
-3 : 
+Prueba 82: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 83: Verifico que encolar y desencolar elementos no altere la estructura de la cola
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : El principio de la cola clon luego de agregar 3 elementos es: 38
-2 : El principio de la cola clon luego de desencolar 2 elementos es: -16
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! El principio de la cola clon luego de agregar 3 elementos es: 0
-2 ! El principio de la cola clon luego de desencolar 2 elementos es: 0
-3 : 
+Prueba 83: Verifico que encolar y desencolar elementos no altere la estructura de la cola -> OK
 -----------------------------------
 Prueba 84: Verifico que funcione el caso base de desencolar dejando la cola vacia -> OK
 -----------------------------------
-Prueba 85: Verifico que destruir el clon no altere la cola original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : cantidad de elementos de la cola original luego de destruir clon: 4principio de la cola original luego de destruir clon5
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! cantidad de elementos de la cola original luego de destruir clon: 0principio de la cola original luego de destruir clon0
+Prueba 85: Verifico que destruir el clon no altere la cola original -> OK
 -----------------------------------
-Prueba 86: Verifico que el clon copie todos los elementos de la cola
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : elementos de la cola: 
-2 : 5,2,3,-1
-3 : elementos del clon de la cola: 
-4 : 5,2,3,-1
-5 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : elementos de la cola: 
-2 ! elementos del clon de la cola: 
-3 ! 
+Prueba 86: Verifico que el clon copie todos los elementos de la cola -> OK
 -----------------------------------
 Prueba 87: Libero memoria -> OK
 ********* FIN PRUEBAS ColaInt*******
 
-PRUEBAS FUNCION PRUEBAS ColaInt                                    HAY 9 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS ColaInt                                    PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS Diccionario*******
 -----------------------------------
@@ -1169,5 +1077,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  3 INCORRECTAS: 11
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  4 INCORRECTAS: 10
 PRUEBAS FUNCIONES 

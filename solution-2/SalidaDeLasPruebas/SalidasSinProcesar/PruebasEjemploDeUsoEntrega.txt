@@ -307,39 +307,42 @@ cantidad de elementos al crear la cola: 0
 Esta vacia: 1
 
 -!-76::0-?-?-Imprimo la cantidad de elementos al crear la cola y valido que sea vacia
-Principio de la cola cuando agrego el primer elemento: 0
+Principio de la cola cuando agrego el primer elemento: 4
 
 -!-77::0-?-?-Imprimo el principio de la cola con 1 elemento para validar el caso base de encolar
-Esta vacia: 1
+Esta vacia: 0
 
 -!-78::0-?-?-Imprimo si esta vacia o llena antes y despues de agregar, verificando que encolar funcione
-Largo de cola: 0
+Largo de cola: 5
 
 -!-79::0-?-?-Imprimo largo luego de agregar
-el primer elemento antes de desencolar es: 0
-el primer elemento luego de desencolar es: 0
-la cantidad de elementos luego de desencolar es: 0
+el primer elemento antes de desencolar es: 4
+el primer elemento luego de desencolar es: 5
+la cantidad de elementos luego de desencolar es: 4
 
 -!-80::0-?-?-Imprimo el primer elemento antes y despues de desencolar, verificando que disminuya la cantidad de elementos
 elementos de la cola: 
+5,2,3,-1
 
 -!-81::0-?-?-Clono e imprimo los elementos de la cola clonando y desencolando
 Largo de clon luego de vaciarlo: 0
-Largo de la cola original luego de vaciar clon: 0
+Largo de la cola original luego de vaciar clon: 4
 
 -!-82::0-?-?-Verifico que se modifique el clon y no el original
-El principio de la cola clon luego de agregar 3 elementos es: 0
-El principio de la cola clon luego de desencolar 2 elementos es: 0
+El principio de la cola clon luego de agregar 3 elementos es: 38
+El principio de la cola clon luego de desencolar 2 elementos es: -16
 
 -!-83::0-?-?-Verifico que encolar y desencolar elementos no altere la estructura de la cola
 vacio el clon totalmente. Cantidad de elementos: 0
 Es vacia: 1
 
 -!-84::0-?-?-Verifico que funcione el caso base de desencolar dejando la cola vacia
-cantidad de elementos de la cola original luego de destruir clon: 0principio de la cola original luego de destruir clon0
+cantidad de elementos de la cola original luego de destruir clon: 4principio de la cola original luego de destruir clon5
 -!-85::0-?-?-Verifico que destruir el clon no altere la cola original
 elementos de la cola: 
+5,2,3,-1
 elementos del clon de la cola: 
+5,2,3,-1
 
 -!-86::0-?-?-Verifico que el clon copie todos los elementos de la cola
 
