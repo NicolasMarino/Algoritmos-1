@@ -1,15 +1,35 @@
 #include "Ejercicios.h"
 
+void agregarElemALista(ListaOrdInt& l, NodoABInt* a) {
+	if (a != NULL) {
+		agregarElemALista(l, a->izq);
+		agregar(l, a->dato);
+		agregarElemALista(l, a->der);
+	}
+}
+
 ListaOrdInt Enlistar(NodoABInt* a)
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	ListaOrdInt nl = crearListaOrdInt();
+	agregarElemALista(nl, a);
+	return nl;
 }
 
 ListaOrdInt UnionListaOrd(ListaOrdInt l1, ListaOrdInt l2)
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	ListaOrdInt nuevaLista = crearListaOrdInt();
+	while (!esVacia(l1))
+	{
+		agregar(nuevaLista, minimo(l1));
+		borrarMinimo(l1);
+	}
+	while (!esVacia(l2))
+	{
+		agregar(nuevaLista, minimo(l2));
+		borrarMinimo(l2);
+	}
+		
+	return nuevaLista;
 }
 
 bool EstaContenida(PilaInt p1, PilaInt p2)

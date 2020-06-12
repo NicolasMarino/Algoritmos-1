@@ -1,90 +1,24 @@
 ********* INICIO PRUEBAS Enlistar*******
 -----------------------------------
-Prueba 0: Prueba de pasar ABB a ListaOrd 1
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: Llamada: Enlistar({2,1,5})
- 2: 1 2 5
- 3: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: Llamada: Enlistar({2,1,5})
- 2! NULL
- 3: 
+Prueba 0: Prueba de pasar ABB a ListaOrd 1 -> OK
 -----------------------------------
-Prueba 1: Prueba de pasar ABB a ListaOrd 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: Llamada: Enlistar({1,#,2,#,5})
- 2: 1 2 5
- 3: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: Llamada: Enlistar({1,#,2,#,5})
- 2! NULL
- 3: 
+Prueba 1: Prueba de pasar ABB a ListaOrd 2 -> OK
 -----------------------------------
-Prueba 2: Prueba de pasar ABB a ListaOrd 3
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: Llamada: Enlistar({1,#,2,#,15,10,20,8,#,16,30,7,9,#,18})
- 2: 1 2 7 8 9 10 15 16 18 20 30
- 3: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: Llamada: Enlistar({1,#,2,#,15,10,20,8,#,16,30,7,9,#,18})
- 2! NULL
- 3: 
+Prueba 2: Prueba de pasar ABB a ListaOrd 3 -> OK
 ********* FIN PRUEBAS Enlistar*******
 
-PRUEBAS FUNCION PRUEBAS Enlistar                                   HAY 3 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS Enlistar                                   PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS UnionListaOrd*******
 -----------------------------------
-Prueba 3: Prueba union de dos listas ordenadas 1
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: UnionListaOrd((1,3,5,7,9), (2,4,6,8))
-2 : 1 2 3 4 5 6 7 8 9
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: UnionListaOrd((1,3,5,7,9), (2,4,6,8))
-2 ! NULL
-3 : 
+Prueba 3: Prueba union de dos listas ordenadas 1 -> OK
 -----------------------------------
-Prueba 4: Prueba union de dos listas ordenadas 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: UnionListaOrd((100,200,300,400), (100,200,300,400))
-2 : 100 100 200 200 300 300 400 400
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: UnionListaOrd((100,200,300,400), (100,200,300,400))
-2 ! NULL
-3 : 
+Prueba 4: Prueba union de dos listas ordenadas 2 -> OK
 -----------------------------------
-Prueba 5: Prueba union de dos listas ordenadas 3
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: UnionListaOrd((), (-1,0,1,5))
-2 : -1 0 1 5
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: UnionListaOrd((), (-1,0,1,5))
-2 ! NULL
-3 : 
+Prueba 5: Prueba union de dos listas ordenadas 3 -> OK
 ********* FIN PRUEBAS UnionListaOrd*******
 
-PRUEBAS FUNCION PRUEBAS UnionListaOrd                              HAY 3 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS UnionListaOrd                              PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS EstaContenida*******
 -----------------------------------
@@ -1077,5 +1011,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  4 INCORRECTAS: 10
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  6 INCORRECTAS:  8
 PRUEBAS FUNCIONES 
