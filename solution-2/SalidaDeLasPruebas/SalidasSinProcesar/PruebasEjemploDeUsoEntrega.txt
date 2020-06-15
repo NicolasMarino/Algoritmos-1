@@ -32,7 +32,7 @@ No esta contenida
 
 -!-6::0-?-?-Prueba de pila contenida 1
 Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
-No esta contenida
+Esta contenida
 
 -!-7::0-?-?-Prueba de pila contenida 2
 Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,1,4,8))
@@ -40,7 +40,7 @@ No esta contenida
 
 -!-8::0-?-?-Prueba de pila contenida 3
 Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
-No esta contenida
+Esta contenida
 
 -!-9::0-?-?-Prueba de pila contenida 4
 -!-Fin::PRUEBAS EstaContenida

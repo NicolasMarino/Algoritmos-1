@@ -24,36 +24,14 @@ PRUEBAS FUNCION PRUEBAS UnionListaOrd                              PRUEBAS CORRE
 -----------------------------------
 Prueba 6: Prueba de pila contenida 1 -> OK
 -----------------------------------
-Prueba 7: Prueba de pila contenida 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
-2 : Esta contenida
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
-2 ! No esta contenida
-3 : 
+Prueba 7: Prueba de pila contenida 2 -> OK
 -----------------------------------
 Prueba 8: Prueba de pila contenida 3 -> OK
 -----------------------------------
-Prueba 9: Prueba de pila contenida 4
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
-2 : Esta contenida
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
-2 ! No esta contenida
-3 : 
+Prueba 9: Prueba de pila contenida 4 -> OK
 ********* FIN PRUEBAS EstaContenida*******
 
-PRUEBAS FUNCION PRUEBAS EstaContenida                              HAY 2 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS EstaContenida                              PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS ObtenerRepetidos*******
 -----------------------------------
@@ -1011,5 +989,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  6 INCORRECTAS:  8
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  7 INCORRECTAS:  7
 PRUEBAS FUNCIONES 
