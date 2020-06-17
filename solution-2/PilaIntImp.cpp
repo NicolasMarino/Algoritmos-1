@@ -3,69 +3,67 @@
 #ifdef PILA_INT_IMP
 
 struct _cabezalPilaInt {
-	int tamVector;
-	int tope;
-	int* vector;
+	unsigned int cantElementos;
+	NodoListaInt* pila;
 };
 
 PilaInt crearPilaInt() {
 	PilaInt pilaInt = new _cabezalPilaInt();
-	pilaInt->tamVector = 2;
-	pilaInt->tope = -1;
-	pilaInt->vector = new int[2];
+	pilaInt->pila = new NodoListaInt();
 	return pilaInt;
 }
 
-void expandirVector(PilaInt p) {
-	int* nuevaMemoria = new int[p->tamVector * 2]();
-	for (int i = 0; i < p->tamVector; i++)
-	{
-		nuevaMemoria[i] = p->vector[i];
-	}
-	delete[] p->vector;
-	p->tamVector *= 2;
-	p->vector = nuevaMemoria;
-}
-
 void push(PilaInt& p, int e) {
-	if (p->tamVector == p->tope+1)
-	{
-		expandirVector(p);
-	}
-	p->tope++;
-	p->vector[p->tope] = e;
+	NodoListaInt* nuevoElem = new NodoListaInt(e);
+	p->cantElementos++;
+	nuevoElem->sig = p->pila;
+	p->pila = nuevoElem;
 }
 
 int top(PilaInt p) {
-	return p->vector[p->tope];
+	return p->pila->dato;
 }
 
 void pop(PilaInt& p) {
-	p->tope--;
+	NodoListaInt* aux = p->pila;
+	p->pila = p->pila->sig;
+	delete aux;
+	p->cantElementos--;
 }
 
 unsigned int cantidadElementos(PilaInt p) {
-	return p->tope + 1;
+	return p->cantElementos;
 }
 
 bool esVacia(PilaInt p) {
-	return p->tope == -1;
+	return p->cantElementos == 0;
+}
+NodoListaInt* clonar(NodoListaInt* pila) {
+	if (pila == nullptr) return nullptr;
+	NodoListaInt* aux = new NodoListaInt();
+	aux->dato = pila->dato;
+	aux->sig = clonar(pila->sig);
+	return aux;
 }
 
 PilaInt clon(PilaInt p) {
 	PilaInt nuevaPilaInt = new _cabezalPilaInt();
-	nuevaPilaInt->vector = new int[p->tamVector]();
-	for (int i = 0; i < p->tope + 1; i++)
-	{
-		nuevaPilaInt->vector[i] = p->vector[i];
-	}
-	nuevaPilaInt->tamVector = p->tamVector;
-	nuevaPilaInt->tope = p->tope;
+	nuevaPilaInt->pila = clonar(p->pila);
+	nuevaPilaInt->cantElementos = p->cantElementos;
 	return nuevaPilaInt;
 }
 
+void vaciar(NodoListaInt*& l) {
+	if (l != NULL) {
+		vaciar(l->sig);
+		delete l;
+		l = NULL;
+	}
+}
+
 void destruir(PilaInt& p) {
-	delete[] p->vector;
+	vaciar(p->pila);
+	delete p->pila;
 	delete p;
 }
 
