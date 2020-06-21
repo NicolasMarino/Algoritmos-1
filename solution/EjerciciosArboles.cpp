@@ -107,22 +107,24 @@ void borrarHojaO1Hijo(NodoAB*& raiz, int dato) {
 
 //Obligatorio -	DONE
 void borrarNodoRaiz(NodoAB * & A) {
+	NodoAB* borrar = A;
 	if (A->der == nullptr) {
-		NodoAB* aux = A;
+		//NodoAB* aux = A;
 		A = A->izq;
-		delete aux;
+		delete borrar;
 	}
 	else if (A->izq == nullptr)
 	{
-		NodoAB* aux = A;
+		//NodoAB* aux = A;
 		A = A->der;
-		delete aux;
+		delete borrar;
 	}
 	else
 	{
-		NodoAB*& aux = obtenerMayorIzq(A->izq);
-		A->dato = aux->dato;
-		borrarHojaO1Hijo(aux, aux->dato);
+		NodoAB* aux = obtenerMayorIzq(A->izq);
+		aux->der = A->der;
+		A = A->izq;
+		delete borrar;
 	}
 }
 

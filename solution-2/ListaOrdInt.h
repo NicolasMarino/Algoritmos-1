@@ -1,8 +1,8 @@
 #pragma once
 
 // Elegir la implementacion a usar (solo 1 a la vez):
-#define LISTA_ORD_INT_IMP
-//#define LISTA_ORD_INT_IMP_2
+//#define LISTA_ORD_INT_IMP
+#define LISTA_ORD_INT_IMP_2
 
 #if defined(LISTA_ORD_INT_IMP)
 	#include "ListaOrdIntImp.h"
