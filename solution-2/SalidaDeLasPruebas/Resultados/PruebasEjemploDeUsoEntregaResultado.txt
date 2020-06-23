@@ -912,82 +912,26 @@ PRUEBAS FUNCION PRUEBAS MultisetInt                                HAY 12 PRUEBA
 
 ********* INICIO PRUEBAS ColaPrioridadInt*******
 -----------------------------------
-Prueba 117: Imprimo largo luego de agregar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Cantidad de elementos de la cola: 10
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Cantidad de elementos de la cola: 0
-2 : 
+Prueba 117: Imprimo largo luego de agregar -> OK
 -----------------------------------
-Prueba 118: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Clon de elementos colaPrioridadInt: 9:9,8:8,6:6,5:5,3:3,2:3,-5:3,20:3,1:1,1:-1
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Clon de elementos colaPrioridadInt: 
+Prueba 118: Clono e imprimo -> OK
 -----------------------------------
-Prueba 119: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 : Cantidad de elementos de la cola luego de vaciar clon: 10
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
-3 : 
+Prueba 119: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 120: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Clon de prioridades colaPrioridadInt: 9:-1,8:-1,6:-1,5:-1,3:-1,2:-1,-5:-1,20:-1,1:-1,1:-1
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Clon de prioridades colaPrioridadInt: 
+Prueba 120: Clono e imprimo -> OK
 -----------------------------------
-Prueba 121: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 : Cantidad de elementos de la cola luego de vaciar clon: 10
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Cantidad de elementos del clon luego de vaciarlo: 0
-2 ! Cantidad de elementos de la cola luego de vaciar clon: 0
-3 : 
+Prueba 121: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 122: Cantidad de elementos luego de borrar 3 elementos
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Cantidad de elementos luego de borrar 3 elementos: 7
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Cantidad de elementos luego de borrar 3 elementos: 0
-2 : 
+Prueba 122: Cantidad de elementos luego de borrar 3 elementos -> OK
 -----------------------------------
 Prueba 123: Libero memoria -> OK
 ********* FIN PRUEBAS ColaPrioridadInt*******
 
-PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           HAY 6 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRECTAS
 
 
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  7 INCORRECTAS:  7
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  8 INCORRECTAS:  6
 PRUEBAS FUNCIONES 

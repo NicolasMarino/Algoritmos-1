@@ -94,19 +94,16 @@ void borrarMinimo(ListaOrdInt& l) {
 	if (l->arbol == nullptr) return;
 	NodoABInt* aBorrar = obtenerMinimo(l->arbol);
 	borrarAux(l->arbol, l, aBorrar->dato);
-	//l->cantidadElem--;
 }
 
 void borrarMaximo(ListaOrdInt& l) {
 	if (l->arbol == nullptr) return;
 	NodoABInt* aBorrar = obtenerMaximo(l->arbol);
 	borrarAux(l->arbol , l, aBorrar->dato);
-	//l->cantidadElem--;
 }
 
 void borrar(ListaOrdInt& l, int e) {
 	borrarAux(l->arbol,l, e);
-	//l->cantidadElem--;
 }
 
 int minimo(ListaOrdInt l) {

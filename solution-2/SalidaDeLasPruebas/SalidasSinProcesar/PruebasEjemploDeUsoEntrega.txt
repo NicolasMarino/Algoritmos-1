@@ -457,22 +457,24 @@ Multiset luego de haber borrado 2 elementos: ()
 -!-116::0-?-?-Libero memoria
 -!-Fin::PRUEBAS MultisetInt
 -!-Ini::PRUEBAS ColaPrioridadInt
-Cantidad de elementos de la cola: 0
+Cantidad de elementos de la cola: 10
 
 -!-117::0-?-?-Imprimo largo luego de agregar
-Clon de elementos colaPrioridadInt: 
+Clon de elementos colaPrioridadInt: 9:9,8:8,6:6,5:5,3:3,2:3,-5:3,20:3,1:1,1:-1
+
 -!-118::0-?-?-Clono e imprimo
 Cantidad de elementos del clon luego de vaciarlo: 0
-Cantidad de elementos de la cola luego de vaciar clon: 0
+Cantidad de elementos de la cola luego de vaciar clon: 10
 
 -!-119::0-?-?-Verifico que se modifique el clon y no el original
-Clon de prioridades colaPrioridadInt: 
+Clon de prioridades colaPrioridadInt: 9:-1,8:-1,6:-1,5:-1,3:-1,2:-1,-5:-1,20:-1,1:-1,1:-1
+
 -!-120::0-?-?-Clono e imprimo
 Cantidad de elementos del clon luego de vaciarlo: 0
-Cantidad de elementos de la cola luego de vaciar clon: 0
+Cantidad de elementos de la cola luego de vaciar clon: 10
 
 -!-121::0-?-?-Verifico que se modifique el clon y no el original
-Cantidad de elementos luego de borrar 3 elementos: 0
+Cantidad de elementos luego de borrar 3 elementos: 7
 
 -!-122::0-?-?-Cantidad de elementos luego de borrar 3 elementos
 
