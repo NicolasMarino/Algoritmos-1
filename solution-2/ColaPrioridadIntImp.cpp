@@ -8,7 +8,6 @@ struct _cabezalColaPrioridadInt {
 	NodoListaIntDobleDato* ultimo;
 };
 
-
 ColaPrioridadInt crearColaPrioridadInt() {
 	ColaPrioridadInt nueva = new _cabezalColaPrioridadInt();
 	nueva->cantElementos = 0;
@@ -42,7 +41,7 @@ void encolar(ColaPrioridadInt& c, int e, int p) {
 		c->principio = insertar;
 		inserte = true;
 	}
-	if (p < c->ultimo->dato2 && inserte == false) {
+	if (p <= c->ultimo->dato2 && inserte == false) {
 		insertarFinal(c->principio, insertar, c->ultimo);
 		inserte = true;
 	}
@@ -79,7 +78,7 @@ void desencolar(ColaPrioridadInt& c) {
 	assert(!esVacia(c));
 	if (c->cantElementos == 1) {
 		eliminarCabeza(c->principio);
-		eliminarCabeza(c->ultimo);
+		//eliminarCabeza(c->ultimo);
 	}
 	else {
 		eliminarCabeza(c->principio);

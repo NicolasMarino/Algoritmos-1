@@ -87,7 +87,28 @@ MultisetInt Xor(MultisetInt m1, MultisetInt m2)
 }
 
 ColaPrioridadInt MenorPrioridad(ColaPrioridadInt c) {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	ColaPrioridadInt colaRetorno = crearColaPrioridadInt();
+	if (esVacia(c)) return colaRetorno;
+
+	ColaPrioridadInt clonCola = clon(c);
+	ColaPrioridadInt clonCola2 = clon(c);
+	
+	int menorPrioridad = principioPrioridad(clonCola);
+	while (!esVacia(clonCola))
+	{
+		int prioridad = principioPrioridad(clonCola); 
+		if (prioridad < menorPrioridad) menorPrioridad = prioridad;
+		desencolar(clonCola);
+	}
+	while (!esVacia(clonCola2))
+	{
+		int princI = principioPrioridad(clonCola2);
+		if (princI == menorPrioridad) {
+			encolar(colaRetorno, principio(clonCola2), menorPrioridad);
+		}
+		desencolar(clonCola2);
+	}
+
+	return colaRetorno;
 }
 

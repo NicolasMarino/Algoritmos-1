@@ -331,138 +331,28 @@ PRUEBAS FUNCION PRUEBAS Xor de multisets                           HAY 10 PRUEBA
 
 ********* INICIO PRUEBAS pruebaMenorPrioridad*******
 -----------------------------------
-Prueba 32: Prueba pruebaMenorPrioridad 1
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad(())
-2 : 
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad(())
-2 ! NULL
-3 : 
+Prueba 32: Prueba pruebaMenorPrioridad 1 -> OK
 -----------------------------------
-Prueba 33: Prueba pruebaMenorPrioridad 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((4:1,2:3,3:2,1:4))
-2 : 4:1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((4:1,2:3,3:2,1:4))
-2 ! NULL
-3 : 
+Prueba 33: Prueba pruebaMenorPrioridad 2 -> OK
 -----------------------------------
-Prueba 34: Prueba pruebaMenorPrioridad 3
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((5:5,9:6,2:2,-3:3,5:8,7:2,9:4,-2:-4,1:2,-1:-1))
-2 : -2:-4
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((5:5,9:6,2:2,-3:3,5:8,7:2,9:4,-2:-4,1:2,-1:-1))
-2 ! NULL
-3 : 
+Prueba 34: Prueba pruebaMenorPrioridad 3 -> OK
 -----------------------------------
-Prueba 35: Prueba pruebaMenorPrioridad 4
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((6:-1,30:0,4:7,-10:-1,9:9))
-2 : 6:-1 -10:-1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((6:-1,30:0,4:7,-10:-1,9:9))
-2 ! NULL
-3 : 
+Prueba 35: Prueba pruebaMenorPrioridad 4 -> OK
 -----------------------------------
-Prueba 36: Prueba pruebaMenorPrioridad 5
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((15:5,-4:4,3:4,-3:3,-2:2,12:2,5:2,7:1,6:2,9:4,-3:3,-5:5,1:1))
-2 : 7:1 1:1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((15:5,-4:4,3:4,-3:3,-2:2,12:2,5:2,7:1,6:2,9:4,-3:3,-5:5,1:1))
-2 ! NULL
-3 : 
+Prueba 36: Prueba pruebaMenorPrioridad 5 -> OK
 -----------------------------------
-Prueba 37: Prueba pruebaMenorPrioridad 6
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((2:4,2:4,4:4,4:4))
-2 : 2:4 2:4 4:4 4:4
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((2:4,2:4,4:4,4:4))
-2 ! NULL
-3 : 
+Prueba 37: Prueba pruebaMenorPrioridad 6 -> OK
 -----------------------------------
-Prueba 38: Prueba pruebaMenorPrioridad 7
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((2:4,1:4,7:5,6:4,8:4))
-2 : 2:4 1:4 6:4 8:4
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((2:4,1:4,7:5,6:4,8:4))
-2 ! NULL
-3 : 
+Prueba 38: Prueba pruebaMenorPrioridad 7 -> OK
 -----------------------------------
-Prueba 39: Prueba pruebaMenorPrioridad 8
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((9:-1,8:-2,7:-3,5:-4,3:-5,2:-6,5:-7,4:-8,1:-9,3:-10))
-2 : 3:-10
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((9:-1,8:-2,7:-3,5:-4,3:-5,2:-6,5:-7,4:-8,1:-9,3:-10))
-2 ! NULL
-3 : 
+Prueba 39: Prueba pruebaMenorPrioridad 8 -> OK
 -----------------------------------
-Prueba 40: Prueba pruebaMenorPrioridad 9
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((1:-1))
-2 : 1:-1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((1:-1))
-2 ! NULL
-3 : 
+Prueba 40: Prueba pruebaMenorPrioridad 9 -> OK
 -----------------------------------
-Prueba 41: Prueba pruebaMenorPrioridad 10
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: MenorPrioridad((1:1,2:-1,3:-2,4:1,5:-1,6:-2,7:-2,8:-1,9:1))
-2 : 3:-2 6:-2 7:-2
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: MenorPrioridad((1:1,2:-1,3:-2,4:1,5:-1,6:-2,7:-2,8:-1,9:1))
-2 ! NULL
-3 : 
+Prueba 41: Prueba pruebaMenorPrioridad 10 -> OK
 ********* FIN PRUEBAS pruebaMenorPrioridad*******
 
-PRUEBAS FUNCION PRUEBAS pruebaMenorPrioridad                       HAY 10 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS pruebaMenorPrioridad                       PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS ListaOrdInt*******
 -----------------------------------
@@ -933,5 +823,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  8 INCORRECTAS:  6
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  9 INCORRECTAS:  5
 PRUEBAS FUNCIONES 
