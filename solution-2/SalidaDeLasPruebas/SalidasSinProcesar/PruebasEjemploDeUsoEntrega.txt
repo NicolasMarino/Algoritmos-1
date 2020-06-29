@@ -402,41 +402,41 @@ La tabla  si  es vacia
 -!-103::0-?-?-Libero memoria
 -!-Fin::PRUEBAS TablaIntString
 -!-Ini::PRUEBAS MultisetInt
-Largo de lista Pos: 0
+Largo de lista Pos: 6
 
 -!-104::0-?-?-Imprimo largo luego de agregar
-Clon de multiset: ()
+Clon de multiset: (-2,-1,4,5,7,15)
 
 -!-105::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de Set luego de vaciar clon: 0
+Largo de Set luego de vaciar clon: 6
 
 -!-106::0-?-?-Verifico que se modifique el clon y no el original
-Union de multiset: ()
+Union de multiset: (-2,-1,1,2,4,4,5,5,7,7,13,15,15)
 
 -!-107::0-?-?-Hago union e imprimo
 Largo de la union luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la union: 0
-Largo de Multiset2 luego de vaciar la union: 0
+Largo de Multiset1 luego de vaciar la union: 6
+Largo de Multiset2 luego de vaciar la union: 7
 
 -!-108::0-?-?-Verifico que se modifique la union y no los originales
-Interseccion de multiset: ()
+Interseccion de multiset: (4,5,7,15)
 
 -!-109::0-?-?-Hago interseccion e imprimo
 Largo de la interseccion luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la interseccion: 0
-Largo de Multiset2 luego de vaciar la interseccion: 0
+Largo de Multiset1 luego de vaciar la interseccion: 6
+Largo de Multiset2 luego de vaciar la interseccion: 7
 
 -!-110::0-?-?-Verifico que se modifique la interseccion y no los originales
-Diferencia de multiset: ()
+Diferencia de multiset: (-2,-1)
 
 -!-111::0-?-?-Hago diferencia e imprimo
 Largo de la diferencia luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la diferencia: 0
-Largo de Multiset2 luego de vaciar la diferencia: 0
+Largo de Multiset1 luego de vaciar la diferencia: 6
+Largo de Multiset2 luego de vaciar la diferencia: 7
 
 -!-112::0-?-?-Verifico que se modifique la diferencia y no los originales
-Pertenece elemento: 0
+Pertenece elemento: 1
 Pertenece elemento luego de borrarlo: 0
 Pertenece otro elemento: 0
 
@@ -449,8 +449,8 @@ Cantidad elementos de vacio: 0
 Subconjunto vacio: 0
 
 -!-114::0-?-?-Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
-Largo del multiset luego de borrar otro elemento: 0
-Multiset luego de haber borrado 2 elementos: ()
+Largo del multiset luego de borrar otro elemento: 3
+Multiset luego de haber borrado 2 elementos: (-2,4,7)
 
 -!-115::0-?-?-Borro algunos elementos
 
