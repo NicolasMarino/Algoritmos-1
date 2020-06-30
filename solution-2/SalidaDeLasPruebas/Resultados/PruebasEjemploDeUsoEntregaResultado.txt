@@ -633,159 +633,34 @@ PRUEBAS FUNCION PRUEBAS TablaIntString                             HAY 9 PRUEBAS
 
 ********* INICIO PRUEBAS MultisetInt*******
 -----------------------------------
-Prueba 104: Imprimo largo luego de agregar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de lista Pos: 8
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de lista Pos: 6
-2 : 
+Prueba 104: Imprimo largo luego de agregar -> OK
 -----------------------------------
-Prueba 105: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Clon de multiset: (-2,-1,4,5,5,7,7,15)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Clon de multiset: (-2,-1,4,5,7,15)
-2 : 
+Prueba 105: Clono e imprimo -> OK
 -----------------------------------
-Prueba 106: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de clon luego de vaciarlo: 0
-2 : Largo de Set luego de vaciar clon: 8
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de clon luego de vaciarlo: 0
-2 ! Largo de Set luego de vaciar clon: 6
-3 : 
+Prueba 106: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 107: Hago union e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Union de multiset: (-2,-1,1,2,2,2,4,4,5,5,7,7,13,15)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Union de multiset: (-2,-1,1,2,4,4,5,5,7,7,13,15,15)
-2 : 
+Prueba 107: Hago union e imprimo -> OK
 -----------------------------------
-Prueba 108: Verifico que se modifique la union y no los originales
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de la union luego de vaciarlo: 0
-2 : Largo de Multiset1 luego de vaciar la union: 8
-3 : Largo de Multiset2 luego de vaciar la union: 11
-4 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de la union luego de vaciarlo: 0
-2 ! Largo de Multiset1 luego de vaciar la union: 6
-3 ! Largo de Multiset2 luego de vaciar la union: 7
-4 : 
+Prueba 108: Verifico que se modifique la union y no los originales -> OK
 -----------------------------------
-Prueba 109: Hago interseccion e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Interseccion de multiset: (4,5,5,7,15)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Interseccion de multiset: (4,5,7,15)
-2 : 
+Prueba 109: Hago interseccion e imprimo -> OK
 -----------------------------------
-Prueba 110: Verifico que se modifique la interseccion y no los originales
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de la interseccion luego de vaciarlo: 0
-2 : Largo de Multiset1 luego de vaciar la interseccion: 8
-3 : Largo de Multiset2 luego de vaciar la interseccion: 11
-4 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de la interseccion luego de vaciarlo: 0
-2 ! Largo de Multiset1 luego de vaciar la interseccion: 6
-3 ! Largo de Multiset2 luego de vaciar la interseccion: 7
-4 : 
+Prueba 110: Verifico que se modifique la interseccion y no los originales -> OK
 -----------------------------------
-Prueba 111: Hago diferencia e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Diferencia de multiset: (-2,-1,7)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Diferencia de multiset: (-2,-1)
-2 : 
+Prueba 111: Hago diferencia e imprimo -> OK
 -----------------------------------
-Prueba 112: Verifico que se modifique la diferencia y no los originales
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de la diferencia luego de vaciarlo: 0
-2 : Largo de Multiset1 luego de vaciar la diferencia: 8
-3 : Largo de Multiset2 luego de vaciar la diferencia: 11
-4 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de la diferencia luego de vaciarlo: 0
-2 ! Largo de Multiset1 luego de vaciar la diferencia: 6
-3 ! Largo de Multiset2 luego de vaciar la diferencia: 7
-4 : 
+Prueba 112: Verifico que se modifique la diferencia y no los originales -> OK
 -----------------------------------
 Prueba 113: Verifico si pertenecen algunos elementos -> OK
 -----------------------------------
-Prueba 114: Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Subconjunto: 0
-2 : Subconjunto luego de borrar elementos: 0
-3 : Subconjunto luego de borrar mas elementos: 1
-4 : Es vacio: 1
-5 : Cantidad elementos de vacio: 0
-6 : Subconjunto vacio: 1
-7 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Subconjunto: 0
-2 : Subconjunto luego de borrar elementos: 0
-3 ! Subconjunto luego de borrar mas elementos: 0
-4 : Es vacio: 1
-5 : Cantidad elementos de vacio: 0
-6 ! Subconjunto vacio: 0
-7 : 
+Prueba 114: Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece -> OK
 -----------------------------------
-Prueba 115: Borro algunos elementos
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo del multiset luego de borrar otro elemento: 5
-2 : Multiset luego de haber borrado 2 elementos: (-2,4,5,7,7)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo del multiset luego de borrar otro elemento: 3
-2 ! Multiset luego de haber borrado 2 elementos: (-2,4,7)
-3 : 
+Prueba 115: Borro algunos elementos -> OK
 -----------------------------------
 Prueba 116: Libero memoria -> OK
 ********* FIN PRUEBAS MultisetInt*******
 
-PRUEBAS FUNCION PRUEBAS MultisetInt                                HAY 11 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS MultisetInt                                PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS ColaPrioridadInt*******
 -----------------------------------
@@ -810,5 +685,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  9 INCORRECTAS:  5
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 10 INCORRECTAS:  4
 PRUEBAS FUNCIONES 

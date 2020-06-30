@@ -402,38 +402,38 @@ La tabla  si  es vacia
 -!-103::0-?-?-Libero memoria
 -!-Fin::PRUEBAS TablaIntString
 -!-Ini::PRUEBAS MultisetInt
-Largo de lista Pos: 6
+Largo de lista Pos: 8
 
 -!-104::0-?-?-Imprimo largo luego de agregar
-Clon de multiset: (-2,-1,4,5,7,15)
+Clon de multiset: (-2,-1,4,5,5,7,7,15)
 
 -!-105::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de Set luego de vaciar clon: 6
+Largo de Set luego de vaciar clon: 8
 
 -!-106::0-?-?-Verifico que se modifique el clon y no el original
-Union de multiset: (-2,-1,1,2,4,4,5,5,7,7,13,15,15)
+Union de multiset: (-2,-1,1,2,2,2,4,4,5,5,7,7,13,15)
 
 -!-107::0-?-?-Hago union e imprimo
 Largo de la union luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la union: 6
-Largo de Multiset2 luego de vaciar la union: 7
+Largo de Multiset1 luego de vaciar la union: 8
+Largo de Multiset2 luego de vaciar la union: 11
 
 -!-108::0-?-?-Verifico que se modifique la union y no los originales
-Interseccion de multiset: (4,5,7,15)
+Interseccion de multiset: (4,5,5,7,15)
 
 -!-109::0-?-?-Hago interseccion e imprimo
 Largo de la interseccion luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la interseccion: 6
-Largo de Multiset2 luego de vaciar la interseccion: 7
+Largo de Multiset1 luego de vaciar la interseccion: 8
+Largo de Multiset2 luego de vaciar la interseccion: 11
 
 -!-110::0-?-?-Verifico que se modifique la interseccion y no los originales
-Diferencia de multiset: (-2,-1)
+Diferencia de multiset: (-2,-1,7)
 
 -!-111::0-?-?-Hago diferencia e imprimo
 Largo de la diferencia luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la diferencia: 6
-Largo de Multiset2 luego de vaciar la diferencia: 7
+Largo de Multiset1 luego de vaciar la diferencia: 8
+Largo de Multiset2 luego de vaciar la diferencia: 11
 
 -!-112::0-?-?-Verifico que se modifique la diferencia y no los originales
 Pertenece elemento: 1
@@ -443,14 +443,14 @@ Pertenece otro elemento: 0
 -!-113::0-?-?-Verifico si pertenecen algunos elementos
 Subconjunto: 0
 Subconjunto luego de borrar elementos: 0
-Subconjunto luego de borrar mas elementos: 0
+Subconjunto luego de borrar mas elementos: 1
 Es vacio: 1
 Cantidad elementos de vacio: 0
-Subconjunto vacio: 0
+Subconjunto vacio: 1
 
 -!-114::0-?-?-Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
-Largo del multiset luego de borrar otro elemento: 3
-Multiset luego de haber borrado 2 elementos: (-2,4,7)
+Largo del multiset luego de borrar otro elemento: 5
+Multiset luego de haber borrado 2 elementos: (-2,4,5,7,7)
 
 -!-115::0-?-?-Borro algunos elementos
 
