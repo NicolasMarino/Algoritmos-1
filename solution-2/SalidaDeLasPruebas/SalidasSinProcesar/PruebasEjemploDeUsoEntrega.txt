@@ -349,18 +349,18 @@ elementos del clon de la cola:
 -!-87::0-?-?-Libero memoria
 -!-Fin::PRUEBAS ColaInt
 -!-Ini::PRUEBAS Diccionario
-Largo de diccionario: 0
+Largo de diccionario: 6
 
 -!-88::0-?-?-Imprimo largo luego de agregar
-Clon de diccionario: ()
+Clon de diccionario: (-5,-1,4,5,7,15)
 
 -!-89::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de diccionario luego de vaciar clon: 0
+Largo de diccionario luego de vaciar clon: 6
 
 -!-90::0-?-?-Verifico que se modifique el clon y no el original
-Largo de diccionario luego de borrar 3 elementos: 0
-Diccionario luego de borrar 3 elementos: ()
+Largo de diccionario luego de borrar 3 elementos: 3
+Diccionario luego de borrar 3 elementos: (-1,4,7)
 
 -!-91::0-?-?-Borro algunos elementos
 

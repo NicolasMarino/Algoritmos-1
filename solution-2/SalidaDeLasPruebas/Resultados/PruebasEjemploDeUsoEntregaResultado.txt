@@ -468,58 +468,18 @@ PRUEBAS FUNCION PRUEBAS ColaInt                                    PRUEBAS CORRE
 
 ********* INICIO PRUEBAS Diccionario*******
 -----------------------------------
-Prueba 88: Imprimo largo luego de agregar
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de diccionario: 6
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de diccionario: 0
-2 : 
+Prueba 88: Imprimo largo luego de agregar -> OK
 -----------------------------------
-Prueba 89: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Clon de diccionario: (-5,-1,4,5,7,15)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Clon de diccionario: ()
-2 : 
+Prueba 89: Clono e imprimo -> OK
 -----------------------------------
-Prueba 90: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de clon luego de vaciarlo: 0
-2 : Largo de diccionario luego de vaciar clon: 6
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de clon luego de vaciarlo: 0
-2 ! Largo de diccionario luego de vaciar clon: 0
-3 : 
+Prueba 90: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 91: Borro algunos elementos
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de diccionario luego de borrar 3 elementos: 3
-2 : Diccionario luego de borrar 3 elementos: (-1,4,7)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de diccionario luego de borrar 3 elementos: 0
-2 ! Diccionario luego de borrar 3 elementos: ()
-3 : 
+Prueba 91: Borro algunos elementos -> OK
 -----------------------------------
 Prueba 92: Libero memoria -> OK
 ********* FIN PRUEBAS Diccionario*******
 
-PRUEBAS FUNCION PRUEBAS Diccionario                                HAY 4 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS Diccionario                                PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS TablaIntString*******
 -----------------------------------
@@ -685,5 +645,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 10 INCORRECTAS:  4
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 11 INCORRECTAS:  3
 PRUEBAS FUNCIONES 

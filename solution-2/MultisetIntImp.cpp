@@ -52,7 +52,6 @@ void borrar(MultisetInt& s, int e) {
 
 		aRecorrer = aRecorrer->sig;
 	}
-
 }
 
 bool pertenece(MultisetInt s, int e) {
@@ -283,17 +282,17 @@ unsigned int cantidadElementos(MultisetInt s) {
 	return s->cantElementos;
 }
 
-//void vaciar(NodoListaIntDobleDato*& l) {
-//	if (l != NULL) {
-//		vaciar(l->sig);
-//		delete l;
-//		l = NULL;
-//	}
-//}
+void vaciarMultiLista(NodoListaInt*& l) {
+	if (l != NULL) {
+		vaciarMultiLista(l->sig);
+		delete l;
+		l = NULL;
+	}
+}
 
 void destruir(MultisetInt& s) {
-	//vaciar(s->multiLista);
-
+	vaciarMultiLista(s->multiLista);
+	delete s;
 }
 
 NodoListaInt* clonare(NodoListaInt* lista) {
