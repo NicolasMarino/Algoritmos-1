@@ -483,113 +483,30 @@ PRUEBAS FUNCION PRUEBAS Diccionario                                PRUEBAS CORRE
 
 ********* INICIO PRUEBAS TablaIntString*******
 -----------------------------------
-Prueba 93: Imprimio largo luego de agregar 5 elementos
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de la tabla: 5
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de la tabla: 0
-2 : 
+Prueba 93: Imprimio largo luego de agregar 5 elementos -> OK
 -----------------------------------
-Prueba 94: Imprimio largo del clon luego de clonar la tabla
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo del clon: 5
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo del clon: 0
-2 : 
+Prueba 94: Imprimio largo del clon luego de clonar la tabla -> OK
 -----------------------------------
-Prueba 95: Clono e imprimo
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Elementos del dominio del Clon de la tabla: (1,2,3,4,5)
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Elementos del dominio del Clon de la tabla: ()
-2 : 
+Prueba 95: Clono e imprimo -> OK
 -----------------------------------
-Prueba 96: Verifico que se modifique el clon y no el original
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de clon luego de vaciarlo: 0
-2 : Largo de Tabla luego de vaciar clon: 5
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Largo de clon luego de vaciarlo: 0
-2 ! Largo de Tabla luego de vaciar clon: 0
-3 : 
+Prueba 96: Verifico que se modifique el clon y no el original -> OK
 -----------------------------------
-Prueba 97: Verifico que se agregue los elementos a la tabla
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Largo de la tabla luego de agregar dos elemento :7
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Largo de la tabla luego de agregar dos elemento :0
-2 : 
+Prueba 97: Verifico que se agregue los elementos a la tabla -> OK
 -----------------------------------
-Prueba 98: Verifico que el elemento 7 esta definido
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : El 7  si  esta definido en la tabla
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! El 7  no  esta definido en la tabla
-2 : 
+Prueba 98: Verifico que el elemento 7 esta definido -> OK
 -----------------------------------
-Prueba 99: Verifico que el elemento 7 tenga datos asociados
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : El elemento  de dominio 7 le corresponde : char
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! El elemento  de dominio 7 le corresponde : 
-2 : 
+Prueba 99: Verifico que el elemento 7 tenga datos asociados -> OK
 -----------------------------------
 Prueba 100: Verifico que el elemento 7 no esta definido -> OK
 -----------------------------------
-Prueba 101: Verifico que la tabla me devuelva un dominio cualquiera
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Consigo un dominio cualquiera de la tabla : 1
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! Consigo un dominio cualquiera de la tabla : 0
-2 : 
+Prueba 101: Verifico que la tabla me devuelva un dominio cualquiera -> OK
 -----------------------------------
-Prueba 102: Verifico que la tabla no sea vacia
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : La tabla  no  es vacia
-2 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 ! La tabla  si  es vacia
-2 : 
+Prueba 102: Verifico que la tabla no sea vacia -> OK
 -----------------------------------
 Prueba 103: Libero memoria -> OK
 ********* FIN PRUEBAS TablaIntString*******
 
-PRUEBAS FUNCION PRUEBAS TablaIntString                             HAY 9 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS TablaIntString                             PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS MultisetInt*******
 -----------------------------------
@@ -645,5 +562,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 11 INCORRECTAS:  3
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 12 INCORRECTAS:  2
 PRUEBAS FUNCIONES 

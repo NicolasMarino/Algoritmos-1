@@ -367,35 +367,35 @@ Diccionario luego de borrar 3 elementos: (-1,4,7)
 -!-92::0-?-?-Libero memoria
 -!-Fin::PRUEBAS Diccionario
 -!-Ini::PRUEBAS TablaIntString
-Largo de la tabla: 0
+Largo de la tabla: 5
 
 -!-93::0-?-?-Imprimio largo luego de agregar 5 elementos
-Largo del clon: 0
+Largo del clon: 5
 
 -!-94::0-?-?-Imprimio largo del clon luego de clonar la tabla
-Elementos del dominio del Clon de la tabla: ()
+Elementos del dominio del Clon de la tabla: (1,2,3,4,5)
 
 -!-95::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de Tabla luego de vaciar clon: 0
+Largo de Tabla luego de vaciar clon: 5
 
 -!-96::0-?-?-Verifico que se modifique el clon y no el original
-Largo de la tabla luego de agregar dos elemento :0
+Largo de la tabla luego de agregar dos elemento :7
 
 -!-97::0-?-?-Verifico que se agregue los elementos a la tabla
-El 7  no  esta definido en la tabla
+El 7  si  esta definido en la tabla
 
 -!-98::0-?-?-Verifico que el elemento 7 esta definido
-El elemento  de dominio 7 le corresponde : 
+El elemento  de dominio 7 le corresponde : char
 
 -!-99::0-?-?-Verifico que el elemento 7 tenga datos asociados
 El 7  no  esta definido en la tabla
 
 -!-100::0-?-?-Verifico que el elemento 7 no esta definido
-Consigo un dominio cualquiera de la tabla : 0
+Consigo un dominio cualquiera de la tabla : 1
 
 -!-101::0-?-?-Verifico que la tabla me devuelva un dominio cualquiera
-La tabla  si  es vacia
+La tabla  no  es vacia
 
 -!-102::0-?-?-Verifico que la tabla no sea vacia
 
