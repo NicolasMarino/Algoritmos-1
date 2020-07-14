@@ -13,7 +13,6 @@ MultisetInt crearMultisetInt() {
 	return multiset;
 }
 
-
 void agregar(MultisetInt& s, int e, unsigned int ocurrencias) {
 	bool agregue = false;
 
@@ -85,6 +84,7 @@ void listaOrdenadaSelectionSort(NodoListaInt*& l)
 		listaOrdenadaSelectionSort(l->sig);
 	}
 }
+
 int obtenerMenor(int uno, int dos) {
 	if (uno < dos) {
 		return uno;
@@ -103,7 +103,6 @@ int obtenerMayor(int uno, int dos) {
 	}
 }
 
-
 int obtenerOcurrencias(MultisetInt s, int e) {
 	NodoListaInt* aRecorrer = s->multiLista;
 	int contador = 0;
@@ -116,10 +115,6 @@ int obtenerOcurrencias(MultisetInt s, int e) {
 	return contador;
 }
 
-// PRE: -
-// POS: Retorna un nuevo multiset que es la union de m1 y m2,
-//   	 o sea, el conjunto que contiene los elementos de m1 y de m2
-//   	 El conjunto retornado no debe compartir memoria con m1 ni m2.
 MultisetInt unionConjuntos(MultisetInt s1, MultisetInt s2) {
 	MultisetInt recorrerS1 = clon(s1);
 	listaOrdenadaSelectionSort(recorrerS1->multiLista);
@@ -161,7 +156,6 @@ MultisetInt unionConjuntos(MultisetInt s1, MultisetInt s2) {
 	return aRetornar;
 }
 
-
 MultisetInt interseccionConjuntos(MultisetInt s1, MultisetInt s2) {
 	MultisetInt recorrerS1 = clon(s1);
 	listaOrdenadaSelectionSort(recorrerS1->multiLista);
@@ -197,10 +191,6 @@ MultisetInt interseccionConjuntos(MultisetInt s1, MultisetInt s2) {
 	return aRetornar;
 }
 
-// PRE: -
-// POS: Retorna un nuevo multiset que es la diferencia entre m1 y m2,
-//   	 o sea, el conjunto que contiene solo los elementos que estan en m1 pero no en m2.
-//   	 El conjunto retornado no debe compartir memoria con m1 ni m2.
 MultisetInt diferenciaConjuntos(MultisetInt s1, MultisetInt s2) {
 	NodoListaInt* recorrerS1 = s1->multiLista;
 
@@ -224,28 +214,6 @@ MultisetInt diferenciaConjuntos(MultisetInt s1, MultisetInt s2) {
 	return aRetornar;
 }
 
-//bool embebida(NodoListaInt* l, NodoListaInt* secuencia) {
-//	if (l == nullptr && secuencia == nullptr) return true;
-//	if (l == nullptr) return false;
-//	if (secuencia == nullptr) return true;
-//	if (l != nullptr && secuencia != nullptr)
-//		if (l->dato == secuencia->dato) {
-//			int datoL = l->dato;
-//			while (l->dato == datoL)
-//			{
-//				l = l->sig;
-//			}
-//			while (secuencia->dato == datoL)
-//			{
-//				secuencia = secuencia->sig;
-//			}
-//			embebida(l, secuencia);
-//		}			
-//		else
-//			return false;
-//}
-//PRE: -
-//POS: Retorna true sii todos los elementos de m1 pertenecen a m2
 bool contenidoEn(MultisetInt s1, MultisetInt s2) {
 	NodoListaInt* recorrerS1 = s1->multiLista;
 	NodoListaInt* recorrerS2 = s2->multiLista;
@@ -267,7 +235,6 @@ bool contenidoEn(MultisetInt s1, MultisetInt s2) {
 	}
 	return true;
 }
-
 
 int elemento(MultisetInt s) {
 	assert(!esVacio(s));
