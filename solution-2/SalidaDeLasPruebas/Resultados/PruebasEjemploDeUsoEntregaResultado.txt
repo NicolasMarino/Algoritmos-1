@@ -64,138 +64,28 @@ PRUEBAS FUNCION PRUEBAS ObtenerRepetidos                           PRUEBAS CORRE
 
 ********* INICIO PRUEBAS Xor de multisets*******
 -----------------------------------
-Prueba 22: Prueba Xor de multisets 1
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((), ())
-2 : ()
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((), ())
-2 ! NULL
-3 : 
+Prueba 22: Prueba Xor de multisets 1 -> OK
 -----------------------------------
-Prueba 23: Prueba Xor de multisets 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,2,3), (3,2,1))
-2 : ()
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,2,3), (3,2,1))
-2 ! NULL
-3 : 
+Prueba 23: Prueba Xor de multisets 2 -> OK
 -----------------------------------
-Prueba 24: Prueba Xor de multisets 3
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,2,3), ())
-2 : (1,2,3)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,2,3), ())
-2 ! NULL
-3 : 
+Prueba 24: Prueba Xor de multisets 3 -> OK
 -----------------------------------
-Prueba 25: Prueba Xor de multisets 4
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((), (3,2,1))
-2 : (1,2,3)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((), (3,2,1))
-2 ! NULL
-3 : 
+Prueba 25: Prueba Xor de multisets 4 -> OK
 -----------------------------------
-Prueba 26: Prueba Xor de multisets 5
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,3,4,7), (8,1,2,3))
-2 : (2,4,7,8)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,3,4,7), (8,1,2,3))
-2 ! NULL
-3 : 
+Prueba 26: Prueba Xor de multisets 5 -> OK
 -----------------------------------
-Prueba 27: Prueba Xor de multisets 6
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,1,2), (1,2))
-2 : (1)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,1,2), (1,2))
-2 ! NULL
-3 : 
+Prueba 27: Prueba Xor de multisets 6 -> OK
 -----------------------------------
-Prueba 28: Prueba Xor de multisets 7
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,1,2,3,3,3), (1,3))
-2 : (1,2,3,3)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,1,2,3,3,3), (1,3))
-2 ! NULL
-3 : 
+Prueba 28: Prueba Xor de multisets 7 -> OK
 -----------------------------------
-Prueba 29: Prueba Xor de multisets 8
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,1,1), ())
-2 : (1,1,1)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,1,1), ())
-2 ! NULL
-3 : 
+Prueba 29: Prueba Xor de multisets 8 -> OK
 -----------------------------------
-Prueba 30: Prueba Xor de multisets 9
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,1,1), (5))
-2 : (1,1,1,5)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,1,1), (5))
-2 ! NULL
-3 : 
+Prueba 30: Prueba Xor de multisets 9 -> OK
 -----------------------------------
-Prueba 31: Prueba Xor de multisets 10
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: Xor((1,1,1,0), (1,1,1))
-2 : (0)
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: Xor((1,1,1,0), (1,1,1))
-2 ! NULL
-3 : 
+Prueba 31: Prueba Xor de multisets 10 -> OK
 ********* FIN PRUEBAS Xor de multisets*******
 
-PRUEBAS FUNCION PRUEBAS Xor de multisets                           HAY 10 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS Xor de multisets                           PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS pruebaMenorPrioridad*******
 -----------------------------------
@@ -430,5 +320,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 13 INCORRECTAS:  1
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 14 INCORRECTAS:  0
 PRUEBAS FUNCIONES 

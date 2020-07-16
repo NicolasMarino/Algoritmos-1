@@ -91,8 +91,31 @@ ListaOrdInt ObtenerRepetidos(MultisetInt m)
 
 MultisetInt Xor(MultisetInt m1, MultisetInt m2)
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	MultisetInt clonM1 = clon(m1);
+	MultisetInt clonM2 = clon(m2);
+	MultisetInt aRetornar = crearMultisetInt();
+	MultisetInt aBorrar = crearMultisetInt();
+	aBorrar = interseccionConjuntos(clonM1, clonM2);
+	while (!esVacio(aBorrar)) {
+		int dato = elemento(aBorrar);
+		borrar(clonM1, dato);
+		borrar(clonM2, dato);
+		borrar(aBorrar, dato);
+	}
+	while (!esVacio(clonM1))
+	{
+		int dato = elemento(clonM1);
+		agregar(aRetornar, dato, 1);
+		borrar(clonM1, dato);
+	}
+	while (!esVacio(clonM2))
+	{
+		int dato = elemento(clonM2);
+		agregar(aRetornar, dato, 1);
+		borrar(clonM2, dato);
+	}
+
+	return aRetornar;
 }
 
 ColaPrioridadInt MenorPrioridad(ColaPrioridadInt c) {

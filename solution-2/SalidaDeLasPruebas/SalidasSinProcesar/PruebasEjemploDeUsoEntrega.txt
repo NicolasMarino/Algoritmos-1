@@ -96,43 +96,43 @@ Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
 -!-Fin::PRUEBAS ObtenerRepetidos
 -!-Ini::PRUEBAS Xor de multisets
 Llamada: Xor((), ())
-NULL
+()
 
 -!-22::0-?-?-Prueba Xor de multisets 1
 Llamada: Xor((1,2,3), (3,2,1))
-NULL
+()
 
 -!-23::0-?-?-Prueba Xor de multisets 2
 Llamada: Xor((1,2,3), ())
-NULL
+(1,2,3)
 
 -!-24::0-?-?-Prueba Xor de multisets 3
 Llamada: Xor((), (3,2,1))
-NULL
+(1,2,3)
 
 -!-25::0-?-?-Prueba Xor de multisets 4
 Llamada: Xor((1,3,4,7), (8,1,2,3))
-NULL
+(2,4,7,8)
 
 -!-26::0-?-?-Prueba Xor de multisets 5
 Llamada: Xor((1,1,2), (1,2))
-NULL
+(1)
 
 -!-27::0-?-?-Prueba Xor de multisets 6
 Llamada: Xor((1,1,2,3,3,3), (1,3))
-NULL
+(1,2,3,3)
 
 -!-28::0-?-?-Prueba Xor de multisets 7
 Llamada: Xor((1,1,1), ())
-NULL
+(1,1,1)
 
 -!-29::0-?-?-Prueba Xor de multisets 8
 Llamada: Xor((1,1,1), (5))
-NULL
+(1,1,1,5)
 
 -!-30::0-?-?-Prueba Xor de multisets 9
 Llamada: Xor((1,1,1,0), (1,1,1))
-NULL
+(0)
 
 -!-31::0-?-?-Prueba Xor de multisets 10
 -!-Fin::PRUEBAS Xor de multisets
