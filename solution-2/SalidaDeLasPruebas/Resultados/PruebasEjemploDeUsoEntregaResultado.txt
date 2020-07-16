@@ -35,164 +35,32 @@ PRUEBAS FUNCION PRUEBAS EstaContenida                              PRUEBAS CORRE
 
 ********* INICIO PRUEBAS ObtenerRepetidos*******
 -----------------------------------
-Prueba 10: Prueba ObtenerRepetidos 1
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 1, 2))
-2 : 1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 1, 2))
-2 ! NULL
-3 : 
+Prueba 10: Prueba ObtenerRepetidos 1 -> OK
 -----------------------------------
-Prueba 11: Prueba ObtenerRepetidos 2
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos(())
-2 : 
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos(())
-2 ! NULL
-3 : 
+Prueba 11: Prueba ObtenerRepetidos 2 -> OK
 -----------------------------------
-Prueba 12: Prueba ObtenerRepetidos 3
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 2, 3, 2, 1))
-2 : 1 2
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 2, 3, 2, 1))
-2 ! NULL
-3 : 
+Prueba 12: Prueba ObtenerRepetidos 3 -> OK
 -----------------------------------
-Prueba 13: Prueba ObtenerRepetidos 4
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((10, 4, 6, 1, 1, 10, 5, 8))
-2 : 1 10
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((10, 4, 6, 1, 1, 10, 5, 8))
-2 ! NULL
-3 : 
+Prueba 13: Prueba ObtenerRepetidos 4 -> OK
 -----------------------------------
-Prueba 14: Prueba ObtenerRepetidos 5
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((4))
-2 : 
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((4))
-2 ! NULL
-3 : 
+Prueba 14: Prueba ObtenerRepetidos 5 -> OK
 -----------------------------------
-Prueba 15: Prueba ObtenerRepetidos 6
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
-2 : 
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
-2 ! NULL
-3 : 
+Prueba 15: Prueba ObtenerRepetidos 6 -> OK
 -----------------------------------
-Prueba 16: Prueba ObtenerRepetidos 7
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 1, 1, 1, 1, 1))
-2 : 1
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 1, 1, 1, 1, 1))
-2 ! NULL
-3 : 
+Prueba 16: Prueba ObtenerRepetidos 7 -> OK
 -----------------------------------
-Prueba 17: Prueba ObtenerRepetidos 8
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 10, 100, 1000))
-2 : 
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 10, 100, 1000))
-2 ! NULL
-3 : 
+Prueba 17: Prueba ObtenerRepetidos 8 -> OK
 -----------------------------------
-Prueba 18: Prueba ObtenerRepetidos 9
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((4, 6, 4, 6, 4, 6, 4, 6))
-2 : 4 6
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((4, 6, 4, 6, 4, 6, 4, 6))
-2 ! NULL
-3 : 
+Prueba 18: Prueba ObtenerRepetidos 9 -> OK
 -----------------------------------
-Prueba 19: Prueba ObtenerRepetidos 10
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((1, 2, 1, 4, 2, 1, 4, 2, 7))
-2 : 1 2 4
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((1, 2, 1, 4, 2, 1, 4, 2, 7))
-2 ! NULL
-3 : 
+Prueba 19: Prueba ObtenerRepetidos 10 -> OK
 -----------------------------------
-Prueba 20: Prueba ObtenerRepetidos 11
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((6, 6))
-2 : 6
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((6, 6))
-2 ! NULL
-3 : 
+Prueba 20: Prueba ObtenerRepetidos 11 -> OK
 -----------------------------------
-Prueba 21: Prueba ObtenerRepetidos 12
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
-1 : Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
-2 : 6 7
-3 : 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
-1 : Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
-2 ! NULL
-3 : 
+Prueba 21: Prueba ObtenerRepetidos 12 -> OK
 ********* FIN PRUEBAS ObtenerRepetidos*******
 
-PRUEBAS FUNCION PRUEBAS ObtenerRepetidos                           HAY 12 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS ObtenerRepetidos                           PRUEBAS CORRECTAS
 
 ********* INICIO PRUEBAS Xor de multisets*******
 -----------------------------------
@@ -562,5 +430,5 @@ PRUEBAS FUNCION PRUEBAS ColaPrioridadInt                           PRUEBAS CORRE
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 12 INCORRECTAS:  2
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS: 13 INCORRECTAS:  1
 PRUEBAS FUNCIONES 

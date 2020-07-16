@@ -46,51 +46,51 @@ Esta contenida
 -!-Fin::PRUEBAS EstaContenida
 -!-Ini::PRUEBAS ObtenerRepetidos
 Llamada: ObtenerRepetidos((1, 1, 2))
-NULL
+1
 
 -!-10::0-?-?-Prueba ObtenerRepetidos 1
 Llamada: ObtenerRepetidos(())
-NULL
+
 
 -!-11::0-?-?-Prueba ObtenerRepetidos 2
 Llamada: ObtenerRepetidos((1, 2, 3, 2, 1))
-NULL
+1 2
 
 -!-12::0-?-?-Prueba ObtenerRepetidos 3
 Llamada: ObtenerRepetidos((10, 4, 6, 1, 1, 10, 5, 8))
-NULL
+1 10
 
 -!-13::0-?-?-Prueba ObtenerRepetidos 4
 Llamada: ObtenerRepetidos((4))
-NULL
+
 
 -!-14::0-?-?-Prueba ObtenerRepetidos 5
 Llamada: ObtenerRepetidos((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
-NULL
+
 
 -!-15::0-?-?-Prueba ObtenerRepetidos 6
 Llamada: ObtenerRepetidos((1, 1, 1, 1, 1, 1))
-NULL
+1
 
 -!-16::0-?-?-Prueba ObtenerRepetidos 7
 Llamada: ObtenerRepetidos((1, 10, 100, 1000))
-NULL
+
 
 -!-17::0-?-?-Prueba ObtenerRepetidos 8
 Llamada: ObtenerRepetidos((4, 6, 4, 6, 4, 6, 4, 6))
-NULL
+4 6
 
 -!-18::0-?-?-Prueba ObtenerRepetidos 9
 Llamada: ObtenerRepetidos((1, 2, 1, 4, 2, 1, 4, 2, 7))
-NULL
+1 2 4
 
 -!-19::0-?-?-Prueba ObtenerRepetidos 10
 Llamada: ObtenerRepetidos((6, 6))
-NULL
+6
 
 -!-20::0-?-?-Prueba ObtenerRepetidos 11
 Llamada: ObtenerRepetidos((6, 6, 6, 7, 7, 7))
-NULL
+6 7
 
 -!-21::0-?-?-Prueba ObtenerRepetidos 12
 -!-Fin::PRUEBAS ObtenerRepetidos

@@ -76,8 +76,17 @@ bool EstaContenida(PilaInt p1, PilaInt p2)
 
 ListaOrdInt ObtenerRepetidos(MultisetInt m) 
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	MultisetInt clonM1 = clon(m);
+	ListaOrdInt aRetornar = crearListaOrdInt();
+	while (!esVacio(clonM1)) {
+		int dato = elemento(clonM1);
+		borrar(clonM1, dato);
+		if (!existe(aRetornar, dato) && pertenece(clonM1, dato)) {
+			agregar(aRetornar, dato);
+		}
+	}
+
+	return aRetornar;
 }
 
 MultisetInt Xor(MultisetInt m1, MultisetInt m2)
