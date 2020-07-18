@@ -1,0 +1,4 @@
+EJERCICIOS 
+
+1) Desarrolle una implementación del TAD Bedelia según la letra entregada en el pdf publicado.
+
