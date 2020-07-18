@@ -14,10 +14,8 @@ MultisetInt crearMultisetInt() {
 }
 
 void agregar(MultisetInt& s, int e, unsigned int ocurrencias) {
-	bool agregue = false;
-
 	NodoListaInt* aRecorrer = s->multiLista;
-	while (ocurrencias != 0 && agregue == false)
+	while (ocurrencias != 0)
 	{
 		NodoListaInt* nuevo2 = new NodoListaInt(e);
 		nuevo2->sig = s->multiLista;

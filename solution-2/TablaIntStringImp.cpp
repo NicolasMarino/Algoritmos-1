@@ -5,7 +5,7 @@
 
 struct TablaString {
 	int clave;
-	const char* valor;
+	char* valor;
 	TablaString* sig;
 };
 
@@ -23,72 +23,141 @@ TablaIntString crearTablaIntString(unsigned int esperados) {
 	return nuevaTablaString;
 }
 
-int hashingTabla(int dato, int tam) {
-	int hashingTablaData = dato % tam;
+// PRE: 
+// POS: Retorna el valor que le corresponde a la clave proporcionada en el hash, de tamaño tam proporcionado.
+//
+int hashingTabla(int clave, int tam) {
+	int hashingTablaData = clave % tam;
 	hashingTablaData = abs(hashingTablaData);
 	return hashingTablaData;
 }
 
+// PRE: 
+// POS: Retorna si la cantidad de elementos sobre el tamaño es mayor o igual a 1.
+//		Le inidica al usuario si debe agrandar su vector de hash.
+//
 bool factorCargaTabla (int cantElementos, int tam) {
 	return cantElementos / tam >= 1;
 }
 
-void agrandarHashTabla(TablaIntString& d) {
-	int dobleTam = d->tamVector * 2;
-	d->tamVector = dobleTam;
-	TablaString** vectorNuevo = new TablaString * [dobleTam]();
-	for (int i = 0; i < d->tamVector / 2; i++)
+// PRE: 
+// POS: Retorna el largo de este string
+//
+int largoPalabra(const char* palabra)
+{
+	int largoP = 0;
+	for (int i = 0; palabra[i] != '\0'; i++)
 	{
-		while (d->vector[i] != nullptr)
+		largoP += 1;
+	}
+	return largoP + 1;
+}
+
+// PRE: Recibe un string y el largo del mismo string.
+// POS: Retorna el mismo string en un nuevo espacio de memoria.
+//	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
+//
+char* copiarStringCompleto(const char* origen, int largoString)
+{
+	char* nuevoChar = new char[largoString];
+	for (int i = 0; i < largoString - 1 ; i++)
+	{
+		nuevoChar[i] = origen[i];
+	}
+	nuevoChar[largoString - 1] = '\0';
+	return nuevoChar;
+}
+
+// PRE: -
+// POS: Libera la memoria del vector de la tabla.
+//
+void destruirVector(TablaIntString& t) {
+	for (int i = 0; i < t->tamVector; i++)
+	{
+		while (t->vector[i] != nullptr)
 		{
-			TablaString* nuevo = new TablaString();
-			nuevo->clave = d->vector[i]->clave;	
-			nuevo->valor = d->vector[i]->valor;
-			nuevo->sig = vectorNuevo[hashingTabla(d->vector[i]->clave, d->tamVector)];
-			vectorNuevo[hashingTabla(d->vector[i]->clave, d->tamVector)] = nuevo;
-			d->vector[i] = d->vector[i]->sig;
+			TablaString* aBorrar = t->vector[i];
+			char* charAborrar = t->vector[i]->valor;
+			t->vector[i] = t->vector[i]->sig;
+			delete[] charAborrar;
+			delete aBorrar;
 		}
 	}
+	delete[] t->vector;
+}
+
+// PRE: -
+// POS: Agranda al doble las posiciones del vector de la TablaIntString que es pasada por parámetro.
+//		Se vuelven a hashear todos los elementos y asignar al nuevo vector.
+//		Se libera memoria del vector antiguo.
+//
+void agrandarHashTabla(TablaIntString& d) {
+	int dobleTam = d->tamVector * 2;
+	TablaString** vectorNuevo = new TablaString * [dobleTam]();
+	for (int i = 0; i < d->tamVector; i++)
+	{
+		TablaString* aRecorrer = d->vector[i];
+		while (aRecorrer != nullptr)
+		{
+			TablaString* nuevo = new TablaString();
+			nuevo->clave = aRecorrer->clave;
+			nuevo->valor = copiarStringCompleto(aRecorrer->valor, largoPalabra(aRecorrer->valor));
+			nuevo->sig = vectorNuevo[hashingTabla(aRecorrer->clave, dobleTam)];
+			vectorNuevo[hashingTabla(aRecorrer->clave, dobleTam)] = nuevo;
+			aRecorrer = aRecorrer->sig;
+		}
+	}
+	destruirVector(d);
+	d->tamVector = dobleTam;
 	d->vector = vectorNuevo;
 }
 
-void pisarTabla(TablaIntString& d, TablaString*& lista, int e, const char* r) {
-	bool borre = false;
-	while (lista != nullptr && lista->clave == e && borre == false)
+// PRE: 
+// POS: libera memoria del char proporcionado.
+//
+void borrarChar(char*& r) {
+	char*& aBorrar = r;
+	delete[] aBorrar;
+}
+
+// PRE: 
+// POS: Como d esta definida en t, libera memoria y actualiza correspondencia con r.
+//	
+void pisarValorTabla(TablaString*& lista, int d, const char* r) {
+	if (lista != nullptr && lista->clave == d)
 	{
-		lista->valor = r;
-		borre = true;
+		borrarChar(lista->valor);
+		lista->valor = copiarStringCompleto(r, largoPalabra(r));
 	}
 	TablaString* aRecorrer = lista;
 
-	while (aRecorrer != nullptr && borre == false)
+	while (aRecorrer != nullptr)
 	{
-		if (aRecorrer->sig != nullptr && aRecorrer->sig->clave == e) {
-			aRecorrer->sig->valor = r;
-			borre = true;
+		if (aRecorrer->sig != nullptr && aRecorrer->sig->clave == d) {
+			borrarChar(lista->valor);
+			aRecorrer->sig->valor = copiarStringCompleto(r, largoPalabra(r));
+			break;
 		}
 		aRecorrer = aRecorrer->sig;
 	}
 }
-
 
 void agregar(TablaIntString& t, int d, const char* r) {
 	if (factorCargaTabla (t->cantElementos, t->tamVector)) agrandarHashTabla(t);
 
 	if (estaDefinida(t, d)) {
 		int hashedE = hashingTabla(d, t->tamVector);
-		pisarTabla(t, t->vector[hashedE], d, r);
+		pisarValorTabla(t->vector[hashedE], d, r);
 	} else {
 		TablaString* nuevo = new TablaString();
 		nuevo->clave = d;
-		nuevo->valor = r;
+		nuevo->valor = copiarStringCompleto(r, largoPalabra(r));
 		nuevo->sig = t->vector[hashingTabla(d, t->tamVector)];
 		t->vector[hashingTabla(d, t->tamVector)] = nuevo;
 		t->cantElementos++;
 	}
 	
 }
-
 
 bool estaDefinida(TablaIntString t, int d) {
 	int hashedE = hashingTabla(d, t->tamVector);
@@ -103,69 +172,49 @@ bool estaDefinida(TablaIntString t, int d) {
 	return false;
 }
 
-int largoPalabra(const char* palabra)
-{
-	int largoP = 0;
-	for (int i = 0; palabra[i] != '\0'; i++)
-	{
-		largoP += 1;
-	}
-	return largoP + 1;
-}
-
-char* copiarStringCompleto(const char* origen, int largoString)
-{
-	char* nuevoChar = new char[largoString];
-	for (int i = 0; i < largoString; i++)
-	{
-		nuevoChar[i] = origen[i];
-	}
-
-	return nuevoChar;
-}
-
 char* recuperar(TablaIntString t, int d) {
 	int hashedE = hashingTabla(d, t->tamVector);	
-	bool borre = false;
-	while (t->vector[hashedE] != nullptr && t->vector[hashedE]->clave == d && borre == false)
+	if (t->vector[hashedE] != nullptr && t->vector[hashedE]->clave == d)
 	{
 		int largoP = largoPalabra(t->vector[hashedE]->valor);
 		return copiarStringCompleto(t->vector[hashedE]->valor, largoP);
-		borre = true;
 	}
 	TablaString* aRecorrer = t->vector[hashedE];
 
-	while (aRecorrer != nullptr && borre == false)
+	while (aRecorrer != nullptr)
 	{
 		if (aRecorrer->sig != nullptr && aRecorrer->sig->clave == d) {
-			int largoP = largoPalabra(t->vector[hashedE]->valor);
-			return copiarStringCompleto(t->vector[hashedE]->valor, largoP);
-			borre = true;
+			int largoP = largoPalabra(aRecorrer->valor);
+			return copiarStringCompleto(aRecorrer->valor, largoP);
 		}
 		aRecorrer = aRecorrer->sig;
 	}
 }
 
-void borrarLista(TablaIntString& d, TablaString*& lista, int e) {
-	bool borre = false;
-	while (lista != nullptr && lista->clave == e && borre == false)
+// PRE: -
+// POS: Libera memoria de t(d) y baja la cantidad de elementos en la TablaIntString.
+void borrarLista(TablaIntString& t, TablaString*& lista, int d) {
+	if (lista != nullptr && lista->clave == d)
 	{
 		TablaString* aBorrar = lista;
 		lista = lista->sig;
+		borrarChar(aBorrar->valor);
 		delete aBorrar;
-		borre = true;
-		d->cantElementos--;
+		t->cantElementos--;
 	}
+
 	TablaString* aRecorrer = lista;
+	bool borre = false;
 
 	while (aRecorrer != nullptr && borre == false)
 	{
-		if (aRecorrer->sig != nullptr && aRecorrer->sig->clave == e) {
+		if (aRecorrer->sig != nullptr && aRecorrer->sig->clave == d) {
 			TablaString* aBorrar = aRecorrer->sig;
 			aRecorrer->sig = aRecorrer->sig->sig;
+			borrarChar(aBorrar->valor);
 			delete aBorrar;
-			borre = true;
-			d->cantElementos--;
+			t->cantElementos--;
+			break;
 		}
 		aRecorrer = aRecorrer->sig;
 	}
@@ -193,19 +242,21 @@ unsigned int cantidadElementos(TablaIntString t) {
 	return t->cantElementos;
 }
 
+void destruir(TablaIntString& t) {
+	destruirVector(t);
+	delete t;
+	t = nullptr;
+}
+
+// PRE: -
+// POS: retorna una copia del vector de la tabla sin compartir memoria
 TablaString* clonarTabla(TablaString* lista) {
 	if (lista == nullptr) return nullptr;
 	TablaString* aux = new TablaString();
 	aux->clave = lista->clave;
-	aux->valor = lista->valor;
+	aux->valor = copiarStringCompleto(lista->valor,largoPalabra(lista->valor));
 	aux->sig = clonarTabla(lista->sig);
 	return aux;
-}
-
-void destruir(TablaIntString& t) {
-	delete[] t->vector;
-	delete t;
-	t = nullptr;
 }
 
 TablaIntString clon(TablaIntString t) {

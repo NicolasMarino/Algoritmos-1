@@ -122,10 +122,9 @@ void vaciar(NodoListaIntDobleDato*& l) {
 
 void destruir(ColaPrioridadInt& c) {
 	vaciar(c->principio);
-	//vaciar(c->ultimo);
 	delete c->principio;
-	//delete c->ultimo;
 	delete c;
+	c = nullptr;
 }
 
 #endif
