@@ -90,7 +90,6 @@ void destruirVector(TablaIntString& t) {
 // POS: Agranda al doble las posiciones del vector de la TablaIntString que es pasada por parámetro.
 //		Se vuelven a hashear todos los elementos y asignar al nuevo vector.
 //		Se libera memoria del vector antiguo.
-//
 void agrandarHashTabla(TablaIntString& d) {
 	int dobleTam = d->tamVector * 2;
 	TablaString** vectorNuevo = new TablaString * [dobleTam]();
@@ -249,7 +248,7 @@ void destruir(TablaIntString& t) {
 }
 
 // PRE: -
-// POS: retorna una copia del vector de la tabla sin compartir memoria
+// POS: retorna una copia de una posición del vector de la tabla sin compartir memoria
 TablaString* clonarTabla(TablaString* lista) {
 	if (lista == nullptr) return nullptr;
 	TablaString* aux = new TablaString();

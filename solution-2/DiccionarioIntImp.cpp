@@ -16,31 +16,59 @@ DiccionarioInt crearDiccionarioInt(unsigned int esperados) {
 	return nuevoDiccionario;
 }
 
+// PRE: 
+// POS: Retorna el valor que le corresponde a la clave proporcionada en el hash, de tamaño tam proporcionado.
+//
 int hashing(int dato, int tam) {
 	int hashingData = dato % tam;
 	hashingData = abs(hashingData);
 	return hashingData;
 }
 
+// PRE: 
+// POS: Retorna si la cantidad de elementos sobre el tamaño es mayor o igual a 1.
+//		Le inidica al usuario si debe agrandar su vector de hash.
+//
 bool factorCarga(int cantElementos, int tam) {
 	return cantElementos / tam >= 1;
 }
 
+// PRE: -
+// POS: Libera la memoria del vector del diccionario.
+//
+void destruirVector(DiccionarioInt& d) {
+	for (int i = 0; i < d->tamVector; i++)
+	{
+		while (d->vector[i] != nullptr)
+		{
+			NodoListaInt* aBorrar = d->vector[i];
+			d->vector[i] = d->vector[i]->sig;
+			delete aBorrar;
+		}
+	}
+	delete[] d->vector;
+}
+
+// PRE: -
+// POS: Agranda al doble las posiciones del vector del diccionario que es pasada por parámetro.
+//		Se vuelven a hashear todos los elementos y asignar al nuevo vector.
+//		Se libera memoria del vector antiguo.
 void agrandarHash(DiccionarioInt& d) {
 	int dobleTam = d->tamVector * 2;
-	d->tamVector = dobleTam;
 	NodoListaInt** vectorNuevo = new NodoListaInt * [dobleTam]();
-	for (int i = 0; i < d->tamVector / 2; i++)
+	for (int i = 0; i < d->tamVector; i++)
 	{
 		while (d->vector[i] != nullptr)
 		{
 			int nuevoDatoHashed = d->vector[i]->dato;
 			NodoListaInt * nuevo = new NodoListaInt(nuevoDatoHashed);
-			nuevo->sig = vectorNuevo[hashing(nuevoDatoHashed, d->tamVector)];
-			vectorNuevo[hashing(nuevoDatoHashed, d->tamVector)] = nuevo;
+			nuevo->sig = vectorNuevo[hashing(nuevoDatoHashed, dobleTam)];
+			vectorNuevo[hashing(nuevoDatoHashed, dobleTam)] = nuevo;
 			d->vector[i] = d->vector[i]->sig;
 		}
 	}
+	destruirVector(d);
+	d->tamVector = dobleTam;
 	d->vector = vectorNuevo;
 }
 
@@ -53,26 +81,26 @@ void agregar(DiccionarioInt& d, int e) {
 	d->cantElementos++;
 }
 
+// PRE: -
+// POS: Borra un elemento del diccionario, si no se encuentra no tiene efecto.
 void borrarLista(DiccionarioInt& d, NodoListaInt*& lista, int e) {
-	bool borre = false;
-	while (lista != nullptr && lista->dato == e && borre == false)
+	if (lista != nullptr && lista->dato == e)
 	{
 		NodoListaInt* aBorrar = lista;
 		lista = lista->sig;
 		delete aBorrar;
-		borre = true;
 		d->cantElementos--;
 	}
 	NodoListaInt* aRecorrer = lista;
 
-	while (aRecorrer != nullptr && borre == false)
+	while (aRecorrer != nullptr)
 	{
 		if (aRecorrer->sig != nullptr && aRecorrer->sig->dato == e) {
 			NodoListaInt* aBorrar = aRecorrer->sig;
 			aRecorrer->sig = aRecorrer->sig->sig;
 			delete aBorrar;
-			borre = true;
 			d->cantElementos--;
+			break;
 		}
 		aRecorrer = aRecorrer->sig;
 	}
@@ -114,6 +142,8 @@ unsigned int cantidadElementos(DiccionarioInt d) {
 	return d->cantElementos;
 }
 
+// PRE: -
+// POS: retorna una copia de una posición del vector del diccionario sin compartir memoria
 NodoListaInt* clonarDic(NodoListaInt* lista) {
 	if (lista == nullptr) return nullptr;
 	NodoListaInt* aux = new NodoListaInt();
@@ -134,9 +164,8 @@ DiccionarioInt clon(DiccionarioInt d) {
 }
 
 void destruir(DiccionarioInt& d) {
-	delete[] d->vector;
+	destruirVector(d);
 	delete d;
 	d = nullptr;
 }
-
 #endif
