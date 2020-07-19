@@ -18,7 +18,6 @@ DiccionarioInt crearDiccionarioInt(unsigned int esperados) {
 
 // PRE: 
 // POS: Retorna el valor que le corresponde a la clave proporcionada en el hash, de tamaño tam proporcionado.
-//
 int hashing(int dato, int tam) {
 	int hashingData = dato % tam;
 	hashingData = abs(hashingData);
@@ -28,14 +27,12 @@ int hashing(int dato, int tam) {
 // PRE: 
 // POS: Retorna si la cantidad de elementos sobre el tamaño es mayor o igual a 1.
 //		Le inidica al usuario si debe agrandar su vector de hash.
-//
 bool factorCarga(int cantElementos, int tam) {
 	return cantElementos / tam >= 1;
 }
 
 // PRE: -
 // POS: Libera la memoria del vector del diccionario.
-//
 void destruirVector(DiccionarioInt& d) {
 	for (int i = 0; i < d->tamVector; i++)
 	{

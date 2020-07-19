@@ -20,31 +20,31 @@ void agregar(MultisetInt& s, int e, unsigned int ocurrencias) {
 		NodoListaInt* nuevo2 = new NodoListaInt(e);
 		nuevo2->sig = s->multiLista;
 		s->multiLista = nuevo2;
-		ocurrencias--;
 		s->cantElementos++;
+		ocurrencias--;
 	}
 }
 
 void borrar(MultisetInt& s, int e) {
-	bool borre = false;
-	while (s->multiLista != nullptr && s->multiLista->dato == e && borre == false)
+
+	while (s->multiLista != nullptr && s->multiLista->dato == e)
 	{
 		NodoListaInt* aBorrar = s->multiLista;
 		s->multiLista = s->multiLista->sig;
 		delete aBorrar;
 		s->cantElementos--;
-		borre = true;
+		return;
 	}
 	NodoListaInt* aRecorrer = s->multiLista;
 
-	while (aRecorrer != nullptr && borre == false)
+	while (aRecorrer != nullptr)
 	{
 		if (aRecorrer->sig != nullptr && aRecorrer->sig->dato == e) {
 			NodoListaInt* aBorrar = aRecorrer->sig;
 			aRecorrer->sig = aRecorrer->sig->sig;
 			delete aBorrar;
 			s->cantElementos--;
-			borre = true;
+			break;
 		}
 
 		aRecorrer = aRecorrer->sig;
@@ -62,6 +62,8 @@ bool pertenece(MultisetInt s, int e) {
 	return false;
 }
 
+// PRE: -
+// POS: Ordena la lista utilizando selection sort.
 void listaOrdenadaSelectionSort(NodoListaInt*& l)
 {
 	if (l != nullptr) {
@@ -83,6 +85,8 @@ void listaOrdenadaSelectionSort(NodoListaInt*& l)
 	}
 }
 
+// PRE: -
+// POS: Retorna el menor de los dos numeros.
 int obtenerMenor(int uno, int dos) {
 	if (uno < dos) {
 		return uno;
@@ -92,6 +96,8 @@ int obtenerMenor(int uno, int dos) {
 	}
 }
 
+// PRE: -
+// POS: Retorna el mayor de los dos numeros.
 int obtenerMayor(int uno, int dos) {
 	if (uno > dos) {
 		return uno;
@@ -101,6 +107,8 @@ int obtenerMayor(int uno, int dos) {
 	}
 }
 
+// PRE: -
+// POS: Retorna las ocurrencias de e en el multiset.
 int obtenerOcurrencias(MultisetInt s, int e) {
 	NodoListaInt* aRecorrer = s->multiLista;
 	int contador = 0;
@@ -247,6 +255,8 @@ unsigned int cantidadElementos(MultisetInt s) {
 	return s->cantElementos;
 }
 
+// PRE: -
+// POS: Libera la memoria de la lista del multiset.
 void vaciarMultiLista(NodoListaInt*& l) {
 	if (l != NULL) {
 		vaciarMultiLista(l->sig);
@@ -258,19 +268,22 @@ void vaciarMultiLista(NodoListaInt*& l) {
 void destruir(MultisetInt& s) {
 	vaciarMultiLista(s->multiLista);
 	delete s;
+	s = nullptr;
 }
 
-NodoListaInt* clonare(NodoListaInt* lista) {
+// PRE: -
+// POS: Retorna un clon de la lista que no comparte memoria.
+NodoListaInt* clonarMultiLista(NodoListaInt* lista) {
 	if (lista == nullptr) return nullptr;
 	NodoListaInt* aux = new NodoListaInt();
 	aux->dato = lista->dato;
-	aux->sig = clonare(lista->sig);
+	aux->sig = clonarMultiLista(lista->sig);
 	return aux;
 }
 
 MultisetInt clon(MultisetInt s) {
 	MultisetInt nuevoMultiset = crearMultisetInt();
-	nuevoMultiset->multiLista = clonare(s->multiLista);
+	nuevoMultiset->multiLista = clonarMultiLista(s->multiLista);
 	nuevoMultiset->cantElementos = s->cantElementos;
 	return nuevoMultiset;
 }

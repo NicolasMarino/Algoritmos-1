@@ -25,7 +25,6 @@ TablaIntString crearTablaIntString(unsigned int esperados) {
 
 // PRE: 
 // POS: Retorna el valor que le corresponde a la clave proporcionada en el hash, de tamaño tam proporcionado.
-//
 int hashingTabla(int clave, int tam) {
 	int hashingTablaData = clave % tam;
 	hashingTablaData = abs(hashingTablaData);
@@ -35,14 +34,12 @@ int hashingTabla(int clave, int tam) {
 // PRE: 
 // POS: Retorna si la cantidad de elementos sobre el tamaño es mayor o igual a 1.
 //		Le inidica al usuario si debe agrandar su vector de hash.
-//
 bool factorCargaTabla (int cantElementos, int tam) {
 	return cantElementos / tam >= 1;
 }
 
 // PRE: 
 // POS: Retorna el largo de este string
-//
 int largoPalabra(const char* palabra)
 {
 	int largoP = 0;
@@ -56,7 +53,6 @@ int largoPalabra(const char* palabra)
 // PRE: Recibe un string y el largo del mismo string.
 // POS: Retorna el mismo string en un nuevo espacio de memoria.
 //	  básicamente es una copia a una nueva memoria para poder modificar este sin modificar el original.
-//
 char* copiarStringCompleto(const char* origen, int largoString)
 {
 	char* nuevoChar = new char[largoString];
@@ -70,7 +66,6 @@ char* copiarStringCompleto(const char* origen, int largoString)
 
 // PRE: -
 // POS: Libera la memoria del vector de la tabla.
-//
 void destruirVector(TablaIntString& t) {
 	for (int i = 0; i < t->tamVector; i++)
 	{
@@ -113,7 +108,6 @@ void agrandarHashTabla(TablaIntString& d) {
 
 // PRE: 
 // POS: libera memoria del char proporcionado.
-//
 void borrarChar(char*& r) {
 	char*& aBorrar = r;
 	delete[] aBorrar;
@@ -121,7 +115,6 @@ void borrarChar(char*& r) {
 
 // PRE: 
 // POS: Como d esta definida en t, libera memoria y actualiza correspondencia con r.
-//	
 void pisarValorTabla(TablaString*& lista, int d, const char* r) {
 	if (lista != nullptr && lista->clave == d)
 	{
