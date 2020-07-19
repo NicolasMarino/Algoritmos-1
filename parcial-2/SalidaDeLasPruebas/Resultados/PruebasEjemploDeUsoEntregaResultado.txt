@@ -2,16 +2,7 @@
 -----------------------------------
 Prueba 0: Cargo estudiantes y materias (sin salida) -> OK
 -----------------------------------
-Prueba 1: Imprimo la escolaridad del estudiante 100
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: Escolaridad del estudiante 100: Juan A.
- 2: El estudiante no rindio examenes.
- 3: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1! 
+Prueba 1: Imprimo la escolaridad del estudiante 100 -> OK
 -----------------------------------
 Prueba 2: Imprimo la estadistica de la materia 12
  -> ERROR impresion incorrecta
@@ -26,22 +17,7 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
 -----------------------------------
 Prueba 3: Cargo examenes (sin salida) -> OK
 -----------------------------------
-Prueba 4: Imprimo la escolaridad del estudiante 100
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 100: Juan A.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 40
- 4: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 80
- 5: Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 62
- 6: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 86
- 7: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 78
- 8: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 4: Imprimo la escolaridad del estudiante 100 -> OK
 -----------------------------------
 Prueba 5: Imprimo la estadistica de la materia 95
  -> ERROR impresion incorrecta
@@ -57,134 +33,21 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
  1: 
  2! 
 -----------------------------------
-Prueba 6: Imprimo la escolaridad del estudiante 100
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 100: Juan A.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 40
- 4: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 80
- 5: Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 62
- 6: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 86
- 7: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 78
- 8: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 6: Imprimo la escolaridad del estudiante 100 -> OK
 -----------------------------------
-Prueba 7: Imprimo la escolaridad del estudiante 200
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 200: Jose B.
- 3: Fecha: 20190208 - Materia 73: Algoritmos 1 - Nota: 84
- 4: Fecha: 20200209 - Materia 95: Probabilidad y estadistica - Nota: 58
- 5: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 81
- 6: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 95
- 7: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 7: Imprimo la escolaridad del estudiante 200 -> OK
 -----------------------------------
-Prueba 8: Imprimo la escolaridad del estudiante 300
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 300: Ana C.
- 3: Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 78
- 4: Fecha: 20200204 - Materia 21: Algebra lineal - Nota: 40
- 5: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
- 6: Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 86
- 7: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 8: Imprimo la escolaridad del estudiante 300 -> OK
 -----------------------------------
-Prueba 9: Imprimo la escolaridad del estudiante 400
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 400: Lucia D.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
- 5: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 100
- 6: Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 80
- 7: Fecha: 20200512 - Materia 1: Logica - Nota: 100
- 8: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
- 9: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 9: Imprimo la escolaridad del estudiante 400 -> OK
 -----------------------------------
-Prueba 10: Imprimo la escolaridad del estudiante 500
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 500: Jose E.
- 3: El estudiante no rindio examenes.
- 4: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 10: Imprimo la escolaridad del estudiante 500 -> OK
 -----------------------------------
-Prueba 11: Imprimo la escolaridad del estudiante 600
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 600: Juan F.
- 3: Fecha: 20190422 - Materia 53: Programacion 2 - Nota: 80
- 4: Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 78
- 5: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 45
- 6: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
- 7: Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
- 8: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 11: Imprimo la escolaridad del estudiante 600 -> OK
 -----------------------------------
-Prueba 12: Imprimo la escolaridad del estudiante 700
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 700: Pedro G.
- 3: El estudiante no rindio examenes.
- 4: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 12: Imprimo la escolaridad del estudiante 700 -> OK
 -----------------------------------
-Prueba 13: Imprimo la escolaridad del estudiante 800
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 800: Diego H.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
- 5: Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
- 6: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 10
- 7: Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
- 8: Fecha: 20200512 - Materia 1: Logica - Nota: 69
- 9: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
-10: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 13: Imprimo la escolaridad del estudiante 800 -> OK
 -----------------------------------
 Prueba 14: Imprimo la estadistica de la materia 1
  -> ERROR impresion incorrecta
@@ -311,23 +174,7 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
  1: 
  2! 
 -----------------------------------
-Prueba 23: Imprimo la escolaridad del estudiante 400
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 400: Lucia D.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
- 5: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 100
- 6: Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 87
- 7: Fecha: 20200512 - Materia 1: Logica - Nota: 100
- 8: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
- 9: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 23: Imprimo la escolaridad del estudiante 400 -> OK
 -----------------------------------
 Prueba 24: Imprimo la estadistica de la materia 53
  -> ERROR impresion incorrecta
@@ -343,42 +190,9 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
  1: 
  2! 
 -----------------------------------
-Prueba 25: Imprimo la escolaridad del estudiante 400
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 400: Lucia D.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
- 5: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 81
- 6: Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 87
- 7: Fecha: 20200512 - Materia 1: Logica - Nota: 100
- 8: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
- 9: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 25: Imprimo la escolaridad del estudiante 400 -> OK
 -----------------------------------
-Prueba 26: Imprimo la escolaridad del estudiante 800
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 800: Diego H.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
- 5: Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
- 6: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 60
- 7: Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
- 8: Fecha: 20200512 - Materia 1: Logica - Nota: 69
- 9: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
-10: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 26: Imprimo la escolaridad del estudiante 800 -> OK
 -----------------------------------
 Prueba 27: Imprimo la estadistica de la materia 73
  -> ERROR impresion incorrecta
@@ -394,24 +208,7 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
  1: 
  2! 
 -----------------------------------
-Prueba 28: Imprimo la escolaridad del estudiante 800
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 800: Diego H.
- 3: Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
- 4: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
- 5: Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
- 6: Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 60
- 7: Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
- 8: Fecha: 20200512 - Materia 1: Logica - Nota: 96
- 9: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
-10: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 28: Imprimo la escolaridad del estudiante 800 -> OK
 -----------------------------------
 Prueba 29: Imprimo la estadistica de la materia 1
  -> ERROR impresion incorrecta
@@ -426,38 +223,9 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
  1: 
  2! 
 -----------------------------------
-Prueba 30: Imprimo la escolaridad del estudiante 200
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 200: Jose B.
- 3: Fecha: 20190208 - Materia 73: Algoritmos 1 - Nota: 84
- 4: Fecha: 20200209 - Materia 95: Probabilidad y estadistica - Nota: 58
- 5: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 81
- 6: Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 59
- 7: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 30: Imprimo la escolaridad del estudiante 200 -> OK
 -----------------------------------
-Prueba 31: Imprimo la escolaridad del estudiante 600
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Escolaridad del estudiante 600: Juan F.
- 3: Fecha: 20190422 - Materia 53: Programacion 2 - Nota: 80
- 4: Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 68
- 5: Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 45
- 6: Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
- 7: Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
- 8: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2! 
+Prueba 31: Imprimo la escolaridad del estudiante 600 -> OK
 -----------------------------------
 Prueba 32: Imprimo la estadistica de la materia 95
  -> ERROR impresion incorrecta
@@ -478,7 +246,7 @@ Se imprimio (el numero de linea fue agregado, no se debe imprimir):
 Prueba 33: Libero memoria -> OK
 ********* FIN PRUEBAS Bedelia*******
 
-PRUEBAS FUNCION PRUEBAS Bedelia                                    HAY 31 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS Bedelia                                    HAY 15 PRUEBAS INCORRECTAS
 
 
 

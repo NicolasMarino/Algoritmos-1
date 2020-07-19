@@ -1,40 +1,86 @@
 -!-Ini::PRUEBAS Bedelia
 
 -!-0::0-?-?-Cargo estudiantes y materias (sin salida)
-
+Escolaridad del estudiante 100: Juan A.
+El estudiante no rindio examenes.
 -!-1::0-?-?-Imprimo la escolaridad del estudiante 100
 
 -!-2::0-?-?-Imprimo la estadistica de la materia 12
 
 -!-3::0-?-?-Cargo examenes (sin salida)
 
+Escolaridad del estudiante 100: Juan A.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 40
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 80
+Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 62
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 86
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 78
 
 -!-4::0-?-?-Imprimo la escolaridad del estudiante 100
 
 
 -!-5::0-?-?-Imprimo la estadistica de la materia 95
 
+Escolaridad del estudiante 100: Juan A.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 40
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 80
+Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 62
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 86
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 78
 
 -!-6::0-?-?-Imprimo la escolaridad del estudiante 100
 
+Escolaridad del estudiante 200: Jose B.
+Fecha: 20190208 - Materia 73: Algoritmos 1 - Nota: 84
+Fecha: 20200209 - Materia 95: Probabilidad y estadistica - Nota: 58
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 81
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 95
 
 -!-7::0-?-?-Imprimo la escolaridad del estudiante 200
 
+Escolaridad del estudiante 300: Ana C.
+Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 78
+Fecha: 20200204 - Materia 21: Algebra lineal - Nota: 40
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
+Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 86
 
 -!-8::0-?-?-Imprimo la escolaridad del estudiante 300
 
+Escolaridad del estudiante 400: Lucia D.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 100
+Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 80
+Fecha: 20200512 - Materia 1: Logica - Nota: 100
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
 
 -!-9::0-?-?-Imprimo la escolaridad del estudiante 400
 
-
+Escolaridad del estudiante 500: Jose E.
+El estudiante no rindio examenes.
 -!-10::0-?-?-Imprimo la escolaridad del estudiante 500
 
+Escolaridad del estudiante 600: Juan F.
+Fecha: 20190422 - Materia 53: Programacion 2 - Nota: 80
+Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 78
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 45
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
+Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
 
 -!-11::0-?-?-Imprimo la escolaridad del estudiante 600
 
-
+Escolaridad del estudiante 700: Pedro G.
+El estudiante no rindio examenes.
 -!-12::0-?-?-Imprimo la escolaridad del estudiante 700
 
+Escolaridad del estudiante 800: Diego H.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
+Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 10
+Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
+Fecha: 20200512 - Materia 1: Logica - Nota: 69
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 
 -!-13::0-?-?-Imprimo la escolaridad del estudiante 800
 
@@ -65,30 +111,71 @@
 
 -!-22::0-?-?-Imprimo la estadistica de la materia 200
 
+Escolaridad del estudiante 400: Lucia D.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 100
+Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 87
+Fecha: 20200512 - Materia 1: Logica - Nota: 100
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
 
 -!-23::0-?-?-Imprimo la escolaridad del estudiante 400
 
 
 -!-24::0-?-?-Imprimo la estadistica de la materia 53
 
+Escolaridad del estudiante 400: Lucia D.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 70
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 75
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 81
+Fecha: 20200509 - Materia 53: Programacion 2 - Nota: 87
+Fecha: 20200512 - Materia 1: Logica - Nota: 100
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
 
 -!-25::0-?-?-Imprimo la escolaridad del estudiante 400
 
+Escolaridad del estudiante 800: Diego H.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
+Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 60
+Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
+Fecha: 20200512 - Materia 1: Logica - Nota: 69
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 
 -!-26::0-?-?-Imprimo la escolaridad del estudiante 800
 
 
 -!-27::0-?-?-Imprimo la estadistica de la materia 73
 
+Escolaridad del estudiante 800: Diego H.
+Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 60
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 55
+Fecha: 20190719 - Materia 200: Matematica discreta - Nota: 60
+Fecha: 20200223 - Materia 73: Algoritmos 1 - Nota: 60
+Fecha: 20200510 - Materia 95: Probabilidad y estadistica - Nota: 50
+Fecha: 20200512 - Materia 1: Logica - Nota: 96
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 
 -!-28::0-?-?-Imprimo la escolaridad del estudiante 800
 
 
 -!-29::0-?-?-Imprimo la estadistica de la materia 1
 
+Escolaridad del estudiante 200: Jose B.
+Fecha: 20190208 - Materia 73: Algoritmos 1 - Nota: 84
+Fecha: 20200209 - Materia 95: Probabilidad y estadistica - Nota: 58
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 81
+Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 59
 
 -!-30::0-?-?-Imprimo la escolaridad del estudiante 200
 
+Escolaridad del estudiante 600: Juan F.
+Fecha: 20190422 - Materia 53: Programacion 2 - Nota: 80
+Fecha: 20190528 - Materia 95: Probabilidad y estadistica - Nota: 68
+Fecha: 20190714 - Materia 21: Algebra lineal - Nota: 45
+Fecha: 20200529 - Materia 52: Programacion 1 - Nota: 80
+Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
 
 -!-31::0-?-?-Imprimo la escolaridad del estudiante 600
 
