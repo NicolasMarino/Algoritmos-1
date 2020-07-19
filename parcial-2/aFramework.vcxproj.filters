@@ -79,6 +79,12 @@
     <Filter Include="Ejercicios\TAD Bedelia">
       <UniqueIdentifier>{772fdf7b-19fa-4c66-83a2-544b58080787}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pruebas\NewFilter1">
+      <UniqueIdentifier>{36db213e-437f-41a9-8702-95e85a282b88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Soluciones">
+      <UniqueIdentifier>{b71b71c6-f9f7-4736-ad07-8e9e9b3024c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PruebasPropias.h">

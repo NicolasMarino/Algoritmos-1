@@ -1,0 +1,100 @@
+-!-Ini::PRUEBAS Bedelia
+
+-!-0::0-?-?-Cargo estudiantes y materias (sin salida)
+
+-!-1::0-?-?-Imprimo la escolaridad del estudiante 100
+
+-!-2::0-?-?-Imprimo la estadistica de la materia 12
+
+-!-3::0-?-?-Cargo examenes (sin salida)
+
+
+-!-4::0-?-?-Imprimo la escolaridad del estudiante 100
+
+
+-!-5::0-?-?-Imprimo la estadistica de la materia 95
+
+
+-!-6::0-?-?-Imprimo la escolaridad del estudiante 100
+
+
+-!-7::0-?-?-Imprimo la escolaridad del estudiante 200
+
+
+-!-8::0-?-?-Imprimo la escolaridad del estudiante 300
+
+
+-!-9::0-?-?-Imprimo la escolaridad del estudiante 400
+
+
+-!-10::0-?-?-Imprimo la escolaridad del estudiante 500
+
+
+-!-11::0-?-?-Imprimo la escolaridad del estudiante 600
+
+
+-!-12::0-?-?-Imprimo la escolaridad del estudiante 700
+
+
+-!-13::0-?-?-Imprimo la escolaridad del estudiante 800
+
+
+-!-14::0-?-?-Imprimo la estadistica de la materia 1
+
+
+-!-15::0-?-?-Imprimo la estadistica de la materia 12
+
+
+-!-16::0-?-?-Imprimo la estadistica de la materia 21
+
+
+-!-17::0-?-?-Imprimo la estadistica de la materia 52
+
+
+-!-18::0-?-?-Imprimo la estadistica de la materia 53
+
+
+-!-19::0-?-?-Imprimo la estadistica de la materia 73
+
+
+-!-20::0-?-?-Imprimo la estadistica de la materia 74
+
+
+-!-21::0-?-?-Imprimo la estadistica de la materia 95
+
+
+-!-22::0-?-?-Imprimo la estadistica de la materia 200
+
+
+-!-23::0-?-?-Imprimo la escolaridad del estudiante 400
+
+
+-!-24::0-?-?-Imprimo la estadistica de la materia 53
+
+
+-!-25::0-?-?-Imprimo la escolaridad del estudiante 400
+
+
+-!-26::0-?-?-Imprimo la escolaridad del estudiante 800
+
+
+-!-27::0-?-?-Imprimo la estadistica de la materia 73
+
+
+-!-28::0-?-?-Imprimo la escolaridad del estudiante 800
+
+
+-!-29::0-?-?-Imprimo la estadistica de la materia 1
+
+
+-!-30::0-?-?-Imprimo la escolaridad del estudiante 200
+
+
+-!-31::0-?-?-Imprimo la escolaridad del estudiante 600
+
+
+-!-32::0-?-?-Imprimo la estadistica de la materia 95
+
+
+-!-33::0-?-?-Libero memoria
+-!-Fin::PRUEBAS Bedelia

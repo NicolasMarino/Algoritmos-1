@@ -7,7 +7,7 @@ using namespace std;
 #include <assert.h>
 
 // Poner un nombre acorde a _xxxxx (en BedeliaImp.cpp y BedeliaImp.h)
-struct _xxxxx;
-typedef struct _xxxxx* Bedelia;
+struct _cabezalBedelia;
+typedef struct _cabezalBedelia* Bedelia;
 
 #endif
