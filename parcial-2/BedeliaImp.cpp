@@ -19,8 +19,6 @@ struct Materia {
 	Examen* examenes;
 	Materia() : id(), nombre(), examenes(nullptr) {}
 };
-//examenes
-//p1 2020, p2 22020, p1 2021. Dada alta
 
 struct Estudiante {
 	char* nombre;
@@ -35,7 +33,6 @@ struct Estudiante {
 struct _cabezalBedelia {
 	Estudiante** estudiantes;
 	Materia** materias;
-	//Examen* examenes;
 	unsigned int cantidadEstudiantes;
 };
 
@@ -90,14 +87,18 @@ void borrarChar(char*& r) {
 	delete[] aBorrar;
 }
 
-void agregarEstudiante(Bedelia& d, int id, const char* nombre) {
-	int hashedEstudiante = hashing(id, d->cantidadEstudiantes);
-	Estudiante* lista = d->estudiantes[hashedEstudiante];
+// ---------------------- ORDEN(1) promedio / HASH SI O SI-----------------------------------
+//PRE: -
+//POS: asocia el nombre de estudiante nombreE al identificador dado, independientemente de si
+//éste existía ya o no, en el sistema de bedelía b 
+void actualizarEstudiante(Bedelia& b, const char* nombreE, unsigned int id) {
+	int hashedEstudiante = hashing(id, b->cantidadEstudiantes);
+	Estudiante* lista = b->estudiantes[hashedEstudiante];
 	bool modifique = false;
 	while (lista != nullptr) {
 		if (lista->idEstudiante == id) {
 			borrarChar(lista->nombre);
-			lista->nombre = copiarStringCompleto(nombre, largoPalabra(nombre));
+			lista->nombre = copiarStringCompleto(nombreE, largoPalabra(nombreE));
 			modifique = true;
 		}
 		lista = lista->sig;
@@ -105,18 +106,10 @@ void agregarEstudiante(Bedelia& d, int id, const char* nombre) {
 	if (modifique == false) {
 		Estudiante* nuevo = new Estudiante();
 		nuevo->idEstudiante = id;
-		nuevo->nombre = copiarStringCompleto(nombre, largoPalabra(nombre));
-		nuevo->sig = d->estudiantes[hashedEstudiante];
-		d->estudiantes[hashedEstudiante] = nuevo;
+		nuevo->nombre = copiarStringCompleto(nombreE, largoPalabra(nombreE));
+		nuevo->sig = b->estudiantes[hashedEstudiante];
+		b->estudiantes[hashedEstudiante] = nuevo;
 	}
-}
-
-// ---------------------- ORDEN(1) promedio / HASH SI O SI-----------------------------------
-//PRE: -
-//POS: asocia el nombre de estudiante nombreE al identificador dado, independientemente de si
-//éste existía ya o no, en el sistema de bedelía b 
-void actualizarEstudiante(Bedelia& b, const char* nombreE, unsigned int id) {
-	agregarEstudiante(b, id, nombreE);
 }
 
 // ---------------------- ORDEN(1) peor caso, si o si un array de 200.-----------------------------------
@@ -124,12 +117,10 @@ void actualizarEstudiante(Bedelia& b, const char* nombreE, unsigned int id) {
 //POS: asocia el nombre de la materia nombreA al identificador dado, independientemente de
 //si ésta existía ya o no, en el sistema de bedelía b 
 void actualizarMateria(Bedelia& b, const char* nombreA, unsigned int id) {
-	//if (b->materias[id] != nullptr) borrarChar(b->materias[id]->nombre);
 	Materia* nuevaMateria = new Materia;
 	nuevaMateria->id = id;
 	nuevaMateria->nombre = copiarStringCompleto(nombreA, largoPalabra(nombreA));
 	b->materias[id] = nuevaMateria;
-	//b->materias[id]->nombre = 
 }
 
 /*
@@ -157,6 +148,7 @@ bool esIgual(char* unChar, const char* otroChar)
 	}
 	return true;
 }
+
 bool obtenerStringMenor(char* unChar, const char* otroChar)
 {
 	int largoUnChar = largoPalabra(unChar);
@@ -174,10 +166,9 @@ bool obtenerStringMenor(char* unChar, const char* otroChar)
 	}
 	return esMasLargo;
 }
+
 void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 {
-	// insertar 2020
-	//2019,2019
 	if (lista == nullptr || obtenerStringMenor(nuevo->fecha, lista->fecha)) {
 		if (porMateria) {
 			if (lista != nullptr && esIgual(nuevo->fecha, lista->fecha)) {
@@ -212,7 +203,6 @@ void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 				aRecorrerInicio = aRecorrerInicio->sigMateria;
 			}
 			if (aRecorrerInicio->sigMateria != nullptr) {
-				//Si hay materia en el siguiente pero tiene
 				if (esIgual(nuevo->fecha, aRecorrerInicio->fecha)) {					
 					if (nuevo->nota >= 70) {
 						aRecorrerInicio->cantAprobados++;
@@ -251,13 +241,6 @@ void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 						aRecorrerInicio->sigMateria->cantReprobados++;
 					}
 				}
-				/*aRecorrerInicio->sigMateria = nuevo;
-				if (nuevo->nota >= 70) {
-					aRecorrerInicio->sigMateria->cantAprobados++;
-				}
-				else {
-					aRecorrerInicio->sigMateria->cantReprobados++;
-				}*/
 			}
 			
 			
@@ -365,21 +348,7 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 		}
 		lista = lista->sig;
 	}
-	/*lista = b->estudiantes[hashedEstudiante];
-	if (!modifique) {
-		while (lista)
-		{
-
-		}
-		if (lista->idEstudiante == nroE) {
-
-		}
-		lista = lista->sig;
-	}*/
 }
-
-
-
 
 // ---------------------- ORDEN(1) peor caso-----------------------------------
 //PRE: el parámetro nroE es válido
@@ -420,50 +389,7 @@ void escolaridadEstudiante(Bedelia b, unsigned int nroE) {
 //PRE: el parámetro nroA es válido
 //POS: muestra por pantalla la cantidad de aprobados y no aprobados en cada fecha de examen de la
 //	   materia, ordenados por fecha desde la más antigua hasta la más reciente 
-
-/*
-Formato de salida de la operación estadisticaMateria:
-Estadistica para la materia NROMATERIA: NOMBREMATERIA
-	Fecha: 20200512 - Aprobados: 3 - No aprobados: 1
-	Fecha: 20201720 - Aprobados: 5 - No aprobados: 2
-
-Si no ha habido instancias de examen para la materia:
-	Estadistica para la materia NROMATERIA: NOMBREMATERIA
-	La materia no tiene examenes asociados.
-
-*/
-//
-//void listaOrdenadaSelectionSort2(Examen* l)
-//{
-//	if (l->fecha != nullptr) {
-//		Examen* menor = l;
-//		Examen* aux = l;
-//
-//		while (aux != NULL) {
-//			if (obtenerStringMenor(aux->fecha, menor->fecha)) {
-//				menor = aux;
-//			}
-//			aux = aux->sig;
-//		}
-//		char* fechaAux = l->fecha;
-//		int materiaAux = l->idMateria;
-//		int notaAux = l->nota;
-//		l->fecha = menor->fecha;
-//		l->idMateria = menor->idMateria;
-//		l->nota = menor->nota;
-//		menor->fecha = fechaAux;
-//		menor->idMateria = materiaAux;
-//		menor->nota = notaAux;
-//
-//		//menor = l->sig;
-//
-//		listaOrdenadaSelectionSort(l->sigMateria);
-//	}
-//}
-
-
 void estadisticaMateria(Bedelia b, unsigned int nroA) {
-	//Examen* aRecorrer = b->examenes;
 	Examen* listaExamenesPorMateria = b->materias[nroA]->examenes;
 	int Aprobados = 0;
 	int Reprobados = 0;
@@ -474,24 +400,12 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 	else {
 		while (listaExamenesPorMateria != nullptr)
 		{
-			//if(listaexamenespormateria)
-			//examen* aordenard = listaexamenespormateria->sigmateria;
-			//listaordenadaselectionsort2(aordenard);
-			//while (aordenard != nullptr)
-			//{
-			//	//fecha: 20190210 - materia 52: programacion 1 - nota: 40
-			//	//cout << "fecha: " << aordenard->fecha << " - materia " << aordenar->idmateria << ": " << b->materias[aordenar->idmateria]->nombre << " - nota: " << aordenar->nota << endl;
-			//	//aordenar = aordenar->sig;
-			//}
 			if (listaExamenesPorMateria->idMateria == nroA) {
 				cout << "Fecha: " << listaExamenesPorMateria->fecha << " - Aprobados: " << listaExamenesPorMateria->cantAprobados << " - No aprobados: " << listaExamenesPorMateria->cantReprobados << endl;
 			}
-			
-
 			listaExamenesPorMateria = listaExamenesPorMateria->sigMateria;
 		}
 	}
-
 }
 
 //PRE: -
