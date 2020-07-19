@@ -131,9 +131,8 @@ La materia no tiene examenes asociados.
 
 Estadistica para la materia 95: Probabilidad y estadistica
 Fecha: 20190528 - Aprobados: 2 - No aprobados: 0
-Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
-Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
-Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200209 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 2
 Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
 
 -!-21::0-?-?-Imprimo la estadistica de la materia 95
@@ -220,11 +219,10 @@ Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
 -!-31::0-?-?-Imprimo la escolaridad del estudiante 600
 
 Estadistica para la materia 95: Probabilidad y estadistica
-Fecha: 20190528 - Aprobados: 0 - No aprobados: 2
-Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
-Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
-Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
+Fecha: 20190528 - Aprobados: 1 - No aprobados: 1
+Fecha: 20200209 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 2
+Fecha: 20200630 - Aprobados: 2 - No aprobados: 2
 
 -!-32::0-?-?-Imprimo la estadistica de la materia 95
 

@@ -42,27 +42,7 @@ Prueba 19: Imprimo la estadistica de la materia 73 -> OK
 -----------------------------------
 Prueba 20: Imprimo la estadistica de la materia 74 -> OK
 -----------------------------------
-Prueba 21: Imprimo la estadistica de la materia 95
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Estadistica para la materia 95: Probabilidad y estadistica
- 3: Fecha: 20190528 - Aprobados: 2 - No aprobados: 0
- 4: Fecha: 20200209 - Aprobados: 0 - No aprobados: 1
- 5: Fecha: 20200510 - Aprobados: 0 - No aprobados: 2
- 6: Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
- 7: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2: Estadistica para la materia 95: Probabilidad y estadistica
- 3: Fecha: 20190528 - Aprobados: 2 - No aprobados: 0
- 4! Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
- 5! Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
- 6! Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
- 7! Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
- 8! 
+Prueba 21: Imprimo la estadistica de la materia 95 -> OK
 -----------------------------------
 Prueba 22: Imprimo la estadistica de la materia 200 -> OK
 -----------------------------------
@@ -84,36 +64,16 @@ Prueba 30: Imprimo la escolaridad del estudiante 200 -> OK
 -----------------------------------
 Prueba 31: Imprimo la escolaridad del estudiante 600 -> OK
 -----------------------------------
-Prueba 32: Imprimo la estadistica de la materia 95
- -> ERROR impresion incorrecta
-Se esperaba imprimir (el numero de linea fue agregado, no se debe imprimir): 
- 1: 
- 2: Estadistica para la materia 95: Probabilidad y estadistica
- 3: Fecha: 20190528 - Aprobados: 1 - No aprobados: 1
- 4: Fecha: 20200209 - Aprobados: 0 - No aprobados: 1
- 5: Fecha: 20200510 - Aprobados: 0 - No aprobados: 2
- 6: Fecha: 20200630 - Aprobados: 2 - No aprobados: 2
- 7: 
-
-Se imprimio (el numero de linea fue agregado, no se debe imprimir): 
-(Los numeros de linea aparecen con : si coinciden y ! si no coinciden)
- 1: 
- 2: Estadistica para la materia 95: Probabilidad y estadistica
- 3! Fecha: 20190528 - Aprobados: 0 - No aprobados: 2
- 4! Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
- 5! Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
- 6! Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
- 7! Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
- 8! 
+Prueba 32: Imprimo la estadistica de la materia 95 -> OK
 -----------------------------------
 Prueba 33: Libero memoria -> OK
 ********* FIN PRUEBAS Bedelia*******
 
-PRUEBAS FUNCION PRUEBAS Bedelia                                    HAY 2 PRUEBAS INCORRECTAS
+PRUEBAS FUNCION PRUEBAS Bedelia                                    PRUEBAS CORRECTAS
 
 
 
 ----------------
 PRUEBAS FUNCIONES 
-PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  0 INCORRECTAS:  1
+PRUEBAS FUNCIONES RESULTADO ../PruebasEjemploDeUsoEntrega.txt   => CORRECTAS:  1 INCORRECTAS:  0
 PRUEBAS FUNCIONES 

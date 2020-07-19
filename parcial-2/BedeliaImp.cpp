@@ -213,17 +213,23 @@ void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 			}
 			if (aRecorrerInicio->sigMateria != nullptr) {
 				//Si hay materia en el siguiente pero tiene
-				if (esIgual(nuevo->fecha, aRecorrerInicio->sigMateria->fecha)) {					
+				if (esIgual(nuevo->fecha, aRecorrerInicio->fecha)) {					
+					if (nuevo->nota >= 70) {
+						aRecorrerInicio->cantAprobados++;
+					}
+					else {
+						aRecorrerInicio->cantReprobados++;
+					}
+				}
+				else {
+					nuevo->sigMateria = aRecorrerInicio->sigMateria;
+					aRecorrerInicio->sigMateria = nuevo;
 					if (nuevo->nota >= 70) {
 						aRecorrerInicio->sigMateria->cantAprobados++;
 					}
 					else {
 						aRecorrerInicio->sigMateria->cantReprobados++;
 					}
-				}
-				else {					
-					nuevo->sigMateria = aRecorrerInicio->sigMateria;
-					aRecorrerInicio->sigMateria = nuevo;
 				}		
 			}
 			else {
@@ -297,7 +303,7 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 							lista->cantexamenesReprobados++;
 							Examen* test = b->materias[nroA]->examenes;
 							bool yaEdite = false;
-							if (esIgual(examenesEstudiante->fecha, fecha)) {
+							if (esIgual(test->fecha, fecha)) {
 								test->cantAprobados--;
 								test->cantReprobados++;
 								yaEdite = true;
@@ -305,7 +311,7 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 							test = b->materias[nroA]->examenes;
 							while (test->sigMateria != nullptr && yaEdite == false)
 							{
-								if (esIgual(examenesEstudiante->fecha, fecha)) {
+								if (esIgual(test->sigMateria->fecha, fecha)) {
 									test->sigMateria->cantAprobados--;
 									test->sigMateria->cantReprobados++;
 								}
@@ -347,10 +353,6 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 				nuevoExamen->nota = nota;
 				insertarOrdenado(lista->examenes, nuevoExamen, false);
 				insertarOrdenado(b->materias[nroA]->examenes, nuevoExamen, true);
-				/*nuevoExamen->sig = lista->examenes;
-				lista->examenes = nuevoExamen;
-				nuevoExamen->sigMateria = b->materias[nroA]->examenes;
-				b->materias[nroA]->examenes = nuevoExamen;*/
 				lista->cantExamenes++;
 				if (nota >= 70) {
 					lista->cantexamenesAprobados++;
@@ -482,8 +484,7 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 			//	//aordenar = aordenar->sig;
 			//}
 			if (listaExamenesPorMateria->idMateria == nroA) {
-				cout << "Fecha: " << listaExamenesPorMateria->fecha << " - Aprobados: "
-					<< listaExamenesPorMateria->cantAprobados << " - No aprobados: " << listaExamenesPorMateria->cantReprobados << endl;
+				cout << "Fecha: " << listaExamenesPorMateria->fecha << " - Aprobados: " << listaExamenesPorMateria->cantAprobados << " - No aprobados: " << listaExamenesPorMateria->cantReprobados << endl;
 			}
 			
 
