@@ -181,24 +181,23 @@ void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 	if (lista == nullptr || obtenerStringMenor(nuevo->fecha, lista->fecha)) {
 		if (porMateria) {
 			if (lista != nullptr && esIgual(nuevo->fecha, lista->fecha)) {
-				/*if (nuevo->nota >= 70) {
+				if (nuevo->nota >= 70) {
 					lista->cantAprobados++;
 				}
 				else {
 					lista->cantReprobados++;
-				}*/
+				}
 			}
 			else {
-				
-				/*if (nuevo->nota >= 70) {
+				nuevo->sigMateria = lista;
+				lista = nuevo;
+				if (nuevo->nota >= 70) {
 					lista->cantAprobados++;
 				}
 				else {
 					lista->cantReprobados++;
-				}*/
-			}	
-			nuevo->sigMateria = lista;
-			lista = nuevo;
+				}
+			}				
 		}
 		else {
 			nuevo->sig = lista;
@@ -213,29 +212,48 @@ void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
 				aRecorrerInicio = aRecorrerInicio->sigMateria;
 			}
 			if (aRecorrerInicio->sigMateria != nullptr) {
-				if (esIgual(nuevo->fecha, aRecorrerInicio->sig->fecha)) {
-					/*if (nuevo->nota >= 70) {
-						aRecorrerInicio->sig->cantAprobados++;
+				//Si hay materia en el siguiente pero tiene
+				if (esIgual(nuevo->fecha, aRecorrerInicio->sigMateria->fecha)) {					
+					if (nuevo->nota >= 70) {
+						aRecorrerInicio->sigMateria->cantAprobados++;
 					}
 					else {
-						aRecorrerInicio->sig->cantReprobados++;
-					}*/
-					//aRecorrerInicio->sigMateria = nuevo;
+						aRecorrerInicio->sigMateria->cantReprobados++;
+					}
+				}
+				else {					
+					nuevo->sigMateria = aRecorrerInicio->sigMateria;
+					aRecorrerInicio->sigMateria = nuevo;
+				}		
+			}
+			else {
+				if (esIgual(nuevo->fecha, aRecorrerInicio->fecha)) {
+					if (nuevo->nota >= 70) {
+						aRecorrerInicio->cantAprobados++;
+					}
+					else {
+						aRecorrerInicio->cantReprobados++;
+					}
 				}
 				else {
-					
-					
-					/*if (nuevo->nota >= 70) {
-						aRecorrerInicio->sig->cantAprobados++;
+					nuevo->sigMateria = aRecorrerInicio->sigMateria;
+					aRecorrerInicio->sigMateria = nuevo;
+					if (nuevo->nota >= 70) {
+						aRecorrerInicio->sigMateria->cantAprobados++;
 					}
 					else {
-						aRecorrerInicio->sig->cantReprobados++;
-					}*/
+						aRecorrerInicio->sigMateria->cantReprobados++;
+					}
 				}
-				nuevo->sigMateria = aRecorrerInicio->sigMateria;
-				
+				/*aRecorrerInicio->sigMateria = nuevo;
+				if (nuevo->nota >= 70) {
+					aRecorrerInicio->sigMateria->cantAprobados++;
+				}
+				else {
+					aRecorrerInicio->sigMateria->cantReprobados++;
+				}*/
 			}
-			aRecorrerInicio->sigMateria = nuevo;
+			
 			
 		}
 		else {
@@ -277,11 +295,43 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 						{
 							lista->cantexamenesAprobados--;
 							lista->cantexamenesReprobados++;
+							Examen* test = b->materias[nroA]->examenes;
+							bool yaEdite = false;
+							if (esIgual(examenesEstudiante->fecha, fecha)) {
+								test->cantAprobados--;
+								test->cantReprobados++;
+								yaEdite = true;
+							}
+							test = b->materias[nroA]->examenes;
+							while (test->sigMateria != nullptr && yaEdite == false)
+							{
+								if (esIgual(examenesEstudiante->fecha, fecha)) {
+									test->sigMateria->cantAprobados--;
+									test->sigMateria->cantReprobados++;
+								}
+								test = test->sigMateria;
+							}
 						}
 						else if (examenesEstudiante->nota < 70 && nota >= 70)
 						{
 							lista->cantexamenesAprobados++;
 							lista->cantexamenesReprobados--;
+							Examen* test = b->materias[nroA]->examenes;
+							bool yaEdite = false;
+							if (esIgual(examenesEstudiante->fecha, fecha)) {
+								test->cantAprobados++;
+								test->cantReprobados--;
+								yaEdite = true;
+							}
+							test = b->materias[nroA]->examenes;
+							while (test->sigMateria != nullptr && yaEdite== false)
+							{
+								if (esIgual(examenesEstudiante->fecha, fecha)) {
+									test->sigMateria->cantAprobados++;
+									test->sigMateria->cantReprobados--;
+								}
+								test = test->sigMateria;
+							}
 						}
 						examenesEstudiante->nota = nota;
 						modifique = true;
@@ -431,8 +481,11 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 			//	//cout << "fecha: " << aordenard->fecha << " - materia " << aordenar->idmateria << ": " << b->materias[aordenar->idmateria]->nombre << " - nota: " << aordenar->nota << endl;
 			//	//aordenar = aordenar->sig;
 			//}
-			cout << "fecha: " << listaExamenesPorMateria->fecha << " - Aprobados: " 
-				<< listaExamenesPorMateria->cantAprobados << " - No aprobados: " << listaExamenesPorMateria->cantReprobados << endl;
+			if (listaExamenesPorMateria->idMateria == nroA) {
+				cout << "Fecha: " << listaExamenesPorMateria->fecha << " - Aprobados: "
+					<< listaExamenesPorMateria->cantAprobados << " - No aprobados: " << listaExamenesPorMateria->cantReprobados << endl;
+			}
+			
 
 			listaExamenesPorMateria = listaExamenesPorMateria->sigMateria;
 		}

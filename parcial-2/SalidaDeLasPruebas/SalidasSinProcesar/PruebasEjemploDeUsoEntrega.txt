@@ -21,8 +21,8 @@ Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 78
 -!-4::0-?-?-Imprimo la escolaridad del estudiante 100
 
 Estadistica para la materia 95: Probabilidad y estadistica
-fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200630 - Aprobados: 1 - No aprobados: 0
 
 -!-5::0-?-?-Imprimo la estadistica de la materia 95
 
@@ -90,8 +90,7 @@ Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 -!-13::0-?-?-Imprimo la escolaridad del estudiante 800
 
 Estadistica para la materia 1: Logica
-fecha: 20200512 - Aprobados: 0 - No aprobados: 0
-fecha: 20200512 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200512 - Aprobados: 1 - No aprobados: 1
 
 -!-14::0-?-?-Imprimo la estadistica de la materia 1
 
@@ -101,37 +100,27 @@ La materia no tiene examenes asociados.
 -!-15::0-?-?-Imprimo la estadistica de la materia 12
 
 Estadistica para la materia 21: Algebra lineal
-fecha: 20190714 - Aprobados: 0 - No aprobados: 0
-fecha: 20190714 - Aprobados: 0 - No aprobados: 0
-fecha: 20190714 - Aprobados: 0 - No aprobados: 0
-fecha: 20200204 - Aprobados: 0 - No aprobados: 0
-fecha: 20200628 - Aprobados: 0 - No aprobados: 0
-fecha: 20200628 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190714 - Aprobados: 1 - No aprobados: 2
+Fecha: 20200204 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200628 - Aprobados: 2 - No aprobados: 0
 
 -!-16::0-?-?-Imprimo la estadistica de la materia 21
 
 Estadistica para la materia 52: Programacion 1
-fecha: 20190210 - Aprobados: 0 - No aprobados: 0
-fecha: 20190210 - Aprobados: 0 - No aprobados: 0
-fecha: 20190210 - Aprobados: 0 - No aprobados: 0
-fecha: 20200529 - Aprobados: 0 - No aprobados: 0
-fecha: 20200529 - Aprobados: 0 - No aprobados: 0
-fecha: 20200529 - Aprobados: 0 - No aprobados: 0
-fecha: 20200529 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190210 - Aprobados: 1 - No aprobados: 2
+Fecha: 20200529 - Aprobados: 4 - No aprobados: 0
 
 -!-17::0-?-?-Imprimo la estadistica de la materia 52
 
 Estadistica para la materia 53: Programacion 2
-fecha: 20190422 - Aprobados: 0 - No aprobados: 0
-fecha: 20200509 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190422 - Aprobados: 1 - No aprobados: 0
+Fecha: 20200509 - Aprobados: 1 - No aprobados: 0
 
 -!-18::0-?-?-Imprimo la estadistica de la materia 53
 
 Estadistica para la materia 73: Algoritmos 1
-fecha: 20190208 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190208 - Aprobados: 1 - No aprobados: 0
+Fecha: 20200223 - Aprobados: 2 - No aprobados: 1
 
 -!-19::0-?-?-Imprimo la estadistica de la materia 73
 
@@ -141,20 +130,16 @@ La materia no tiene examenes asociados.
 -!-20::0-?-?-Imprimo la estadistica de la materia 74
 
 Estadistica para la materia 95: Probabilidad y estadistica
-fecha: 20190528 - Aprobados: 0 - No aprobados: 0
-fecha: 20190528 - Aprobados: 0 - No aprobados: 0
-fecha: 20200209 - Aprobados: 0 - No aprobados: 0
-fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190528 - Aprobados: 2 - No aprobados: 0
+Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
 
 -!-21::0-?-?-Imprimo la estadistica de la materia 95
 
 Estadistica para la materia 200: Matematica discreta
-fecha: 20190719 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190719 - Aprobados: 0 - No aprobados: 1
 
 -!-22::0-?-?-Imprimo la estadistica de la materia 200
 
@@ -169,8 +154,8 @@ Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 76
 -!-23::0-?-?-Imprimo la escolaridad del estudiante 400
 
 Estadistica para la materia 53: Programacion 2
-fecha: 20190422 - Aprobados: 0 - No aprobados: 0
-fecha: 20200509 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190422 - Aprobados: 1 - No aprobados: 0
+Fecha: 20200509 - Aprobados: 1 - No aprobados: 0
 
 -!-24::0-?-?-Imprimo la estadistica de la materia 53
 
@@ -196,10 +181,8 @@ Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 -!-26::0-?-?-Imprimo la escolaridad del estudiante 800
 
 Estadistica para la materia 73: Algoritmos 1
-fecha: 20190208 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
-fecha: 20200223 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190208 - Aprobados: 1 - No aprobados: 0
+Fecha: 20200223 - Aprobados: 2 - No aprobados: 1
 
 -!-27::0-?-?-Imprimo la estadistica de la materia 73
 
@@ -215,8 +198,7 @@ Fecha: 20200630 - Materia 95: Probabilidad y estadistica - Nota: 66
 -!-28::0-?-?-Imprimo la escolaridad del estudiante 800
 
 Estadistica para la materia 1: Logica
-fecha: 20200512 - Aprobados: 0 - No aprobados: 0
-fecha: 20200512 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200512 - Aprobados: 2 - No aprobados: 0
 
 -!-29::0-?-?-Imprimo la estadistica de la materia 1
 
@@ -238,15 +220,11 @@ Fecha: 20200628 - Materia 21: Algebra lineal - Nota: 84
 -!-31::0-?-?-Imprimo la escolaridad del estudiante 600
 
 Estadistica para la materia 95: Probabilidad y estadistica
-fecha: 20190528 - Aprobados: 0 - No aprobados: 0
-fecha: 20190528 - Aprobados: 0 - No aprobados: 0
-fecha: 20200209 - Aprobados: 0 - No aprobados: 0
-fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-fecha: 20200510 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
-fecha: 20200630 - Aprobados: 0 - No aprobados: 0
+Fecha: 20190528 - Aprobados: 0 - No aprobados: 2
+Fecha: 20200209 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 1
+Fecha: 20200510 - Aprobados: 0 - No aprobados: 0
+Fecha: 20200630 - Aprobados: 3 - No aprobados: 1
 
 -!-32::0-?-?-Imprimo la estadistica de la materia 95
 
