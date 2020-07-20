@@ -368,9 +368,12 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 	}
 }
 
-void vaciarMultiLista(Examen*& l) {
+
+//PRE: -
+//POS: destruye el registro de examenes l, liberando la memoria utilizada.
+void destruirExamenes(Examen*& l) {
 	if (l != NULL) {
-		vaciarMultiLista(l->sig);
+		destruirExamenes(l->sig);
 		char* aBorrarFecha = l->fecha;
 		delete[] aBorrarFecha;
 		aBorrarFecha = nullptr;
@@ -390,7 +393,7 @@ void destruir(Bedelia& b) {
 			char* aBorrarNombre = b->estudiantes[i]->nombre;
 			delete[] aBorrarNombre;
 			aBorrarNombre = nullptr;
-			vaciarMultiLista(aBorrar->examenes);
+			destruirExamenes(aBorrar->examenes);
 			b->estudiantes[i] = b->estudiantes[i]->sig;
 		}
 	}
