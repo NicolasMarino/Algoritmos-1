@@ -21,6 +21,8 @@ ColaInt crearColaInt() {
 	return nuevaC;
 };
 
+// PRE: -
+// POS: Inserta al final de la lista, actualizo el ultimo nodo.
 void insertarYQuedarmeUltimoNodo(NodoColaInt*& listaRetorno, NodoColaInt*& lista, NodoColaInt*& ultimo)
 {
 	if (listaRetorno == nullptr) {
@@ -54,7 +56,9 @@ int principio(ColaInt c) {
 }
 
 void desencolar(ColaInt& c) {
+	NodoColaInt* aBorrar = c->primero;
 	c->primero = c->primero->sig;
+	delete aBorrar;
 	c->cantidadPresentes--;
 	if (c->cantidadPresentes == -1) c->ultimo = nullptr;
 }
@@ -67,6 +71,17 @@ unsigned int cantidadElementos(ColaInt c) {
 	return c->cantidadPresentes + 1;
 }
 
+// PRE: -
+// POS: Libera la memoria de la lista de la cola en la primera posición.
+void vaciar(NodoColaInt*& l) {
+	if (l != NULL) {
+		vaciar(l->sig);
+		delete l;
+		l = NULL;
+	}
+}
+
+ 
 ColaInt clon(ColaInt c) {
 	ColaInt colaClon = new _cabezalColaInt();
 	colaClon->cantidadPresentes = c->cantidadPresentes;
@@ -78,6 +93,7 @@ ColaInt clon(ColaInt c) {
 	{
 		insertarYQuedarmeUltimoNodo(listaRetorno, aux, ultimo);
 	}
+	vaciar(aux);
 	colaClon->primero = listaRetorno;
 	colaClon->ultimo = ultimo;
 	
@@ -85,9 +101,10 @@ ColaInt clon(ColaInt c) {
 }
 
 void destruir(ColaInt& c) {
-	delete c->primero;
-	delete c->ultimo;
+	vaciar(c->primero);
+	c->ultimo = nullptr;
 	delete c;
+	c = nullptr;
 }
 
 #endif
