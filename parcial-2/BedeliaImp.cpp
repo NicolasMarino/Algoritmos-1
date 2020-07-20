@@ -24,9 +24,6 @@ struct Estudiante {
 	char* nombre;
 	int idEstudiante;
 	Examen* examenes;
-	/*unsigned int cantExamenes;
-	unsigned int cantexamenesAprobados;
-	unsigned int cantexamenesReprobados;*/
 	Estudiante* sig;
 };
 
@@ -237,8 +234,6 @@ void insertarOrdenado(Examen*& examenesEstudianteOMaterias, Examen*& nuevo, bool
 //	   así también en ese examen en la materia dada lo busca y hace lo mismo, en el caso de que sea menor hace lo inverso.
 void actualizarNotaExamenes(Estudiante* perfilEstudiante, Examen* examenesDeAsignatura, bool mayor, const char* fecha) {
 	if (!mayor) {
-		/*perfilEstudiante->cantexamenesAprobados--;
-		perfilEstudiante->cantexamenesReprobados++;*/
 		bool yaEdite = false;
 		if (esIgual(examenesDeAsignatura->fecha, fecha)) {
 			examenesDeAsignatura->cantAprobados--;
@@ -256,8 +251,6 @@ void actualizarNotaExamenes(Estudiante* perfilEstudiante, Examen* examenesDeAsig
 		}
 	}
 	else {
-		/*perfilEstudiante->cantexamenesAprobados++;
-		perfilEstudiante->cantexamenesReprobados--;*/
 		bool yaEdite = false;
 		if (esIgual(examenesDeAsignatura->fecha, fecha)) {
 			examenesDeAsignatura->cantAprobados++;
@@ -317,13 +310,6 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 				nuevoExamen->nota = nota;
 				insertarOrdenado(lista->examenes, nuevoExamen, false);
 				insertarOrdenado(b->materias[nroA]->examenes, nuevoExamen, true);
-				//lista->cantExamenes++;
-				/*if (nota >= 70) {
-					lista->cantexamenesAprobados++;
-				}
-				else {
-					lista->cantexamenesReprobados++;
-				}*/
 			}
 		}
 		lista = lista->sig;
@@ -387,6 +373,7 @@ void vaciarMultiLista(Examen*& l) {
 		vaciarMultiLista(l->sig);
 		char* aBorrarFecha = l->fecha;
 		delete[] aBorrarFecha;
+		aBorrarFecha = nullptr;
 		delete l;
 		l = NULL;
 	}
@@ -395,17 +382,33 @@ void vaciarMultiLista(Examen*& l) {
 //PRE: -
 //POS: destruye el registro de bedelía b, liberando la memoria utilizada 
 void destruir(Bedelia& b) {
-	//
-	/*for (int i = 0; i < b->cantidadEstudiantes; i++)
+	for (int i = 0; i < b->cantidadEstudiantes; i++)
 	{
 		while (b->estudiantes[i] != nullptr) {
+			// Del estudiante borro el nombre y vacio los examenes.
 			Estudiante*& aBorrar = b->estudiantes[i];
 			char* aBorrarNombre = b->estudiantes[i]->nombre;
 			delete[] aBorrarNombre;
+			aBorrarNombre = nullptr;
 			vaciarMultiLista(aBorrar->examenes);
+			b->estudiantes[i] = b->estudiantes[i]->sig;
 		}
-	}*/
-	Bedelia test = b;
+	}
+	for (int i = 0; i < 201; i++)
+	{
+		while (b->materias[i] != nullptr) {
+			// De la materia borro nombre y los examenes los apunto a null, porque los borre en el estudiante.
+			Materia*& aBorrar = b->materias[i];
+			char* aBorrarNombreMateria = b->materias[i]->nombre;
+			delete[] aBorrarNombreMateria;
+			aBorrarNombreMateria = nullptr;
+			aBorrar->examenes = nullptr;
+			delete aBorrar;
+			aBorrar = nullptr;		
+		}
+	}
+	delete b;
+	b = nullptr;
 }
 
 #endif
