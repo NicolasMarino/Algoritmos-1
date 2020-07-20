@@ -24,9 +24,9 @@ struct Estudiante {
 	char* nombre;
 	int idEstudiante;
 	Examen* examenes;
-	unsigned int cantExamenes;
+	/*unsigned int cantExamenes;
 	unsigned int cantexamenesAprobados;
-	unsigned int cantexamenesReprobados;
+	unsigned int cantexamenesReprobados;*/
 	Estudiante* sig;
 };
 
@@ -123,14 +123,8 @@ void actualizarMateria(Bedelia& b, const char* nombreA, unsigned int id) {
 	b->materias[id] = nuevaMateria;
 }
 
-/*
-PRE: Recibe dos strings.
-POS: Retorna cual de los dos strings esta antes alfabeticamente
-
-Ejemplo
-Entrada : "paso,pasa"
-Retorno : FALSE
-*/
+//PRE: -
+//POS: Retorna cual de los dos strings esta antes alfabeticamente
 bool esIgual(char* unChar, const char* otroChar)
 {
 	int largoUnChar = largoPalabra(unChar);
@@ -149,13 +143,14 @@ bool esIgual(char* unChar, const char* otroChar)
 	return true;
 }
 
+//PRE: -
+//POS: Retorna cual de los dos strings esta antes alfabeticamente
 bool obtenerStringMenor(char* unChar, const char* otroChar)
 {
 	int largoUnChar = largoPalabra(unChar);
 	int largoOtroChar = largoPalabra(otroChar);
 	int masLargo = (largoUnChar > largoOtroChar) ? masLargo = largoUnChar : masLargo = largoOtroChar;
-	//char* unCharRecorrer = unChar;
-	//const char* otroCharRecorrer = otroChar;
+
 	bool esMasLargo = true;
 	for (int i = 0; i < masLargo; i++)
 	{
@@ -167,98 +162,118 @@ bool obtenerStringMenor(char* unChar, const char* otroChar)
 	return esMasLargo;
 }
 
-void insertarOrdenado(Examen*& lista, Examen*& nuevo, bool porMateria)
+//PRE: -
+//POS: Dependiendo si la nota es mayor o igual o menor que 70, suma 1 en aprobados o reprobados de la lista respectivamente.
+void aprobarReprobar(int nota, Examen* lista) {
+	if (nota >= 70) {
+		lista->cantAprobados++;
+	}
+	else {
+		lista->cantReprobados++;
+	}
+}
+
+//PRE: Recibe una lista de examenes de estudiantes o de examenes de materia, un examen a insertar/modificar, un boolean para saber si es de examen de estudiantes o examenes de materias la lista.
+//POS: Filtra dependiendo si es examen de estudiante o de materia.
+//	   En caso de ser de materia inserta ordenado, si se encuentra con una fecha ya dada, le suma aprobados/reprobados.
+//	   En caso de ser de estudiante inserta ordenado el nuevo examen.
+void insertarOrdenado(Examen*& examenesEstudianteOMaterias, Examen*& nuevo, bool porMateria)
 {
-	if (lista == nullptr || obtenerStringMenor(nuevo->fecha, lista->fecha)) {
+	// Me fijo si no tiene examenes o si la fecha del examen a insertar (nuevo) es menor a la primera de la lista.
+	if (examenesEstudianteOMaterias == nullptr || obtenerStringMenor(nuevo->fecha, examenesEstudianteOMaterias->fecha)) {
+		// Filtro si es por materia así agrego en el puntero correcto.
 		if (porMateria) {
-			if (lista != nullptr && esIgual(nuevo->fecha, lista->fecha)) {
-				if (nuevo->nota >= 70) {
-					lista->cantAprobados++;
-				}
-				else {
-					lista->cantReprobados++;
-				}
-			}
+			// Si es una fecha ya existente simplemente sumo.
+			if (examenesEstudianteOMaterias != nullptr && esIgual(nuevo->fecha, examenesEstudianteOMaterias->fecha)) {
+				aprobarReprobar(nuevo->nota, examenesEstudianteOMaterias);
+			}// Si no existe esa fecha la agrego porque es un examen nuevo.
 			else {
-				nuevo->sigMateria = lista;
-				lista = nuevo;
-				if (nuevo->nota >= 70) {
-					lista->cantAprobados++;
-				}
-				else {
-					lista->cantReprobados++;
-				}
+				nuevo->sigMateria = examenesEstudianteOMaterias;
+				examenesEstudianteOMaterias = nuevo;
+				aprobarReprobar(nuevo->nota, examenesEstudianteOMaterias);
 			}				
-		}
+		}// No es por materia entonces agrego al principio, dado que la fecha que vino es menor que la que estaba a la cabeza.
 		else {
-			nuevo->sig = lista;
-			lista = nuevo;
+			nuevo->sig = examenesEstudianteOMaterias;
+			examenesEstudianteOMaterias = nuevo;
 		}		
 	}
 	else {
-		Examen* aRecorrerInicio = lista;
+		// Ya que no agrego un elemento a la cabeza tengo que agregar en el medio.
+		Examen* aRecorrerExamenesE = examenesEstudianteOMaterias;
+		// Filtro si es por materia entones recorro para agregar en el medio o donde corresponda.
 		if (porMateria) {
-			while (aRecorrerInicio->sigMateria != nullptr && obtenerStringMenor(aRecorrerInicio->sigMateria->fecha, nuevo->fecha))
+			while (aRecorrerExamenesE->sigMateria != nullptr && obtenerStringMenor(aRecorrerExamenesE->sigMateria->fecha, nuevo->fecha))
 			{
-				aRecorrerInicio = aRecorrerInicio->sigMateria;
+				aRecorrerExamenesE = aRecorrerExamenesE->sigMateria;
 			}
-			if (aRecorrerInicio->sigMateria != nullptr) {
-				if (esIgual(nuevo->fecha, aRecorrerInicio->fecha)) {					
-					if (nuevo->nota >= 70) {
-						aRecorrerInicio->cantAprobados++;
-					}
-					else {
-						aRecorrerInicio->cantReprobados++;
-					}
-				}
-				else {
-					nuevo->sigMateria = aRecorrerInicio->sigMateria;
-					aRecorrerInicio->sigMateria = nuevo;
-					if (nuevo->nota >= 70) {
-						aRecorrerInicio->sigMateria->cantAprobados++;
-					}
-					else {
-						aRecorrerInicio->sigMateria->cantReprobados++;
-					}
-				}		
-			}
+			// Si es la misma fecha no tengo que agregar uno nuevo, sino que le sumo.
+			if (esIgual(nuevo->fecha, aRecorrerExamenesE->fecha)) {
+				aprobarReprobar(nuevo->nota, aRecorrerExamenesE);
+			}// Sino le agrego uno porque es otro examen.
 			else {
-				if (esIgual(nuevo->fecha, aRecorrerInicio->fecha)) {
-					if (nuevo->nota >= 70) {
-						aRecorrerInicio->cantAprobados++;
-					}
-					else {
-						aRecorrerInicio->cantReprobados++;
-					}
-				}
-				else {
-					nuevo->sigMateria = aRecorrerInicio->sigMateria;
-					aRecorrerInicio->sigMateria = nuevo;
-					if (nuevo->nota >= 70) {
-						aRecorrerInicio->sigMateria->cantAprobados++;
-					}
-					else {
-						aRecorrerInicio->sigMateria->cantReprobados++;
-					}
-				}
+				nuevo->sigMateria = aRecorrerExamenesE->sigMateria;
+				aRecorrerExamenesE->sigMateria = nuevo;
+				aprobarReprobar(nuevo->nota, aRecorrerExamenesE->sigMateria);
 			}
-			
-			
-		}
+		}// No es por materia entonces recorro para agregar ordenado.
 		else {
-			bool yaEdite = false;
-			while (aRecorrerInicio->sig != nullptr && obtenerStringMenor(aRecorrerInicio->sig->fecha, nuevo->fecha))
+			while (aRecorrerExamenesE->sig != nullptr && obtenerStringMenor(aRecorrerExamenesE->sig->fecha, nuevo->fecha))
 			{
-				aRecorrerInicio = aRecorrerInicio->sig;
+				aRecorrerExamenesE = aRecorrerExamenesE->sig;
 			}
-			if (aRecorrerInicio->sig != nullptr) {
-				nuevo->sig = aRecorrerInicio->sig;
+			// Argego examen ordenado.
+			if (aRecorrerExamenesE->sig != nullptr) {
+				nuevo->sig = aRecorrerExamenesE->sig;
 			}
-			aRecorrerInicio->sig = nuevo;
+			aRecorrerExamenesE->sig = nuevo;
 		}
-		
 	}
+}
 
+//PRE: Recibe un estudiante, unos examenes de una asignatura dada, 
+//	   un boolean mayor el cual nos indica si la nota vieja era mayor que la nueva y una fecha.
+//POS: Si la nota vieja era mayor, le resta un examen aprobado y suma uno reprobado, 
+//	   así también en ese examen en la materia dada lo busca y hace lo mismo, en el caso de que sea menor hace lo inverso.
+void actualizarNotaExamenes(Estudiante* perfilEstudiante, Examen* examenesDeAsignatura, bool mayor, const char* fecha) {
+	if (!mayor) {
+		/*perfilEstudiante->cantexamenesAprobados--;
+		perfilEstudiante->cantexamenesReprobados++;*/
+		bool yaEdite = false;
+		if (esIgual(examenesDeAsignatura->fecha, fecha)) {
+			examenesDeAsignatura->cantAprobados--;
+			examenesDeAsignatura->cantReprobados++;
+			yaEdite = true;
+		}
+		Examen* test = examenesDeAsignatura;
+		while (test->sigMateria != nullptr && yaEdite == false)
+		{
+			if (esIgual(test->sigMateria->fecha, fecha)) {
+				test->sigMateria->cantAprobados--;
+				test->sigMateria->cantReprobados++;
+			}
+			test = test->sigMateria;
+		}
+	}
+	else {
+		/*perfilEstudiante->cantexamenesAprobados++;
+		perfilEstudiante->cantexamenesReprobados--;*/
+		bool yaEdite = false;
+		if (esIgual(examenesDeAsignatura->fecha, fecha)) {
+			examenesDeAsignatura->cantAprobados++;
+			examenesDeAsignatura->cantReprobados--;
+			yaEdite = true;
+		}
+		Examen* test = examenesDeAsignatura;
+		while (test->sigMateria != nullptr && yaEdite == false)
+		{
+			if (esIgual(test->fecha, fecha)) {
+				test->sigMateria->cantAprobados++;
+				test->sigMateria->cantReprobados--;
+			}
+			test = test->sigMateria;
+		}
+	}	
 }
 
 //PRE: todos los parámetros son válidos:
@@ -282,45 +297,11 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 					if (esIgual(examenesEstudiante->fecha, fecha) && examenesEstudiante->idMateria == nroA) {
 						if (examenesEstudiante->nota >= 70 && nota < 70)
 						{
-							lista->cantexamenesAprobados--;
-							lista->cantexamenesReprobados++;
-							Examen* test = b->materias[nroA]->examenes;
-							bool yaEdite = false;
-							if (esIgual(test->fecha, fecha)) {
-								test->cantAprobados--;
-								test->cantReprobados++;
-								yaEdite = true;
-							}
-							test = b->materias[nroA]->examenes;
-							while (test->sigMateria != nullptr && yaEdite == false)
-							{
-								if (esIgual(test->sigMateria->fecha, fecha)) {
-									test->sigMateria->cantAprobados--;
-									test->sigMateria->cantReprobados++;
-								}
-								test = test->sigMateria;
-							}
+							actualizarNotaExamenes(lista, b->materias[nroA]->examenes, false, fecha);
 						}
 						else if (examenesEstudiante->nota < 70 && nota >= 70)
 						{
-							lista->cantexamenesAprobados++;
-							lista->cantexamenesReprobados--;
-							Examen* test = b->materias[nroA]->examenes;
-							bool yaEdite = false;
-							if (esIgual(examenesEstudiante->fecha, fecha)) {
-								test->cantAprobados++;
-								test->cantReprobados--;
-								yaEdite = true;
-							}
-							test = b->materias[nroA]->examenes;
-							while (test->sigMateria != nullptr && yaEdite== false)
-							{
-								if (esIgual(examenesEstudiante->fecha, fecha)) {
-									test->sigMateria->cantAprobados++;
-									test->sigMateria->cantReprobados--;
-								}
-								test = test->sigMateria;
-							}
+							actualizarNotaExamenes(lista, b->materias[nroA]->examenes, true, fecha);
 						}
 						examenesEstudiante->nota = nota;
 						modifique = true;
@@ -336,15 +317,14 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 				nuevoExamen->nota = nota;
 				insertarOrdenado(lista->examenes, nuevoExamen, false);
 				insertarOrdenado(b->materias[nroA]->examenes, nuevoExamen, true);
-				lista->cantExamenes++;
-				if (nota >= 70) {
+				//lista->cantExamenes++;
+				/*if (nota >= 70) {
 					lista->cantexamenesAprobados++;
 				}
 				else {
 					lista->cantexamenesReprobados++;
-				}
+				}*/
 			}
-
 		}
 		lista = lista->sig;
 	}
@@ -354,7 +334,7 @@ void actualizarExamen(Bedelia& b, unsigned int nroE, unsigned int nroA, const ch
 //PRE: el parámetro nroE es válido
 //POS: muestra por pantalla la escolaridad del estudiante nroE, listando todas las materias en
 //las que registró examen, con fecha y nota en cada caso, ordenados por fecha desde la más
-//antigua a la más reciente 
+//antigua a la más reciente.
 void escolaridadEstudiante(Bedelia b, unsigned int nroE) {
 	int hashedEstudiante = hashing(nroE, b->cantidadEstudiantes);
 	Estudiante* lista = b->estudiantes[hashedEstudiante];
@@ -368,10 +348,8 @@ void escolaridadEstudiante(Bedelia b, unsigned int nroE) {
 			}
 			else {
 				Examen* aOrdenar = lista->examenes;
-				//listaOrdenadaSelectionSort(aOrdenar);
 				while (aOrdenar != nullptr)
 				{
-					//Fecha: 20190210 - Materia 52: Programacion 1 - Nota: 40
 					cout << "Fecha: " << aOrdenar->fecha << " - Materia " << aOrdenar->idMateria << ": " << b->materias[aOrdenar->idMateria]->nombre << " - Nota: " << aOrdenar->nota << endl;
 					aOrdenar = aOrdenar->sig;
 				}
@@ -379,10 +357,6 @@ void escolaridadEstudiante(Bedelia b, unsigned int nroE) {
 		}
 		lista = lista->sig;
 	}
-
-	//Escolaridad del estudiante NROESTUDIANTE: NOMBREESTUDIANTE 
-
-
 }
 
 // ---------ORDEN(n) peor caso, n cantidad de instancias de examen de la materia dada------------------
@@ -408,10 +382,30 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 	}
 }
 
+void vaciarMultiLista(Examen*& l) {
+	if (l != NULL) {
+		vaciarMultiLista(l->sig);
+		char* aBorrarFecha = l->fecha;
+		delete[] aBorrarFecha;
+		delete l;
+		l = NULL;
+	}
+}
+
 //PRE: -
 //POS: destruye el registro de bedelía b, liberando la memoria utilizada 
 void destruir(Bedelia& b) {
-
+	//
+	/*for (int i = 0; i < b->cantidadEstudiantes; i++)
+	{
+		while (b->estudiantes[i] != nullptr) {
+			Estudiante*& aBorrar = b->estudiantes[i];
+			char* aBorrarNombre = b->estudiantes[i]->nombre;
+			delete[] aBorrarNombre;
+			vaciarMultiLista(aBorrar->examenes);
+		}
+	}*/
+	Bedelia test = b;
 }
 
 #endif
