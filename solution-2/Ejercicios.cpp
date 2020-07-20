@@ -1,5 +1,7 @@
 #include "Ejercicios.h"
 
+// PRE: -
+// POS: Recorre y agrega todos los elementos del arbol a pasado como parametro en la listaOrdInt l.
 void agregarElemALista(ListaOrdInt& l, NodoABInt* a) {
 	if (a != NULL) {
 		agregarElemALista(l, a->izq);
@@ -114,7 +116,9 @@ MultisetInt Xor(MultisetInt m1, MultisetInt m2)
 		agregar(aRetornar, dato, 1);
 		borrar(clonM2, dato);
 	}
-
+	destruir(clonM1);
+	destruir(clonM2);
+	destruir(aBorrar);
 	return aRetornar;
 }
 
@@ -140,7 +144,8 @@ ColaPrioridadInt MenorPrioridad(ColaPrioridadInt c) {
 		}
 		desencolar(clonCola2);
 	}
-
+	destruir(clonCola);
+	destruir(clonCola2);
 	return colaRetorno;
 }
 
