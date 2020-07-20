@@ -205,7 +205,7 @@ void insertarOrdenado(Examen*& examenesEstudianteOMaterias, Examen*& nuevo, bool
 				aRecorrerExamenesE = aRecorrerExamenesE->sigMateria;
 			}
 			// Si es la misma fecha no tengo que agregar uno nuevo, sino que le sumo.
-			if (esIgual(nuevo->fecha, aRecorrerExamenesE->fecha)) {
+			if (aRecorrerExamenesE != nullptr && esIgual(nuevo->fecha, aRecorrerExamenesE->fecha)) {
 				aprobarReprobar(nuevo->nota, aRecorrerExamenesE);
 			}// Sino le agrego uno porque es otro examen.
 			else {
@@ -368,7 +368,6 @@ void estadisticaMateria(Bedelia b, unsigned int nroA) {
 	}
 }
 
-
 //PRE: -
 //POS: destruye el registro de examenes l, liberando la memoria utilizada.
 void destruirExamenes(Examen*& l) {
@@ -399,7 +398,7 @@ void destruir(Bedelia& b) {
 	}
 	for (int i = 0; i < 201; i++)
 	{
-		while (b->materias[i] != nullptr) {
+		if (b->materias[i] != nullptr) {
 			// De la materia borro nombre y los examenes los apunto a null, porque los borre en el estudiante.
 			Materia*& aBorrar = b->materias[i];
 			char* aBorrarNombreMateria = b->materias[i]->nombre;
@@ -415,4 +414,3 @@ void destruir(Bedelia& b) {
 }
 
 #endif
-
