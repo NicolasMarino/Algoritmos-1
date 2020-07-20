@@ -43,6 +43,8 @@ void agregar(ListaOrdInt& l, int e) {
 	l->cantidadElem++;
 }
 
+//PRE: recibe un arbol binario de búsqueda a, no vacío
+//POS: Obtiene el nodo que tiene el dato mas grande del arbol
 NodoABInt* obtenerMaximo(NodoABInt* A) {
 	if (A->der == nullptr) {
 		return A;
@@ -52,6 +54,8 @@ NodoABInt* obtenerMaximo(NodoABInt* A) {
 	}
 }
 
+//PRE: recibe un arbol binario de búsqueda a, no vacío
+//POS: Obtiene el nodo que tiene el dato mas chico del arbol
 NodoABInt* obtenerMinimo(NodoABInt* A) {
 	if (A->izq == nullptr) {
 		return A;
@@ -61,6 +65,8 @@ NodoABInt* obtenerMinimo(NodoABInt* A) {
 	}
 }
 
+//PRE: recibe un arbol binario de búsqueda a, no vacío
+//POS: elimina el dato que se encuentra en la raíz de a.
 void borrarRaiz(NodoABInt*& A) {
 	NodoABInt* borrar = A;
 	if (A->der == nullptr) {
@@ -79,6 +85,9 @@ void borrarRaiz(NodoABInt*& A) {
 	delete borrar;
 }
 
+//PRE: -
+//POS: Borra el nodo que tiene el valor e del arbol l pasado por parametro.
+//	   Si no lo encuentra no tiene efecto.
 void borrarAux(NodoABInt*& l, ListaOrdInt& la, int e) {
 	if (l == NULL)return;
 	if (l->dato == e) {
@@ -133,6 +142,8 @@ unsigned int cantidadElementos(ListaOrdInt l) {
 	return l->cantidadElem;
 }
 
+// PRE: -
+// POS: retorna una copia del arbol de ListaOrdInt sin compartir memoria
 void clonarArbol(ListaOrdInt& abb, NodoABInt* raiz) {
 	if (raiz == nullptr) return;
 	agregar(abb, raiz->dato);
@@ -146,7 +157,20 @@ ListaOrdInt clon(ListaOrdInt l) {
 	return nueva;
 }
 
+//TODO:
+// PRE: -
+// POS: libera memoria del arbol de la listaOrdInt.
+void vaciarArbol(ListaOrdInt& l) {
+	/*
+	int aBorrar = obtenerMinimo(l->arbol)->dato;
+	borrar(l, aBorrar);
+	clonarArbol(l, l->arbol->izq);
+	clonarArbol(l, l->arbol->der);
+	*/
+}
+
 void destruir(ListaOrdInt& l) {
+	//vaciarArbol(l);
 	delete l->arbol;
 	delete l;
 }
