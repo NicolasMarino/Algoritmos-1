@@ -17,6 +17,9 @@ ListaPosInt crearListaPosInt()
 	return lista;
 }
 
+// PRE: - 
+// POS: Expande al doble el tamaño del vector dentro de p.
+//		Copia todos los datos a nueva memoria.
 void expandirVector(ListaPosInt p) {
 	int* nuevaMemoria = new int [p->tamVector * 2]();
 	for (int i = 0; i < p->tope + 1 ; i++)
@@ -89,6 +92,7 @@ void destruir(ListaPosInt& l)
 {
 	delete[] l->vector;
 	delete l;
+	l = nullptr;
 }
 
 
