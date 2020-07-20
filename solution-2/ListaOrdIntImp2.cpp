@@ -161,16 +161,15 @@ ListaOrdInt clon(ListaOrdInt l) {
 // PRE: -
 // POS: libera memoria del arbol de la listaOrdInt.
 void vaciarArbol(ListaOrdInt& l) {
-	/*
-	int aBorrar = obtenerMinimo(l->arbol)->dato;
-	borrar(l, aBorrar);
-	clonarArbol(l, l->arbol->izq);
-	clonarArbol(l, l->arbol->der);
-	*/
+	if (l == nullptr) return;
+	while (l->arbol != nullptr)
+	{
+		borrarMinimo(l);
+	}
 }
 
 void destruir(ListaOrdInt& l) {
-	//vaciarArbol(l);
+	vaciarArbol(l);
 	delete l->arbol;
 	delete l;
 }

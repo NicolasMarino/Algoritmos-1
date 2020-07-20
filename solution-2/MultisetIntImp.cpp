@@ -14,7 +14,6 @@ MultisetInt crearMultisetInt() {
 }
 
 void agregar(MultisetInt& s, int e, unsigned int ocurrencias) {
-	NodoListaInt* aRecorrer = s->multiLista;
 	while (ocurrencias != 0)
 	{
 		NodoListaInt* nuevo2 = new NodoListaInt(e);
@@ -157,8 +156,9 @@ MultisetInt unionConjuntos(MultisetInt s1, MultisetInt s2) {
 			agregar(aRetornar, recorrerS2->multiLista->dato, 1);
 			recorrerS2->multiLista = recorrerS2->multiLista->sig;
 		}
-
 	}
+	destruir(recorrerS1);
+	destruir(recorrerS2);
 	return aRetornar;
 }
 
@@ -194,6 +194,8 @@ MultisetInt interseccionConjuntos(MultisetInt s1, MultisetInt s2) {
 			}
 		}
 	}
+	destruir(recorrerS1);
+	destruir(recorrerS2);
 	return aRetornar;
 }
 
