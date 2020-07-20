@@ -16,14 +16,12 @@ ColaPrioridadInt crearColaPrioridadInt() {
 	return nueva;
 }
 
+// PRE: -
+// POS: Inserta al final de la lista.
 void insertarFinal(NodoListaIntDobleDato*& listaRetorno, NodoListaIntDobleDato*& lista, NodoListaIntDobleDato*& ultimo)
 {
-	NodoListaIntDobleDato* aux = new NodoListaIntDobleDato();
-	aux->dato1 = lista->dato1;
-	aux->dato2 = lista->dato2;
-	aux->sig = nullptr;
-	ultimo->sig = aux;
-	ultimo = aux;
+	ultimo->sig = lista;
+	ultimo = lista;
 	lista = lista->sig;
 }
 
@@ -68,17 +66,21 @@ int principioPrioridad(ColaPrioridadInt c) {
 	return c->principio->dato2;
 }
 
+// PRE: No es nula la lista
+// POS: Borro un elemento.
 void eliminarCabeza(NodoListaIntDobleDato*& lista) {
+	assert(lista != nullptr);
 	NodoListaIntDobleDato* aBorrar = lista;
 	lista = lista->sig;
 	delete aBorrar;
+	aBorrar = nullptr;
 }
 
 void desencolar(ColaPrioridadInt& c) {
 	assert(!esVacia(c));
 	if (c->cantElementos == 1) {
 		eliminarCabeza(c->principio);
-		//eliminarCabeza(c->ultimo);
+		c->ultimo = nullptr;
 	}
 	else {
 		eliminarCabeza(c->principio);
@@ -95,6 +97,8 @@ unsigned int cantidadElementos(ColaPrioridadInt c) {
 	return c->cantElementos;
 }
 
+// PRE: -
+// POS: retorna una copia de la cola de prioridad sin compartir memoria
 NodoListaIntDobleDato* clonar(NodoListaIntDobleDato* lista) {
 	if (lista == nullptr) return nullptr;
 	NodoListaIntDobleDato* aux = new NodoListaIntDobleDato();
@@ -112,6 +116,8 @@ ColaPrioridadInt clon(ColaPrioridadInt c) {
 	return nuevaPilaInt;
 }
 
+// PRE: -
+// POS: Libera la memoria de la lista de la cola de prioridad.
 void vaciar(NodoListaIntDobleDato*& l) {
 	if (l != NULL) {
 		vaciar(l->sig);
