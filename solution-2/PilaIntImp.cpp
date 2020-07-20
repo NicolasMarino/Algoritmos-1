@@ -38,6 +38,9 @@ unsigned int cantidadElementos(PilaInt p) {
 bool esVacia(PilaInt p) {
 	return p->cantElementos == 0;
 }
+
+// PRE: -
+// POS: retorna una copia de la pila sin compartir memoria.
 NodoListaInt* clonar(NodoListaInt* pila) {
 	if (pila == nullptr) return nullptr;
 	NodoListaInt* aux = new NodoListaInt();
@@ -53,6 +56,8 @@ PilaInt clon(PilaInt p) {
 	return nuevaPilaInt;
 }
 
+// PRE: -
+// POS: Libera la memoria de la lista pasada por parámetro.
 void vaciar(NodoListaInt*& l) {
 	if (l != NULL) {
 		vaciar(l->sig);
@@ -65,6 +70,7 @@ void destruir(PilaInt& p) {
 	vaciar(p->pila);
 	delete p->pila;
 	delete p;
+	p = nullptr;
 }
 
 #endif

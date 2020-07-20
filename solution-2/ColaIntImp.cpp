@@ -72,7 +72,7 @@ unsigned int cantidadElementos(ColaInt c) {
 }
 
 // PRE: -
-// POS: Libera la memoria de la lista de la cola en la primera posición.
+// POS: Libera la memoria de la lista pasada por parámetro.
 void vaciar(NodoColaInt*& l) {
 	if (l != NULL) {
 		vaciar(l->sig);
@@ -80,7 +80,6 @@ void vaciar(NodoColaInt*& l) {
 		l = NULL;
 	}
 }
-
  
 ColaInt clon(ColaInt c) {
 	ColaInt colaClon = new _cabezalColaInt();
