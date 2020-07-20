@@ -42,6 +42,9 @@ Bedelia crearBedelia(unsigned int cantEstudiantes) {
 	return nuevaBedelia;
 }
 
+
+//PRE: -
+//POS: Retorna un valor entre 0 y (tam - 1)
 int hashing(int clave, int tam) {
 	int hashingData = clave % tam;
 	hashingData = abs(hashingData);
